@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo-Butterfly主题博客搭建02</title>
-    <url>/posts/10002.html</url>
-    <content><![CDATA[<p>Hexo+Butterfly主题博客搭建02 ——— 下载有关butterfly主题并进行配置<br><span id="more"></span></p>
-<h3 id="Butterfly主题的安装"><a href="#Butterfly主题的安装" class="headerlink" title="Butterfly主题的安装"></a>Butterfly主题的安装</h3><ol>
-<li>在 hexo 项目根目录下执行操作clone主题</li>
-</ol>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure>
-<ol>
-<li>如果沒有 pug 以及 <a href="https://so.csdn.net/so/search?q=stylus&amp;spm=1001.2101.3001.7020">stylus</a> 的渲染器，还需要下载，否则在项目运行时会报错：</li>
-</ol>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
-<ol>
-<li>修改项目根目录下的_config.yml文件（称为站点配置文件），开启主题</li>
-</ol>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">#theme: landscape</span><br><span class="line">theme: butterfly</span><br></pre></td></tr></table></figure>
-<ol>
-<li>升级建议</li>
-</ol>
-<p>为了減少升级主题带来的不便，我们还需要做以下操作：<br>把主题文件夹中的 _config.yml 复制到 Hexo 根目录下，同重命名为 _config.butterfly.yml</p>
-<p>Hexo会自动合并主题中的  _config.yml  和   _config.butterfly.yml  里的配置，如果存在同名配置，会使用  _config.butterfly.yml  的配置，其优先度较高。</p>
-<h3 id="ButterFly主题"><a href="#ButterFly主题" class="headerlink" title="ButterFly主题"></a>ButterFly主题</h3>]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo+Butterfly主题博客搭建01</title>
     <url>/posts/10001.html</url>
     <content><![CDATA[<p>Hexo+Butterfly主题博客搭建01 ——— 个人博客搭建的基础环境配置工作<br><span id="more"></span></p>
@@ -74,6 +45,75 @@
       </categories>
       <tags>
         <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo-Butterfly主题博客搭建02</title>
+    <url>/posts/10002.html</url>
+    <content><![CDATA[<p>Hexo+Butterfly主题博客搭建02 ——— 下载有关butterfly主题并进行配置<br><span id="more"></span></p>
+<h3 id="Butterfly主题的安装"><a href="#Butterfly主题的安装" class="headerlink" title="Butterfly主题的安装"></a>Butterfly主题的安装</h3><ol>
+<li>在 hexo 项目根目录下执行操作clone主题</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure>
+<ol>
+<li>如果沒有 pug 以及 <a href="https://so.csdn.net/so/search?q=stylus&amp;spm=1001.2101.3001.7020">stylus</a> 的渲染器，还需要下载，否则在项目运行时会报错：</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+<ol>
+<li>修改项目根目录下的_config.yml文件（称为站点配置文件），开启主题</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">#theme: landscape</span><br><span class="line">theme: butterfly</span><br></pre></td></tr></table></figure>
+<ol>
+<li>升级建议</li>
+</ol>
+<p>为了減少升级主题带来的不便，我们还需要做以下操作：<br>把主题文件夹中的 _config.yml 复制到 Hexo 根目录下，同重命名为 _config.butterfly.yml</p>
+<p>Hexo会自动合并主题中的  _config.yml  和   _config.butterfly.yml  里的配置，如果存在同名配置，会使用  _config.butterfly.yml  的配置，其优先度较高。</p>
+<h3 id="ButterFly主题"><a href="#ButterFly主题" class="headerlink" title="ButterFly主题"></a>ButterFly主题</h3>]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaSE02-Java中的文件与方法递归与IO流</title>
+    <url>/posts/10101.html</url>
+    <content><![CDATA[<p>详细的描述了Java中 File类的使用，一步一步剖析了IO流如何创建、如何使用以及其中的注意事项。</p>
+<p>File类使用：详细的描述了使用File的对象操作文件，如:删除、获取文件信息、创建文件夹等<br>方法递归：详细的描述了递归算法思想并能完成常见递归题目，以及文件搜索<br>字符集：程序中经常要读取文件中的数据，知道数据的底层形式才能够去学习如何读写数据<br>IO流的作用：使用IO流完成文件数据的读写等操作<br>字节流与字符流：数据的类型很多，要学会选择不同的流进行读写操作<br><span id="more"></span></p>
+<p><img src="C:/Users/Wang/AppData/Roaming/Typora/typora-user-images/image-20230524214623406.png" alt="image-20230524214623406"></p>
+<h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><p><strong>File类在包java.io.File下、代表操作系统的文件对象（文件、文件夹）。</strong><br><strong>File类提供了诸如∶定位文件，获取文件本身的信息、删除文件、创建文件（文件夹）等功能</strong><br><strong>但是不能读写文件内容。</strong></p>
+<p>File类创建对象API</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public File(String pathname)</td>
+<td>根据文件路径创建文件对象</td>
+</tr>
+<tr>
+<td>public File(String parent, String child)</td>
+<td>从父路径名字符串和子路径名字符串创建文件对象</td>
+</tr>
+<tr>
+<td>public File(File parent, String child)</td>
+<td>根据父路径对应文件对象和子路径名字符串创建文件对象</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>JavaSE</category>
+      </categories>
+      <tags>
+        <tag>JavaSE</tag>
       </tags>
   </entry>
   <entry>
@@ -549,161 +589,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaSE02-Java中的文件与方法递归与IO流</title>
-    <url>/posts/10101.html</url>
-    <content><![CDATA[<p>详细的描述了Java中 File类的使用，一步一步剖析了IO流如何创建、如何使用以及其中的注意事项。</p>
-<p>File类使用：详细的描述了使用File的对象操作文件，如:删除、获取文件信息、创建文件夹等<br>方法递归：详细的描述了递归算法思想并能完成常见递归题目，以及文件搜索<br>字符集：程序中经常要读取文件中的数据，知道数据的底层形式才能够去学习如何读写数据<br>IO流的作用：使用IO流完成文件数据的读写等操作<br>字节流与字符流：数据的类型很多，要学会选择不同的流进行读写操作<br><span id="more"></span></p>
-<p><img src="C:/Users/Wang/AppData/Roaming/Typora/typora-user-images/image-20230524214623406.png" alt="image-20230524214623406"></p>
-<h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><p><strong>File类在包java.io.File下、代表操作系统的文件对象（文件、文件夹）。</strong><br><strong>File类提供了诸如∶定位文件，获取文件本身的信息、删除文件、创建文件（文件夹）等功能</strong><br><strong>但是不能读写文件内容。</strong></p>
-<p>File类创建对象API</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法名称</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>public File(String pathname)</td>
-<td>根据文件路径创建文件对象</td>
-</tr>
-<tr>
-<td>public File(String parent, String child)</td>
-<td>从父路径名字符串和子路径名字符串创建文件对象</td>
-</tr>
-<tr>
-<td>public File(File parent, String child)</td>
-<td>根据父路径对应文件对象和子路径名字符串创建文件对象</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>JavaSE</category>
-      </categories>
-      <tags>
-        <tag>JavaSE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL02-存储引擎</title>
-    <url>/posts/10401.html</url>
-    <content><![CDATA[<p>详细的描述了MySQL中的引擎之间的区别和选择。<br><span id="more"></span></p>
-<h3 id="MySQL体系结构"><a href="#MySQL体系结构" class="headerlink" title="MySQL体系结构"></a>MySQL体系结构</h3><p><img src="https://wang-nine.cn/iamges/MySQL02-01%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png" alt="MySQL02-01体系结构"></p>
-<h4 id="连接层"><a href="#连接层" class="headerlink" title="连接层"></a>连接层</h4><blockquote>
-<p>最上层是一些客户端和链接服务，主要完成一些类似于连接处理、授权认证、及相关的安全方案。服务器也会为安全接入的每个客户端验证它所具有的操作权限。</p>
-</blockquote>
-<h4 id="服务层"><a href="#服务层" class="headerlink" title="服务层"></a>服务层</h4><blockquote>
-<p>第二层架构主要完成大多数的核心服务功能，如SQL接口，并完成缓存的查询，SQL的分析和优化，部分内置函数的执行。所有跨存储引擎的功能也在这一层实现，如过程、函数等。</p>
-</blockquote>
-<h4 id="引擎层"><a href="#引擎层" class="headerlink" title="引擎层"></a>引擎层</h4><blockquote>
-<p>存储引擎真正的负责了MySQL中数据的存储和提取，服务器通过API和存储引擎进行通信。不同的存储引擎具有不同的功能，这样我们可以根据自己的需要，来选取合适的存储引擎。</p>
-</blockquote>
-<h4 id="存储层"><a href="#存储层" class="headerlink" title="存储层"></a>存储层</h4><blockquote>
-<p>主要是将数据存储在文件系统之上，并完成与存储引擎的交互。</p>
-</blockquote>
-<h3 id="存储引擎简介"><a href="#存储引擎简介" class="headerlink" title="存储引擎简介"></a>存储引擎简介</h3><p>建表语句中使用 ENGINE = 引擎名 可以指定使用何种引擎<br>查看当前数据库支持的引擎： SHOW ENGINES；</p>
-<h3 id="存储引擎的特点"><a href="#存储引擎的特点" class="headerlink" title="存储引擎的特点"></a>存储引擎的特点</h3><h4 id="InnoDB"><a href="#InnoDB" class="headerlink" title="InnoDB"></a>InnoDB</h4><p>简介<br>InnoDB是一种兼顾高可靠性和高性能的通用存储引擎，在MySQL 5.5之后，InnoDB是默认的MySQL存储引擎。</p>
-<p>特点（事务，外键，行级锁）<br>DML操作遵循ACID模型,支持<strong>事务</strong><br>支持<strong>外键</strong>FOREIGN KEY约束，保证数据的完整性和正确性<br><strong>行级锁</strong>，提高并发访问性能</p>
-<p>文件<br>xxx.ibd: xxx代表的是表名，innoDB引擎的每张表都会对应这样一个表空间文件，存储该表的表结构(frm、gdi) 、数据和索引。参数: innodb_file_per_table</p>
-<p><img src="https://wang-nine.cn/iamges/MySQL02-02InnoDB.png" alt="MySQL02-02InnoDB"></p>
-<h4 id="MyISAM"><a href="#MyISAM" class="headerlink" title="MyISAM"></a>MyISAM</h4><p>简介<br>MylSAM是MySQL早期的默认存储引擎。</p>
-<p>特点<br>不支持事务<br>不支持外键支持表锁<br>不支持行锁访问速度快</p>
-<p>文件<br>xxx.sdi:存储表结构信息<br>xxx.MYD:存储数据<br>xxx.MYI:存储索引</p>
-<h4 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h4><p>介绍<br>Memory引擎的表数据时存储在内存中的，由于受到硬件问题、或断电问题的影响，只能将这些表作为临时表或缓存使用。</p>
-<p>特点<br>内存存放<br>hash索引（默认)</p>
-<p>文件<br>xxx.sdi:存储表结构信息</p>
-<p>比较：（来自黑马程序员，侵删）</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">特点</th>
-<th style="text-align:center">InnoDB</th>
-<th style="text-align:center">MyISAM</th>
-<th style="text-align:center">Memory</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">存储限制</td>
-<td style="text-align:center">64TB</td>
-<td style="text-align:center">有</td>
-<td style="text-align:center">有</td>
-</tr>
-<tr>
-<td style="text-align:center">事务安全</td>
-<td style="text-align:center"><strong>支持</strong></td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td style="text-align:center">锁机制</td>
-<td style="text-align:center"><strong>行锁</strong></td>
-<td style="text-align:center">表锁</td>
-<td style="text-align:center">表锁</td>
-</tr>
-<tr>
-<td style="text-align:center">B+Tree索引</td>
-<td style="text-align:center">支持</td>
-<td style="text-align:center">支持</td>
-<td style="text-align:center">支持</td>
-</tr>
-<tr>
-<td style="text-align:center">Hash索引</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">支持</td>
-</tr>
-<tr>
-<td style="text-align:center">全文索引</td>
-<td style="text-align:center">支持</td>
-<td style="text-align:center">支持</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td style="text-align:center">空间使用</td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">低</td>
-<td style="text-align:center">N/A</td>
-</tr>
-<tr>
-<td style="text-align:center">内存使用</td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">低</td>
-<td style="text-align:center">中等</td>
-</tr>
-<tr>
-<td style="text-align:center">批量插入速度</td>
-<td style="text-align:center">低</td>
-<td style="text-align:center">高</td>
-<td style="text-align:center">高</td>
-</tr>
-<tr>
-<td style="text-align:center">支持外键</td>
-<td style="text-align:center"><strong>支持</strong></td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="存储引擎的选择（总结自黑马程序员MySQL课程，侵删）"><a href="#存储引擎的选择（总结自黑马程序员MySQL课程，侵删）" class="headerlink" title="存储引擎的选择（总结自黑马程序员MySQL课程，侵删）"></a>存储引擎的选择（总结自黑马程序员MySQL课程，侵删）</h3><p>在选择存储引擎时，应该根据应用系统的特点选择合适的存储引擎。对于复杂的应用系统，还可以根据实际情况选择多种存储引擎进行组合。</p>
-<p>InnoDB:是Mysql的默认存储引擎，支持事务、外键。如果应用对事务的完整性有比较高的要求，在并发条件下要求数据的一致性，数据操怍除了插入和查询之外，还包含很多的更新、删除操作，那么InnoDB存储引擎是比较合适的选择。</p>
-<p>MyISAM:如果应用是以读操作和插入操作为主，只有很少的更新和删除操作，并且对事务的完整性、并发性要求不是很高，那么选择这个存储引擎是非常合适的。（被MongoDB取代）</p>
-<p>MEMORY:将所有数据保存在内存中，访问速度快，通常用于临时表及缓存。MEMORY的缺陷就是对表的大小有限制，太大的表无法缓存在内存中，而且无法保障数据的安全性。（被Redis取代）</p>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL03-索引01-结构</title>
     <url>/posts/10402.html</url>
     <content><![CDATA[<p>详细的描述了MySQL中的索引的结构。<br><span id="more"></span></p>
@@ -1004,6 +889,121 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL02-存储引擎</title>
+    <url>/posts/10401.html</url>
+    <content><![CDATA[<p>详细的描述了MySQL中的引擎之间的区别和选择。<br><span id="more"></span></p>
+<h3 id="MySQL体系结构"><a href="#MySQL体系结构" class="headerlink" title="MySQL体系结构"></a>MySQL体系结构</h3><p><img src="https://wang-nine.cn/iamges/MySQL02-01%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png" alt="MySQL02-01体系结构"></p>
+<h4 id="连接层"><a href="#连接层" class="headerlink" title="连接层"></a>连接层</h4><blockquote>
+<p>最上层是一些客户端和链接服务，主要完成一些类似于连接处理、授权认证、及相关的安全方案。服务器也会为安全接入的每个客户端验证它所具有的操作权限。</p>
+</blockquote>
+<h4 id="服务层"><a href="#服务层" class="headerlink" title="服务层"></a>服务层</h4><blockquote>
+<p>第二层架构主要完成大多数的核心服务功能，如SQL接口，并完成缓存的查询，SQL的分析和优化，部分内置函数的执行。所有跨存储引擎的功能也在这一层实现，如过程、函数等。</p>
+</blockquote>
+<h4 id="引擎层"><a href="#引擎层" class="headerlink" title="引擎层"></a>引擎层</h4><blockquote>
+<p>存储引擎真正的负责了MySQL中数据的存储和提取，服务器通过API和存储引擎进行通信。不同的存储引擎具有不同的功能，这样我们可以根据自己的需要，来选取合适的存储引擎。</p>
+</blockquote>
+<h4 id="存储层"><a href="#存储层" class="headerlink" title="存储层"></a>存储层</h4><blockquote>
+<p>主要是将数据存储在文件系统之上，并完成与存储引擎的交互。</p>
+</blockquote>
+<h3 id="存储引擎简介"><a href="#存储引擎简介" class="headerlink" title="存储引擎简介"></a>存储引擎简介</h3><p>建表语句中使用 ENGINE = 引擎名 可以指定使用何种引擎<br>查看当前数据库支持的引擎： SHOW ENGINES；</p>
+<h3 id="存储引擎的特点"><a href="#存储引擎的特点" class="headerlink" title="存储引擎的特点"></a>存储引擎的特点</h3><h4 id="InnoDB"><a href="#InnoDB" class="headerlink" title="InnoDB"></a>InnoDB</h4><p>简介<br>InnoDB是一种兼顾高可靠性和高性能的通用存储引擎，在MySQL 5.5之后，InnoDB是默认的MySQL存储引擎。</p>
+<p>特点（事务，外键，行级锁）<br>DML操作遵循ACID模型,支持<strong>事务</strong><br>支持<strong>外键</strong>FOREIGN KEY约束，保证数据的完整性和正确性<br><strong>行级锁</strong>，提高并发访问性能</p>
+<p>文件<br>xxx.ibd: xxx代表的是表名，innoDB引擎的每张表都会对应这样一个表空间文件，存储该表的表结构(frm、gdi) 、数据和索引。参数: innodb_file_per_table</p>
+<p><img src="https://wang-nine.cn/iamges/MySQL02-02InnoDB.png" alt="MySQL02-02InnoDB"></p>
+<h4 id="MyISAM"><a href="#MyISAM" class="headerlink" title="MyISAM"></a>MyISAM</h4><p>简介<br>MylSAM是MySQL早期的默认存储引擎。</p>
+<p>特点<br>不支持事务<br>不支持外键支持表锁<br>不支持行锁访问速度快</p>
+<p>文件<br>xxx.sdi:存储表结构信息<br>xxx.MYD:存储数据<br>xxx.MYI:存储索引</p>
+<h4 id="Memory"><a href="#Memory" class="headerlink" title="Memory"></a>Memory</h4><p>介绍<br>Memory引擎的表数据时存储在内存中的，由于受到硬件问题、或断电问题的影响，只能将这些表作为临时表或缓存使用。</p>
+<p>特点<br>内存存放<br>hash索引（默认)</p>
+<p>文件<br>xxx.sdi:存储表结构信息</p>
+<p>比较：（来自黑马程序员，侵删）</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">特点</th>
+<th style="text-align:center">InnoDB</th>
+<th style="text-align:center">MyISAM</th>
+<th style="text-align:center">Memory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">存储限制</td>
+<td style="text-align:center">64TB</td>
+<td style="text-align:center">有</td>
+<td style="text-align:center">有</td>
+</tr>
+<tr>
+<td style="text-align:center">事务安全</td>
+<td style="text-align:center"><strong>支持</strong></td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">锁机制</td>
+<td style="text-align:center"><strong>行锁</strong></td>
+<td style="text-align:center">表锁</td>
+<td style="text-align:center">表锁</td>
+</tr>
+<tr>
+<td style="text-align:center">B+Tree索引</td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">支持</td>
+</tr>
+<tr>
+<td style="text-align:center">Hash索引</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">支持</td>
+</tr>
+<tr>
+<td style="text-align:center">全文索引</td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">空间使用</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">低</td>
+<td style="text-align:center">N/A</td>
+</tr>
+<tr>
+<td style="text-align:center">内存使用</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">低</td>
+<td style="text-align:center">中等</td>
+</tr>
+<tr>
+<td style="text-align:center">批量插入速度</td>
+<td style="text-align:center">低</td>
+<td style="text-align:center">高</td>
+<td style="text-align:center">高</td>
+</tr>
+<tr>
+<td style="text-align:center">支持外键</td>
+<td style="text-align:center"><strong>支持</strong></td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="存储引擎的选择（总结自黑马程序员MySQL课程，侵删）"><a href="#存储引擎的选择（总结自黑马程序员MySQL课程，侵删）" class="headerlink" title="存储引擎的选择（总结自黑马程序员MySQL课程，侵删）"></a>存储引擎的选择（总结自黑马程序员MySQL课程，侵删）</h3><p>在选择存储引擎时，应该根据应用系统的特点选择合适的存储引擎。对于复杂的应用系统，还可以根据实际情况选择多种存储引擎进行组合。</p>
+<p>InnoDB:是Mysql的默认存储引擎，支持事务、外键。如果应用对事务的完整性有比较高的要求，在并发条件下要求数据的一致性，数据操怍除了插入和查询之外，还包含很多的更新、删除操作，那么InnoDB存储引擎是比较合适的选择。</p>
+<p>MyISAM:如果应用是以读操作和插入操作为主，只有很少的更新和删除操作，并且对事务的完整性、并发性要求不是很高，那么选择这个存储引擎是非常合适的。（被MongoDB取代）</p>
+<p>MEMORY:将所有数据保存在内存中，访问速度快，通常用于临时表及缓存。MEMORY的缺陷就是对表的大小有限制，太大的表无法缓存在内存中，而且无法保障数据的安全性。（被Redis取代）</p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL03-索引03-使用规则</title>
     <url>/posts/10404.html</url>
     <content><![CDATA[<p>详细的描述了MySQL中的索引的使用规则和设计原则。<br><span id="more"></span></p>
@@ -1069,69 +1069,6 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始的SSM框架-01-Spring中的Bean</title>
-    <url>/posts/10300.html</url>
-    <content><![CDATA[<p> 简单的介绍了Spring中的架构以及IOC和DI。<br><span id="more"></span></p>
-<h3 id="Spring-FrameWork架构"><a href="#Spring-FrameWork架构" class="headerlink" title="Spring FrameWork架构"></a>Spring FrameWork架构</h3><p><strong>Spring Framework是Spring生态圈中最基础的项目，是其他项目的根基</strong></p>
-<p><strong>Spirng FrameWork的架构</strong></p>
-<p><img src="https://wang-nine.cn/images/SSM01-01SpringFrameWork%E6%9E%B6%E6%9E%84.png" alt="SSM01-01SpringFrameWork架构"></p>
-<h3 id="Spring核心概念"><a href="#Spring核心概念" class="headerlink" title="Spring核心概念"></a>Spring核心概念</h3><h4 id="IoC-Inversion-of-Control-控制反转"><a href="#IoC-Inversion-of-Control-控制反转" class="headerlink" title="IoC ( Inversion of Control )控制反转"></a><strong>IoC ( Inversion of Control )控制反转</strong></h4><blockquote>
-<p>使用对象时，由主动new产生对象转换为由<strong>外部</strong>提供对象，此过程中对象创建控制权由程序转移到<strong>外部</strong>，此思想称为控制反转</p>
-<p>Spring技术对IoC思想进行了实现Spring提供了一个容器，，称为IoC容器，用来充当IoC思想中的”<strong>外部</strong>“</p>
-<p>IoC容器负责对象的创建、初始化等一系列工作，被创建或被管理的对象在IoC容器中统称为Bean</p>
-</blockquote>
-<h4 id="DI-Dependency-Injection-依赖注入"><a href="#DI-Dependency-Injection-依赖注入" class="headerlink" title="DI ( Dependency Injection)依赖注入"></a><strong>DI ( Dependency Injection)依赖注入</strong></h4><blockquote>
-<p>在容器中建立bean与bean之间的依赖关系的整个过程，称为依赖注入</p>
-</blockquote>
-<h3 id="IoC入门案例"><a href="#IoC入门案例" class="headerlink" title="IoC入门案例"></a>IoC入门案例</h3><blockquote>
-<p>思路分析：<br>1.管理什么? （Service与Dao）<br>2.如何将被管理的对象告知IoC容器?（配置）<br>3.被管理的对象交给IoC容器，如何获取到IoC容器?（接口）<br>4.IoC容器得到后，如何从容器中获取bean ?（接口方法）<br>5.使用Spring导入哪些坐标?（pom.xml）</p>
-</blockquote>
-<h4 id="非Spring环境下"><a href="#非Spring环境下" class="headerlink" title="非Spring环境下"></a>非Spring环境下</h4><p>案例代码如下：</p>
-<p>Service层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.dao.impl.DaoImpl;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DaoImpl</span>();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>DAO层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaoImpl</span> <span class="keyword">implements</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao save() ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>主函数代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"><span class="keyword">import</span> wang.service.impl.ServiceImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServiceImpl</span>();</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><img src="https://wang-nine.cn/images/SSM01-02%E9%9D%9ESpring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-02非Spring环境样例"></p>
-<h4 id="Spring环境下"><a href="#Spring环境下" class="headerlink" title="Spring环境下"></a>Spring环境下</h4><p>别忘记在pom.xml中引入spring-context<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.10.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>在resources中创建配置文件（名称：applicationContext.xml）：如图<br><img src="https://wang-nine.cn/images/SSM01-03%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" alt="SSM01-03配置文件"></p>
-<p>在配置文件中输入以下的代码<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--导入spring的坐标spring-context，对应版本是5.2.10.RELEASE--&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--配置bean--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--bean标签标示配置bean</span></span><br><span class="line"><span class="comment">    id属性标示给bean起名字</span></span><br><span class="line"><span class="comment">    class属性表示给bean定义类型--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Dao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>主函数代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 获取IoC容器</span></span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取Bean</span></span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> (Service) ctx.getBean(<span class="string">&quot;Service&quot;</span>);</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>此时运行样例与非Spring方式相同如下：<br><img src="https://wang-nine.cn/images/SSM01-04Spring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-04Spring环境样例"></p>
-<p><strong>综上：可以分为四步</strong></p>
-<blockquote>
-<p><strong>1.导入Spring坐标</strong></p>
-<p><strong>2.定义Spring管理的类（接口）</strong></p>
-<p><strong>3.创建Spring配置文件进行配置</strong></p>
-<p><strong>4.初始化IoC容器，从容器中获取Bean（getBean方法）</strong></p>
-</blockquote>
-<p><strong>问题：业务层中仍然是使用new创建对象，仍然耦合，那么如何解耦合呢？</strong></p>
-<h3 id="DI入门案例"><a href="#DI入门案例" class="headerlink" title="DI入门案例"></a>DI入门案例</h3><blockquote>
-<p>思路分析：<br>1.基于IoC管理bean<br>2.Service使用new形式创建的Dao对象是否保留?（否）<br>3.Service中需要的Dao对象如何进入到service中?（提供方法）<br>4.Service与Dao间的关系如何描述?（配置）</p>
-</blockquote>
-<p>改变Service层实现代码如下<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="comment">// 删除业务层以new的方式创建Dao对象</span></span><br><span class="line">    <span class="comment">//private Dao dao = new DaoImpl();</span></span><br><span class="line">    <span class="keyword">private</span> Dao dao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提供对应的set方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setDao</span><span class="params">(Dao dao)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.dao = dao;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>修改applicationContext.xml中配置：<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--7.配置server与dao的关系--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--property标签表示配置当前bean的属性</span></span><br><span class="line"><span class="comment">        name属性表示配置哪一个具体的属性</span></span><br><span class="line"><span class="comment">        ref属性表示参照哪一个bean--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dao&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;Dao&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>注意：name是上述的（private Dao dao;）语句中的变量名，ref是bean的名字。</strong></p>
-</blockquote>
-<p>运行结果与上述一样：<br><img src="https://wang-nine.cn/images/SSM01-05DI.png" alt="SSM01-05DI"></p>
-<p><strong>综上：可以分为三步</strong></p>
-<blockquote>
-<p>1.<strong>删除以new的形式创建对象的代码</strong></p>
-<p>2.<strong>提供对应的Set方法</strong></p>
-<p>3.<strong>配置Service与Dao之间的关系</strong></p>
-</blockquote>
-<p><strong>注意在Bean标签中还可以进行以下的配置：</strong></p>
-<p><strong>属性name：定义Bean的别名</strong></p>
-<p><strong>属性scope：定义作用范围 singleton（默认，单例）  prototype（非单例）</strong></p>
-]]></content>
-      <categories>
-        <category>SSM</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
@@ -1202,6 +1139,69 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始的SSM框架-01-Spring中的Bean</title>
+    <url>/posts/10300.html</url>
+    <content><![CDATA[<p> 简单的介绍了Spring中的架构以及IOC和DI。<br><span id="more"></span></p>
+<h3 id="Spring-FrameWork架构"><a href="#Spring-FrameWork架构" class="headerlink" title="Spring FrameWork架构"></a>Spring FrameWork架构</h3><p><strong>Spring Framework是Spring生态圈中最基础的项目，是其他项目的根基</strong></p>
+<p><strong>Spirng FrameWork的架构</strong></p>
+<p><img src="https://wang-nine.cn/images/SSM01-01SpringFrameWork%E6%9E%B6%E6%9E%84.png" alt="SSM01-01SpringFrameWork架构"></p>
+<h3 id="Spring核心概念"><a href="#Spring核心概念" class="headerlink" title="Spring核心概念"></a>Spring核心概念</h3><h4 id="IoC-Inversion-of-Control-控制反转"><a href="#IoC-Inversion-of-Control-控制反转" class="headerlink" title="IoC ( Inversion of Control )控制反转"></a><strong>IoC ( Inversion of Control )控制反转</strong></h4><blockquote>
+<p>使用对象时，由主动new产生对象转换为由<strong>外部</strong>提供对象，此过程中对象创建控制权由程序转移到<strong>外部</strong>，此思想称为控制反转</p>
+<p>Spring技术对IoC思想进行了实现Spring提供了一个容器，，称为IoC容器，用来充当IoC思想中的”<strong>外部</strong>“</p>
+<p>IoC容器负责对象的创建、初始化等一系列工作，被创建或被管理的对象在IoC容器中统称为Bean</p>
+</blockquote>
+<h4 id="DI-Dependency-Injection-依赖注入"><a href="#DI-Dependency-Injection-依赖注入" class="headerlink" title="DI ( Dependency Injection)依赖注入"></a><strong>DI ( Dependency Injection)依赖注入</strong></h4><blockquote>
+<p>在容器中建立bean与bean之间的依赖关系的整个过程，称为依赖注入</p>
+</blockquote>
+<h3 id="IoC入门案例"><a href="#IoC入门案例" class="headerlink" title="IoC入门案例"></a>IoC入门案例</h3><blockquote>
+<p>思路分析：<br>1.管理什么? （Service与Dao）<br>2.如何将被管理的对象告知IoC容器?（配置）<br>3.被管理的对象交给IoC容器，如何获取到IoC容器?（接口）<br>4.IoC容器得到后，如何从容器中获取bean ?（接口方法）<br>5.使用Spring导入哪些坐标?（pom.xml）</p>
+</blockquote>
+<h4 id="非Spring环境下"><a href="#非Spring环境下" class="headerlink" title="非Spring环境下"></a>非Spring环境下</h4><p>案例代码如下：</p>
+<p>Service层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.dao.impl.DaoImpl;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DaoImpl</span>();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>DAO层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaoImpl</span> <span class="keyword">implements</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao save() ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>主函数代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"><span class="keyword">import</span> wang.service.impl.ServiceImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServiceImpl</span>();</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><img src="https://wang-nine.cn/images/SSM01-02%E9%9D%9ESpring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-02非Spring环境样例"></p>
+<h4 id="Spring环境下"><a href="#Spring环境下" class="headerlink" title="Spring环境下"></a>Spring环境下</h4><p>别忘记在pom.xml中引入spring-context<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.10.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>在resources中创建配置文件（名称：applicationContext.xml）：如图<br><img src="https://wang-nine.cn/images/SSM01-03%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" alt="SSM01-03配置文件"></p>
+<p>在配置文件中输入以下的代码<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--导入spring的坐标spring-context，对应版本是5.2.10.RELEASE--&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--配置bean--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--bean标签标示配置bean</span></span><br><span class="line"><span class="comment">    id属性标示给bean起名字</span></span><br><span class="line"><span class="comment">    class属性表示给bean定义类型--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Dao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>主函数代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 获取IoC容器</span></span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取Bean</span></span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> (Service) ctx.getBean(<span class="string">&quot;Service&quot;</span>);</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>此时运行样例与非Spring方式相同如下：<br><img src="https://wang-nine.cn/images/SSM01-04Spring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-04Spring环境样例"></p>
+<p><strong>综上：可以分为四步</strong></p>
+<blockquote>
+<p><strong>1.导入Spring坐标</strong></p>
+<p><strong>2.定义Spring管理的类（接口）</strong></p>
+<p><strong>3.创建Spring配置文件进行配置</strong></p>
+<p><strong>4.初始化IoC容器，从容器中获取Bean（getBean方法）</strong></p>
+</blockquote>
+<p><strong>问题：业务层中仍然是使用new创建对象，仍然耦合，那么如何解耦合呢？</strong></p>
+<h3 id="DI入门案例"><a href="#DI入门案例" class="headerlink" title="DI入门案例"></a>DI入门案例</h3><blockquote>
+<p>思路分析：<br>1.基于IoC管理bean<br>2.Service使用new形式创建的Dao对象是否保留?（否）<br>3.Service中需要的Dao对象如何进入到service中?（提供方法）<br>4.Service与Dao间的关系如何描述?（配置）</p>
+</blockquote>
+<p>改变Service层实现代码如下<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="comment">// 删除业务层以new的方式创建Dao对象</span></span><br><span class="line">    <span class="comment">//private Dao dao = new DaoImpl();</span></span><br><span class="line">    <span class="keyword">private</span> Dao dao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提供对应的set方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setDao</span><span class="params">(Dao dao)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.dao = dao;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>修改applicationContext.xml中配置：<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--7.配置server与dao的关系--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--property标签表示配置当前bean的属性</span></span><br><span class="line"><span class="comment">        name属性表示配置哪一个具体的属性</span></span><br><span class="line"><span class="comment">        ref属性表示参照哪一个bean--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dao&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;Dao&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>注意：name是上述的（private Dao dao;）语句中的变量名，ref是bean的名字。</strong></p>
+</blockquote>
+<p>运行结果与上述一样：<br><img src="https://wang-nine.cn/images/SSM01-05DI.png" alt="SSM01-05DI"></p>
+<p><strong>综上：可以分为三步</strong></p>
+<blockquote>
+<p>1.<strong>删除以new的形式创建对象的代码</strong></p>
+<p>2.<strong>提供对应的Set方法</strong></p>
+<p>3.<strong>配置Service与Dao之间的关系</strong></p>
+</blockquote>
+<p><strong>注意在Bean标签中还可以进行以下的配置：</strong></p>
+<p><strong>属性name：定义Bean的别名</strong></p>
+<p><strong>属性scope：定义作用范围 singleton（默认，单例）  prototype（非单例）</strong></p>
+]]></content>
+      <categories>
+        <category>SSM</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
@@ -1889,13 +1889,13 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>相册</title>
-    <url>/gallery/index.html</url>
+    <title></title>
+    <url>/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
+    <title>相册</title>
+    <url>/gallery/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -1904,8 +1904,8 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/index.html</url>
+    <title>标签</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
