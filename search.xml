@@ -1,42 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo+Butterfly主题博客搭建01</title>
-    <url>/posts/10001.html</url>
-    <content><![CDATA[<p>Hexo+Butterfly主题博客搭建01 ——— 个人博客搭建的基础环境配置工作<br><span id="more"></span></p>
-<h3 id="Node-js的配置"><a href="#Node-js的配置" class="headerlink" title="Node.js的配置"></a>Node.js的配置</h3><p><a href="https://nodejs.org/en/download">nodejs的官网</a></p>
-<p>选择适合自己系统的下载即可，大部分人应该是Windows Installer (.msi) 64位，选择msi位安装程序，mac和linux用户选择适合自己的版本即可。</p>
-<p>安装是一路默认选项即可，<strong>注意安装的路径可以根据自己的需求，一定要记住安装在哪里了</strong></p>
-<p>安装完成之后可以在cmd中测试是否安装成功</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<p><img src="https://wang-nine.cn/iamges/Hexo01-01%E6%9F%A5%E7%9C%8Bnode%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="Hexo01-01查看node是否安装成功"></p>
-<h3 id="Git的配置"><a href="#Git的配置" class="headerlink" title="Git的配置"></a>Git的配置</h3><p><a href="https://git-scm.com/">Git的官网</a></p>
-<p><img src="https://wang-nine.cn/iamges/Hexo01-02Git%E5%AE%89%E8%A3%85-1.png" alt="Hexo01-02Git安装-1"></p>
-<p>选择适合自己系统的下载即可，大部分人应该是Windows64位，所以直接点击Downloade for Windows即可。</p>
-<p>安装是一路默认选项即可，<strong>注意安装的路径可以根据自己的需求，一定要记住安装在哪里了</strong></p>
-<p>安装完成之后可以在cmd中测试是否安装成功</p>
-<h3 id="github的配置"><a href="#github的配置" class="headerlink" title="github的配置"></a>github的配置</h3><p>在github新建一个仓库</p>
-<blockquote>
-<p>名称为 <strong>你的名称.github.io</strong></p>
-</blockquote>
-<p>如图所示为我的仓库样例：</p>
-<p><img src="https://wang-nine.cn/iamges/Hexo01-03github%E7%9A%84%E9%85%8D%E7%BD%AE.png" alt="Hexo01-03github的配置"></p>
-<h3 id="博客的初始化"><a href="#博客的初始化" class="headerlink" title="博客的初始化"></a>博客的初始化</h3><h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>所有必备的应用程序安装完成后，即可使用<code>npm</code>安装<code>Hexo</code>。不要觉得安装这个框架有多复杂，只需要一条命令就可以了。<code>npm</code>是安装工具，<code>install</code>表示安装，<code>-g</code>表示全局安装，<code>hexo-cli</code>表示安装的是hexo框架。</p>
-<p>在 git 命令行下输入下述的命令，<strong>若无法安装可能是因为权限不够，可以以管理员权限运行 gitbash</strong></p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<h4 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h4><p>安装完框架之后新建一个存放博客的文件夹Blog，这里在D盘新建了一个Blog文件夹，在该文件夹下右键Git Bash Here并输入<code>hexo init</code>命令初始化这个文件夹。注意新建 Blog 文件夹和初始化这个文件夹只需要下面这条命令就可以了。</p>
-<h4 id="启动和配置博客"><a href="#启动和配置博客" class="headerlink" title="启动和配置博客"></a>启动和配置博客</h4><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo clean  # 清除缓存</span><br><span class="line">hexo g      # 生成静态网页</span><br><span class="line">hexo d      # 部署到Github</span><br><span class="line">hexo s 		# 是 hexo server 的缩写，启动本地服务器，用于预览主题。默认地址： http://localhost:4000/</span><br></pre></td></tr></table></figure>
-<p>此时输入 <code>hexo clean</code>  <code>hexo d</code>  <code>hexo h</code>  <code>hexo s</code> 命令即可初步查看自己的 Blog 页面<br>在浏览器输入 <a href="http://localhost:4000/">http://localhost:4000/</a> 即可访问<br>顺利的话，在浏览器输入：<code>用户名.github.io</code> 即可初步访问自己的博客</p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo-Butterfly主题博客搭建02</title>
     <url>/posts/10002.html</url>
     <content><![CDATA[<p>Hexo+Butterfly主题博客搭建02 ——— 下载有关butterfly主题并进行配置<br><span id="more"></span></p>
@@ -66,9 +30,34 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo-Butterfly主题博客搭建03</title>
-    <url>/posts/10003.html</url>
-    <content><![CDATA[]]></content>
+    <title>Hexo+Butterfly主题博客搭建01</title>
+    <url>/posts/10001.html</url>
+    <content><![CDATA[<p>Hexo+Butterfly主题博客搭建01 ——— 个人博客搭建的基础环境配置工作<br><span id="more"></span></p>
+<h3 id="Node-js的配置"><a href="#Node-js的配置" class="headerlink" title="Node.js的配置"></a>Node.js的配置</h3><p><a href="https://nodejs.org/en/download">nodejs的官网</a></p>
+<p>选择适合自己系统的下载即可，大部分人应该是Windows Installer (.msi) 64位，选择msi位安装程序，mac和linux用户选择适合自己的版本即可。</p>
+<p>安装是一路默认选项即可，<strong>注意安装的路径可以根据自己的需求，一定要记住安装在哪里了</strong></p>
+<p>安装完成之后可以在cmd中测试是否安装成功</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p><img src="https://wang-nine.cn/images/Hexo01-01%E6%9F%A5%E7%9C%8Bnode%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F.png" alt="Hexo01-01查看node是否安装成功"></p>
+<h3 id="Git的配置"><a href="#Git的配置" class="headerlink" title="Git的配置"></a>Git的配置</h3><p><a href="https://git-scm.com/">Git的官网</a></p>
+<p><img src="https://wang-nine.cn/images/Hexo01-02Git%E5%AE%89%E8%A3%85-1.png" alt="Hexo01-02Git安装-1"></p>
+<p>选择适合自己系统的下载即可，大部分人应该是Windows64位，所以直接点击Downloade for Windows即可。</p>
+<p>安装是一路默认选项即可，<strong>注意安装的路径可以根据自己的需求，一定要记住安装在哪里了</strong></p>
+<p>安装完成之后可以在cmd中测试是否安装成功</p>
+<h3 id="github的配置"><a href="#github的配置" class="headerlink" title="github的配置"></a>github的配置</h3><p>在github新建一个仓库</p>
+<blockquote>
+<p>名称为 <strong>你的名称.github.io</strong></p>
+</blockquote>
+<p>如图所示为我的仓库样例：</p>
+<p><img src="https://wang-nine.cn/images/Hexo01-03github%E7%9A%84%E9%85%8D%E7%BD%AE.png" alt="Hexo01-03github的配置"></p>
+<h3 id="博客的初始化"><a href="#博客的初始化" class="headerlink" title="博客的初始化"></a>博客的初始化</h3><h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><p>所有必备的应用程序安装完成后，即可使用<code>npm</code>安装<code>Hexo</code>。不要觉得安装这个框架有多复杂，只需要一条命令就可以了。<code>npm</code>是安装工具，<code>install</code>表示安装，<code>-g</code>表示全局安装，<code>hexo-cli</code>表示安装的是hexo框架。</p>
+<p>在 git 命令行下输入下述的命令，<strong>若无法安装可能是因为权限不够，可以以管理员权限运行 gitbash</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h4 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h4><p>安装完框架之后新建一个存放博客的文件夹Blog，这里在D盘新建了一个Blog文件夹，在该文件夹下右键Git Bash Here并输入<code>hexo init</code>命令初始化这个文件夹。注意新建 Blog 文件夹和初始化这个文件夹只需要下面这条命令就可以了。</p>
+<h4 id="启动和配置博客"><a href="#启动和配置博客" class="headerlink" title="启动和配置博客"></a>启动和配置博客</h4><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo clean  # 清除缓存</span><br><span class="line">hexo g      # 生成静态网页</span><br><span class="line">hexo d      # 部署到Github</span><br><span class="line">hexo s 		# 是 hexo server 的缩写，启动本地服务器，用于预览主题。默认地址： http://localhost:4000/</span><br></pre></td></tr></table></figure>
+<p>此时输入 <code>hexo clean</code>  <code>hexo d</code>  <code>hexo h</code>  <code>hexo s</code> 命令即可初步查看自己的 Blog 页面<br>在浏览器输入 <a href="http://localhost:4000/">http://localhost:4000/</a> 即可访问<br>顺利的话，在浏览器输入：<code>用户名.github.io</code> 即可初步访问自己的博客</p>
+]]></content>
       <categories>
         <category>博客搭建</category>
       </categories>
@@ -77,43 +66,14 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaSE02-Java中的文件与方法递归与IO流</title>
-    <url>/posts/10101.html</url>
-    <content><![CDATA[<p>详细的描述了Java中 File类的使用，一步一步剖析了IO流如何创建、如何使用以及其中的注意事项。</p>
-<p>File类使用：详细的描述了使用File的对象操作文件，如:删除、获取文件信息、创建文件夹等<br>方法递归：详细的描述了递归算法思想并能完成常见递归题目，以及文件搜索<br>字符集：程序中经常要读取文件中的数据，知道数据的底层形式才能够去学习如何读写数据<br>IO流的作用：使用IO流完成文件数据的读写等操作<br>字节流与字符流：数据的类型很多，要学会选择不同的流进行读写操作<br><span id="more"></span></p>
-<p><img src="C:/Users/Wang/AppData/Roaming/Typora/typora-user-images/image-20230524214623406.png" alt="image-20230524214623406"></p>
-<h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><p><strong>File类在包java.io.File下、代表操作系统的文件对象（文件、文件夹）。</strong><br><strong>File类提供了诸如∶定位文件，获取文件本身的信息、删除文件、创建文件（文件夹）等功能</strong><br><strong>但是不能读写文件内容。</strong></p>
-<p>File类创建对象API</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法名称</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>public File(String pathname)</td>
-<td>根据文件路径创建文件对象</td>
-</tr>
-<tr>
-<td>public File(String parent, String child)</td>
-<td>从父路径名字符串和子路径名字符串创建文件对象</td>
-</tr>
-<tr>
-<td>public File(File parent, String child)</td>
-<td>根据父路径对应文件对象和子路径名字符串创建文件对象</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
+    <title>Hexo-Butterfly主题博客搭建03</title>
+    <url>/posts/10003.html</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>JavaSE</category>
+        <category>博客搭建</category>
       </categories>
       <tags>
-        <tag>JavaSE</tag>
+        <tag>博客搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -222,7 +182,7 @@
 <p><strong>④ 启动两个线程，去同一个账户对象中取钱10万</strong></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 模拟取钱案例</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ThreadDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 1.定义线程类，创建一个共享的账户对象</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">Account</span> <span class="variable">acc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Account</span>(<span class="string">&quot;ICBC-999&quot;</span>, <span class="number">100000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 2.创建两个线程对象，代表小明和小红同时取钱</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">DrawThread</span>(acc, <span class="string">&quot;小明&quot;</span>).start();</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">DrawThread</span>(acc, <span class="string">&quot;小红&quot;</span>).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意会出现下面的错误样例：</p>
-<p><img src="https://wang-nine.cn/iamges/JavaSE01-01%E9%94%99%E8%AF%AF%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-01错误样例"></p>
+<p><img src="https://wang-nine.cn/images/JavaSE01-01%E9%94%99%E8%AF%AF%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-01错误样例"></p>
 <h3 id="解决方法：线程同步"><a href="#解决方法：线程同步" class="headerlink" title="解决方法：线程同步"></a>解决方法：线程同步</h3><p><strong>针对上述错误解决线程安全问题：线程同步（同一个时刻仅有一个线程可以访问共享资源）</strong></p>
 <h4 id="①-同步代码块"><a href="#①-同步代码块" class="headerlink" title="① 同步代码块"></a>① 同步代码块</h4><p>synchorized(同步锁对象) {<br>    操作共享资源的代码（核心代码）<br>}</p>
 <blockquote>
@@ -231,7 +191,7 @@
 <p>实例代码如下(修改了上述的代码之后，结果正确)</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">DrawMoney</span><span class="params">(<span class="type">double</span> money)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> Thread.currentThread().getName(); <span class="comment">//获取取钱人的姓名</span></span><br><span class="line">    <span class="comment">//同步代码块</span></span><br><span class="line">    <span class="keyword">synchronized</span> (<span class="built_in">this</span>) &#123;</span><br><span class="line">        <span class="comment">//1.判断账户中的钱是否足够</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span>.money &gt;= money) &#123;</span><br><span class="line">            <span class="comment">//2.取钱</span></span><br><span class="line">            System.out.println(name + <span class="string">&quot;来取钱成功，吐出：&quot;</span> + money);</span><br><span class="line">            <span class="comment">//3.更新余额</span></span><br><span class="line">            <span class="built_in">this</span>.money -= money;</span><br><span class="line">            System.out.println(<span class="string">&quot;取钱后剩余：&quot;</span> + <span class="built_in">this</span>.money);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">//4.余额不足</span></span><br><span class="line">            System.out.println(name + <span class="string">&quot;来取钱，余额不足！&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>结果如下：</p>
-<p><img src="https://wang-nine.cn/iamges/JavaSE01-02%E6%AD%A3%E7%A1%AE%E6%A0%B7%E4%BE%8B.png" alt="JavaSE02-正确样例"></p>
+<p><img src="https://wang-nine.cn/images/JavaSE01-02%E6%AD%A3%E7%A1%AE%E6%A0%B7%E4%BE%8B.png" alt="JavaSE02-正确样例"></p>
 <h4 id="②-同步方法"><a href="#②-同步方法" class="headerlink" title="② 同步方法"></a>② 同步方法</h4><p>修饰符 synchorized 返回值类型 方法名称(形参列表) {<br>    操作共享资源的代码（核心代码）<br>}</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title function_">DrawMoney</span><span class="params">(<span class="type">double</span> money)</span> &#123;     <span class="comment">//同步方法</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> Thread.currentThread().getName(); <span class="comment">//获取取钱人的姓名</span></span><br><span class="line">    <span class="comment">//1.判断账户中的钱是否足够</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.money &gt;= money) &#123;</span><br><span class="line">        <span class="comment">//2.取钱</span></span><br><span class="line">        System.out.println(name + <span class="string">&quot;来取钱成功，吐出：&quot;</span> + money);</span><br><span class="line">        <span class="comment">//3.更新余额</span></span><br><span class="line">        <span class="built_in">this</span>.money -= money;</span><br><span class="line">        System.out.println(<span class="string">&quot;取钱后剩余：&quot;</span> + <span class="built_in">this</span>.money);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">//4.余额不足</span></span><br><span class="line">        System.out.println(name + <span class="string">&quot;来取钱，余额不足！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -278,7 +238,7 @@
 <p><strong>存钱线程类：</strong><br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 取钱的线程类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DepositThread</span> <span class="keyword">extends</span> <span class="title class_">Thread</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> Account acc;    <span class="comment">//定义一个账户对象，便于对账户对象进行操作</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DepositThread</span><span class="params">(Account acc, String name)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(name);</span><br><span class="line">        <span class="built_in">this</span>.acc = acc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">//不断的存取前</span></span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            acc.depositMoney(<span class="number">100000</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">2</span> * <span class="number">1000</span>);     <span class="comment">//每隔两秒存一次钱</span></span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>主程序：</strong><br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ThreadDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 三个父亲线程（生产者） 两个孩子线程（消费者） 模拟存取钱通信思想（一存 一取）</span></span><br><span class="line">        <span class="comment">// 1.创建账户对象，代表五个人共同操作的账户</span></span><br><span class="line">        <span class="type">Account</span> <span class="variable">acc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Account</span>(<span class="string">&quot;ICBC-999&quot;</span>, <span class="number">0</span>);   <span class="comment">//初始化零元</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.创建两个取钱线程 小明 小红</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">DrawThread</span>(acc, <span class="string">&quot;小明&quot;</span>).start();</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">DrawThread</span>(acc, <span class="string">&quot;小红&quot;</span>).start();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3.创建三个存钱线程 亲爹 干爹 岳父</span></span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">DepositThread</span>(acc, <span class="string">&quot;亲爹&quot;</span>).start();</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">DepositThread</span>(acc, <span class="string">&quot;干爹&quot;</span>).start();</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">DepositThread</span>(acc, <span class="string">&quot;岳父&quot;</span>).start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>运行结果</p>
-<p><img src="https://wang-nine.cn//iamges/JavaSE01-03%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-03线程通信样例"></p>
+<p><img src="https://wang-nine.cn/images/JavaSE01-03%E7%BA%BF%E7%A8%8B%E9%80%9A%E4%BF%A1%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-03线程通信样例"></p>
 <h2 id="5-线程池的创建以及使用"><a href="#5-线程池的创建以及使用" class="headerlink" title="5.线程池的创建以及使用"></a>5.线程池的创建以及使用</h2><p><strong>线程池是一个可以复用线程的技术。解决了每次都为新请求创建线程，导致开销较大的问题</strong><br>JDK5.0起提供了代表线程池的接口：ExecutorService<br>得到线程池对象的两种办法：<br>一、使用ExecutorService的实现类ThreadPoolExecutor自己创建一个线程池对象。<br>二、使用Executors（线程池的工具类）调用方法放回不同特点的线程池对象。</p>
 <h3 id="①-线程池的API简介"><a href="#①-线程池的API简介" class="headerlink" title="① 线程池的API简介"></a><small>① 线程池的API简介</small></h3><p>ThreadPoolExecutor构造器：<br>public ThreadPoolExecutor（int corePoolSize<br>                           int maximumPoolSize,<br>                           long keepAliveTIme,<br>                           TimeUnit unit,<br>                           BlockingQueue<Runnable> workQueue,<br>                           ThreadFactory threadFactory,<br>                           RejectedExecutionHandler handler)<br>参数一：指定线程池的线程数量（核心线程）：corePoolsize                                    ——-&gt; 不能小于0<br>参数二：指定线程池可支持的最大线程数：maximumPoolSize                                 ———&gt; 最大数量&gt;=核心线程数量<br>参数三：指定临时线程的最大存活时间：keepAliveTime                                            ———&gt; 不能小于0<br>参数四：存活时间的单位（秒，分，时，天）：unit                                                   ———&gt; 时间单位<br>参数五：指定任务队列：workQueue                                                                            ———&gt; 不能为null<br>参数六：指定用那个线程工厂创建线程：threadFactory                                             ———&gt; 不能为null<br>参数七：指定线程忙，任务慢的时候，新任务来了怎么办，即拒绝策略：handler  ———&gt; 不能为null</p>
 <blockquote>
@@ -316,10 +276,10 @@
 </div>
 <h3 id="②-线程池处理Runnable任务"><a href="#②-线程池处理Runnable任务" class="headerlink" title="② 线程池处理Runnable任务"></a><small>② 线程池处理Runnable任务</small></h3><p>样例代码：<br>Runnable实现代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyRunnable</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName() + <span class="string">&quot;输出了：HelloWorld&quot;</span> + i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 睡眠线程，观察线程的执行情况</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName() + <span class="string">&quot;本任务与线程绑定了，进入休眠状态了~~~&quot;</span>);</span><br><span class="line">            Thread.sleep(<span class="number">1000000</span>);  <span class="comment">//让其睡眠时间久一点，便于观察线程池的复用情况</span></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>线程池创建代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">threadPoolDemo1</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 1.创建线程池对象</span></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         *     public ThreadPoolExecutor(int corePoolSize,</span></span><br><span class="line"><span class="comment">         *                               int maximumPoolSize,</span></span><br><span class="line"><span class="comment">         *                               long keepAliveTime,</span></span><br><span class="line"><span class="comment">         *                               TimeUnit unit,</span></span><br><span class="line"><span class="comment">         *                               BlockingQueue&lt;Runnable&gt; workQueue,</span></span><br><span class="line"><span class="comment">         *                               ThreadFactory threadFactory,</span></span><br><span class="line"><span class="comment">         *                               RejectedExecutionHandler handler) &#123;</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">ExecutorService</span> <span class="variable">pool</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(<span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>,</span><br><span class="line">                TimeUnit.SECONDS, <span class="keyword">new</span> <span class="title class_">ArrayBlockingQueue</span>&lt;&gt;(<span class="number">5</span>), Executors.defaultThreadFactory(),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>.AbortPolicy());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把任务给线程池处理</span></span><br><span class="line">        <span class="type">Runnable</span> <span class="variable">target</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MyRunnable</span>();</span><br><span class="line">        <span class="comment">//核心线程运行</span></span><br><span class="line">        pool.execute(target);</span><br><span class="line">        pool.execute(target);</span><br><span class="line">        pool.execute(target);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//不创建临时线程</span></span><br><span class="line">        pool.execute(target);</span><br><span class="line">        pool.execute(target);</span><br><span class="line">        pool.execute(target);</span><br><span class="line">        pool.execute(target);</span><br><span class="line">        pool.execute(target);       <span class="comment">//任务队列满了！！核心线程都忙！！</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//创建临时线程</span></span><br><span class="line">        pool.execute(target);</span><br><span class="line">        pool.execute(target);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//拒绝策略触发</span></span><br><span class="line">        pool.execute(target);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//关闭线程池（开发一般不使用，线程池作用就是长久存活）</span></span><br><span class="line">        <span class="comment">//pool.shutdownNow();     //立即关闭，即使任务未完成也关闭</span></span><br><span class="line">        <span class="comment">//pool.shutdown();    //等待任务执行完毕再关闭</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>拒绝策略样例：<br><img src="https://wang-nine.cn/iamges/JavaSE01-04%E7%BA%BF%E7%A8%8B%E6%B1%A0%E6%8B%92%E7%BB%9D%E7%AD%96%E7%95%A5%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-04线程池拒绝策略样例"></p>
-<p>线程池运行样例：<br><img src="https://wang-nine.cn/iamges/JavaSE01-05Runnable%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%BF%90%E8%A1%8C%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-05Runnable线程池运行样例"></p>
+<p>拒绝策略样例：<br><img src="https://wang-nine.cn/images/JavaSE01-04%E7%BA%BF%E7%A8%8B%E6%B1%A0%E6%8B%92%E7%BB%9D%E7%AD%96%E7%95%A5%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-04线程池拒绝策略样例"></p>
+<p>线程池运行样例：<br><img src="https://wang-nine.cn/images/JavaSE01-05Runnable%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%BF%90%E8%A1%8C%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-05Runnable线程池运行样例"></p>
 <h3 id="③-线程池处理Callable任务"><a href="#③-线程池处理Callable任务" class="headerlink" title="③ 线程池处理Callable任务"></a><small>③ 线程池处理Callable任务</small></h3><p>样例代码（简单测试一下，Callable实现在上面写过，具体使用方式与Runnable一致）：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">threadPoolDemo2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">// 1.创建线程池对象</span></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         *     public ThreadPoolExecutor(int corePoolSize,</span></span><br><span class="line"><span class="comment">         *                               int maximumPoolSize,</span></span><br><span class="line"><span class="comment">         *                               long keepAliveTime,</span></span><br><span class="line"><span class="comment">         *                               TimeUnit unit,</span></span><br><span class="line"><span class="comment">         *                               BlockingQueue&lt;Runnable&gt; workQueue,</span></span><br><span class="line"><span class="comment">         *                               ThreadFactory threadFactory,</span></span><br><span class="line"><span class="comment">         *                               RejectedExecutionHandler handler) &#123;</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">ExecutorService</span> <span class="variable">pool</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(<span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>,</span><br><span class="line">                TimeUnit.SECONDS, <span class="keyword">new</span> <span class="title class_">ArrayBlockingQueue</span>&lt;&gt;(<span class="number">5</span>), Executors.defaultThreadFactory(),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>.AbortPolicy());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.把任务给线程池处理</span></span><br><span class="line">        Future&lt;String&gt; f1 = pool.submit(<span class="keyword">new</span> <span class="title class_">MyCallable</span>(<span class="number">100</span>));</span><br><span class="line">        Future&lt;String&gt; f2 = pool.submit(<span class="keyword">new</span> <span class="title class_">MyCallable</span>(<span class="number">200</span>));</span><br><span class="line">        Future&lt;String&gt; f3 = pool.submit(<span class="keyword">new</span> <span class="title class_">MyCallable</span>(<span class="number">300</span>));</span><br><span class="line">        Future&lt;String&gt; f4 = pool.submit(<span class="keyword">new</span> <span class="title class_">MyCallable</span>(<span class="number">400</span>));</span><br><span class="line"></span><br><span class="line">        System.out.println(f1.get());</span><br><span class="line">        System.out.println(f2.get());</span><br><span class="line">        System.out.println(f3.get());</span><br><span class="line">        System.out.println(f4.get());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>线程池运行样例：<br><img src="https://wang-nine.cn/iamges/JavaSE01-06Callable%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%BF%90%E8%A1%8C%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-06Callable线程池运行样例"></p>
+<p>线程池运行样例：<br><img src="https://wang-nine.cn/images/JavaSE01-06Callable%E7%BA%BF%E7%A8%8B%E6%B1%A0%E8%BF%90%E8%A1%8C%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-06Callable线程池运行样例"></p>
 <h3 id="④-（重要！）-Executors工具类实现线程池"><a href="#④-（重要！）-Executors工具类实现线程池" class="headerlink" title="④ （重要！） Executors工具类实现线程池"></a><small>④ （重要！） Executors工具类实现线程池</small></h3><p>Executors获得线程池的常用方法：<br>|方法名称|说明|<br>|:—|—-|<br>|public static ExecutorService newCachedThreadPool()|线程数随着任务增加而增加，若线程任务执行完毕且空闲一段时间会被回收|<br>|public static ExecutorService newFixedThreadPool()|创建固定数量的线程池。若某个线程因为异常而结束，那么线程池会补充一个新线程代替它|<br>|public static ExecutorService newSingleThreadExecutor()|创建只有一个线程对象的线程池对象，如果该线程因为异常而结束，那么线程池会补充一个新线程|<br>|public static ScheduledExecutorService newScheduledThreadPool(int PoolSize)|创建一个线程池，可以实现在给定的延迟后运行任务，或者定期执行任务|</p>
 <blockquote>
 <p><strong>注意：Executors的底层其实也是基于线程池的实现类ThreadPoolExecutor创建线程池对象</strong><br><strong>注意：大型并发环境使用Executors如果不注意可能会出现系统风险，例如阿里开发手册不建议使用Executors创建线程池对象，而是建            议使用ThreadPoolExecutor自己创建</strong></p>
@@ -394,7 +354,7 @@
 <p><strong>存在的问题：</strong><br><strong>Timer是单线程，处理多个任务有序执行，存在演示与设置定时器的时间有出入</strong><br><strong>可能因为某个任务的异常使得Timer线程死掉，从而影响后续任务的执行</strong></p>
 </blockquote>
 <p>样例代码如下：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.Timer;</span><br><span class="line"><span class="keyword">import</span> java.util.TimerTask;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TimerDemo1</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 1.创建Timer定时器</span></span><br><span class="line">        <span class="type">Timer</span> <span class="variable">timer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Timer</span>();  <span class="comment">//本身就是一个单线程</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.调用方法，给定定时任务</span></span><br><span class="line">        timer.schedule(<span class="keyword">new</span> <span class="title class_">TimerTask</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(Thread.currentThread().getName() + <span class="string">&quot;执行任务A~~~&quot;</span> + <span class="keyword">new</span> <span class="title class_">Date</span>());</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(<span class="number">5000</span>); <span class="comment">//休眠5s</span></span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="number">0</span>, <span class="number">2000</span>); <span class="comment">//三秒后执行，每隔两秒执行一次</span></span><br><span class="line"></span><br><span class="line">        timer.schedule(<span class="keyword">new</span> <span class="title class_">TimerTask</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(Thread.currentThread().getName() + <span class="string">&quot;执行任务B~~~&quot;</span> + <span class="keyword">new</span> <span class="title class_">Date</span>());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="number">0</span>, <span class="number">2000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 注意，本来A应该7s一次（2s间隔 + 5s睡眠），B应该2s一次</span></span><br><span class="line">        <span class="comment">// 实际情况与上述不符合，只存在一个线程，</span></span><br><span class="line">        <span class="comment">// B任务受到了A任务的影响</span></span><br><span class="line">        <span class="comment">// 其次，如果中间某个线程异常，其余线程都死亡</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行样例如下:<br><img src="https://wang-nine.cn/iamges/JavaSE01-06Timer%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-06Timer样例"></p>
+<p>运行样例如下:<br><img src="https://wang-nine.cn/images/JavaSE01-06Timer%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-06Timer样例"></p>
 <h4 id="ScheduledExecutorService"><a href="#ScheduledExecutorService" class="headerlink" title="ScheduledExecutorService"></a>ScheduledExecutorService</h4><blockquote>
 <p><strong>ScheduledExecutorService弥补了Timer的缺陷</strong></p>
 </blockquote>
@@ -434,7 +394,7 @@
 <p><strong>优点：基于线程池，某个任务的执行情况不会影响其他任务的执行</strong></p>
 </blockquote>
 <p>样例代码如下：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.TimerTask;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.Executors;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.ScheduledExecutorService;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.TimeUnit;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TimerDemo2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 1.创建ScheduledExecutorService线程池对象</span></span><br><span class="line">        <span class="type">ScheduledExecutorService</span> <span class="variable">pool</span> <span class="operator">=</span> Executors.newScheduledThreadPool(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.开启定时任务</span></span><br><span class="line">        pool.scheduleAtFixedRate(<span class="keyword">new</span> <span class="title class_">TimerTask</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(Thread.currentThread().getName() + <span class="string">&quot;执行任务A~~~&quot;</span>);</span><br><span class="line">                <span class="comment">//把该线程堵塞</span></span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Thread.sleep(<span class="number">100000</span>);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="number">0</span>, <span class="number">2</span>, TimeUnit.SECONDS);</span><br><span class="line"></span><br><span class="line">        pool.scheduleAtFixedRate(<span class="keyword">new</span> <span class="title class_">TimerTask</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(Thread.currentThread().getName() + <span class="string">&quot;执行任务B~~~&quot;</span>);</span><br><span class="line">                System.out.println(<span class="number">10</span> / <span class="number">0</span>); <span class="comment">//使该线程异常</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="number">0</span>, <span class="number">3</span>, TimeUnit.SECONDS);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        pool.scheduleAtFixedRate(<span class="keyword">new</span> <span class="title class_">TimerTask</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(Thread.currentThread().getName() + <span class="string">&quot;执行任务C~~~&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="number">0</span>, <span class="number">3</span>, TimeUnit.SECONDS);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行样例如下：<br><img src="https://wang-nine.cn/iamges/JavaSE01-07ScheduledExecutorService%E7%BA%BF%E7%A8%8B%E6%B1%A0%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-07ScheduledExecutorService线程池样例"></p>
+<p>运行样例如下：<br><img src="https://wang-nine.cn/images/JavaSE01-07ScheduledExecutorService%E7%BA%BF%E7%A8%8B%E6%B1%A0%E6%A0%B7%E4%BE%8B.png" alt="JavaSE01-07ScheduledExecutorService线程池样例"></p>
 <blockquote>
 <p><strong>异常不会影响</strong><br><strong>也不受其他任务的影响</strong></p>
 </blockquote>
@@ -448,7 +408,7 @@
 <p><strong>Java线程的状态：</strong><br><strong>Java总共定义了6种状态</strong><br><strong>6种状态都定义在Thread类的内部枚举类中。</strong></p>
 </blockquote>
 <p><strong>线程6种状态的转换如下图</strong></p>
-<p><img src="https://wang-nine.cn/iamges/JavaSE01-08%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2.png" alt="JavaSE01-08线程状态之间的转换"></p>
+<p><img src="https://wang-nine.cn/images/JavaSE01-08%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E4%B9%8B%E9%97%B4%E7%9A%84%E8%BD%AC%E6%8D%A2.png" alt="JavaSE01-08线程状态之间的转换"></p>
 <blockquote>
 <p><strong>注意以下几点：</strong><br><strong>sleep()是睡眠，过程中不会释放锁对象，醒来后直接进入可运行状态</strong><br><strong>wait()是等待，过程中会释放锁对象，但是时间到了或者被notity时会重新获得锁对象，进入可运行状态</strong></p>
 </blockquote>
@@ -589,6 +549,46 @@
       </tags>
   </entry>
   <entry>
+    <title>JavaSE02-Java中的文件与方法递归与IO流</title>
+    <url>/posts/10101.html</url>
+    <content><![CDATA[<p>详细的描述了Java中 File类的使用，一步一步剖析了IO流如何创建、如何使用以及其中的注意事项。</p>
+<p>File类使用：详细的描述了使用File的对象操作文件，如:删除、获取文件信息、创建文件夹等<br>方法递归：详细的描述了递归算法思想并能完成常见递归题目，以及文件搜索<br>字符集：程序中经常要读取文件中的数据，知道数据的底层形式才能够去学习如何读写数据<br>IO流的作用：使用IO流完成文件数据的读写等操作<br>字节流与字符流：数据的类型很多，要学会选择不同的流进行读写操作<br><span id="more"></span></p>
+<p><img src="C:/Users/Wang/AppData/Roaming/Typora/typora-user-images/image-20230524214623406.png" alt="image-20230524214623406"></p>
+<h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><p><strong>File类在包java.io.File下、代表操作系统的文件对象（文件、文件夹）。</strong><br><strong>File类提供了诸如∶定位文件，获取文件本身的信息、删除文件、创建文件（文件夹）等功能</strong><br><strong>但是不能读写文件内容。</strong></p>
+<p>File类创建对象API</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public File(String pathname)</td>
+<td>根据文件路径创建文件对象</td>
+</tr>
+<tr>
+<td>public File(String parent, String child)</td>
+<td>从父路径名字符串和子路径名字符串创建文件对象</td>
+</tr>
+<tr>
+<td>public File(File parent, String child)</td>
+<td>根据父路径对应文件对象和子路径名字符串创建文件对象</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>JavaSE</category>
+      </categories>
+      <tags>
+        <tag>JavaSE</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL02-存储引擎</title>
     <url>/posts/10401.html</url>
     <content><![CDATA[<p>详细的描述了MySQL中的引擎之间的区别和选择。<br><span id="more"></span></p>
@@ -704,6 +704,201 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL03-索引01-结构</title>
+    <url>/posts/10402.html</url>
+    <content><![CDATA[<p>详细的描述了MySQL中的索引的结构。<br><span id="more"></span></p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>索引（index）是帮助MySQL<strong>高效获取数据</strong>的数据结构（有序）。在数据之外，数据库系统还维护着满足特定查找算法的数据结构，这些数据结构以某种方式引用（指向）数据，这样就可以在这些数据结构上实现高级查找算法，这种数据结构就是索引。</p>
+<h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">优势</th>
+<th style="text-align:left">劣势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">提高数据检索的效率，降低数据库的IO成本</td>
+<td style="text-align:left">索引列也会占用空间</td>
+</tr>
+<tr>
+<td style="text-align:left">通过索引列对数据进行排序，降低数据排序的成本，降低CPU的消耗。</td>
+<td style="text-align:left">索引大大提高了查询效率，同时却也降低更新表的速度，如对表进行INSERT、UPDATE、DELETE时,效率降低。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>但是：</p>
+<blockquote>
+<p><strong>目前磁盘很便宜，无所谓占用空间</strong></p>
+<p><strong>目前业务查询 SELECT 频次很高，INSERT、UPDATE、DELETE等操作频次较少</strong></p>
+<p><strong>综上，使用索引是非常有必要的</strong></p>
+</blockquote>
+<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>索引结构</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B+Tree索引</td>
+<td>最常见的索引类型，大部分引擎都支持B+树索引</td>
+</tr>
+<tr>
+<td>Hash索引</td>
+<td>底层数据结构是用哈希表实现的，只有精确匹配索引列的查询才有效不支持范围查询</td>
+</tr>
+<tr>
+<td>R-tree（空间索引）</td>
+<td>空间索引是MylSAM引擎的一个特殊索引类型，主要用于地理空间数据类型，使用较少</td>
+</tr>
+<tr>
+<td>Full-text（全文索引）</td>
+<td>是一种通过建立倒排索引,快速匹配文档的方式。类似于Lucene，Solr，ES</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="引擎对于索引的支持情况"><a href="#引擎对于索引的支持情况" class="headerlink" title="引擎对于索引的支持情况"></a>引擎对于索引的支持情况</h4><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">索引</th>
+<th style="text-align:center">InnoDB</th>
+<th style="text-align:center">MyISAM</th>
+<th style="text-align:center">Memory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">B+tree索引</td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">支持</td>
+</tr>
+<tr>
+<td style="text-align:center">Hash索引</td>
+<td style="text-align:center">不支持</td>
+<td style="text-align:center">不支持</td>
+<td style="text-align:center">支持</td>
+</tr>
+<tr>
+<td style="text-align:center">R-tree索引</td>
+<td style="text-align:center">不支持</td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">不支持</td>
+</tr>
+<tr>
+<td style="text-align:center">Full-text</td>
+<td style="text-align:center">5.6版本之后支持</td>
+<td style="text-align:center">支持</td>
+<td style="text-align:center">不支持</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>具体结构可以点击以下链接进入页面进行模拟操作：</p>
+<p><a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">点击此处链接进行模拟数据结构</a></p>
+<p><a href="https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html">点击此处链接进行模拟B+树结构</a></p>
+<p>具体数据结构在《数据结构》课中都有详细描述。</p>
+<h4 id="B树结构样例如下："><a href="#B树结构样例如下：" class="headerlink" title="B树结构样例如下："></a>B树结构样例如下：</h4><p><img src="https://wang-nine.cn/images/MySQL03-01-01B%E6%A0%91.png" alt="MySQL03-01-01B树"></p>
+<h4 id="B-树结构样例如下："><a href="#B-树结构样例如下：" class="headerlink" title="B+树结构样例如下："></a>B+树结构样例如下：</h4><p><img src="http://wang-nine.cn/images/MySQL03-01-02B+%E6%A0%91.png" alt="MySQL03-01-02B+树"></p>
+<p><strong>B树与B+树的区别：</strong></p>
+<blockquote>
+<p>1.所有的数据都会出现在叶子节点</p>
+<p>2.叶子节点形成了一个单向链表</p>
+<p>3.MySQL索引数据结构对经典的B+Tree进行了优化。在原B+Tree的基础上，增加一个指向相邻叶子节点的链表指针，就形成了带有顺序指针的B+Tree，提高区间访问的性能。即MySQL将单向链表优化为双向链表。</p>
+</blockquote>
+<h4 id="Hash索引"><a href="#Hash索引" class="headerlink" title="Hash索引"></a>Hash索引</h4><p>Hash通过hash算法将键值对映射到指定位置，出现碰撞（hash冲突）可以通过链表解决。</p>
+<blockquote>
+<p>Hash索引特点<br>1.Hash索引只能用于对等比较(=，in)，不支持范围查询(between，&gt;，&lt;，….<br>2.无法利用索引完成排序操作<br>3.查询效率高，通常只需要一次检索就可以了，效率通常要高于B+tree索引</p>
+</blockquote>
+<p>在MySQL中，支持hash索引的是Memory引擎，而InnoDB中具有<strong>自适应hash功能</strong>，hash索引是存储引擎根据B+Tree索引在指定条件下自动构建的。</p>
+<h4 id="为什么InnoDB存储引擎选择使用B-tree索引结构"><a href="#为什么InnoDB存储引擎选择使用B-tree索引结构" class="headerlink" title="为什么InnoDB存储引擎选择使用B+tree索引结构?"></a>为什么InnoDB存储引擎选择使用B+tree索引结构?</h4><blockquote>
+<p>1.相对于二叉树，层级更少，搜索效率高;<br>2.对于B-tree，无论是叶子节点还是非叶子节点，都会保存数据，这样导致一页中存储的键值减少，指针跟着减少，要同样保存大量    数据，只能增加树的高度，导致性能降低;<br>3.相对Hash索引，B+tree支持范围匹配及排序操作;</p>
+</blockquote>
+<h3 id="索引分类"><a href="#索引分类" class="headerlink" title="索引分类"></a>索引分类</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">分类</th>
+<th style="text-align:center">含义</th>
+<th style="text-align:center">特点</th>
+<th style="text-align:center">关键字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">主键索引</td>
+<td style="text-align:center">针对表中主键创建的索引</td>
+<td style="text-align:center">默认自动创建，只能有一个</td>
+<td style="text-align:center">PRIMARY</td>
+</tr>
+<tr>
+<td style="text-align:center">唯一索引</td>
+<td style="text-align:center">避免数据列重复</td>
+<td style="text-align:center">可以多个</td>
+<td style="text-align:center">UNIQUE</td>
+</tr>
+<tr>
+<td style="text-align:center">常规索引</td>
+<td style="text-align:center">快速查询</td>
+<td style="text-align:center">可以多个</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">全文索引</td>
+<td style="text-align:center">查找文本关键词，并非比较索引值</td>
+<td style="text-align:center">可以多个</td>
+<td style="text-align:center">FULLTEXT</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="InnoDB索引分类"><a href="#InnoDB索引分类" class="headerlink" title="InnoDB索引分类"></a>InnoDB索引分类</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>含义</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>聚集索引(Clustered Index)</td>
+<td>数据与索引放在一起，叶子节点保存了一行的数据</td>
+<td>必须存在，且只有一个</td>
+</tr>
+<tr>
+<td>二级索引(Secondary Index)</td>
+<td>数据与索引分开存储，叶子节点存储对应主键</td>
+<td>可以多个</td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p>聚集索引选取规则：<br>1.如果存在主键，主键索引就是聚集索引。<br>2.如果不存在主键，将使用第一含唯一（UNIQUE）索引作为聚集索引。<br>3.如果表没有主键，或没有合适的唯一索引，则InnoDB会自动生成一个rowid作为隐藏的聚集索引。</p>
+</blockquote>
+<p><strong>回表查询：</strong></p>
+<p><strong>在二级索引中查询到主键，在聚集索引中根据主键查询到想要的数据</strong></p>
+<blockquote>
+<p>InnoDB主键索引的B+树高度为多高呢？</p>
+<p>假设:<br>一行数据大小为1k，一页中可以存储16行这样的数据。InnoDB的指针占用6个字节的空间，主键即使为bigint，占用字节数为8。<br>高度为2:<br>n <em> 8 + (n + 1) </em> 6 = 16 <em> 1024，算出n约为1170<br>1171 </em> 16=18736<br>高度为3:<br>1171 <em> 1171 </em> 16 = 21939856</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL03-索引02-性能分析</title>
     <url>/posts/10403.html</url>
     <content><![CDATA[<p>详细的描述了MySQL中的索引的性能分析。<br><span id="more"></span></p>
@@ -809,201 +1004,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL03-索引01-结构</title>
-    <url>/posts/10402.html</url>
-    <content><![CDATA[<p>详细的描述了MySQL中的索引的结构。<br><span id="more"></span></p>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>索引（index）是帮助MySQL<strong>高效获取数据</strong>的数据结构（有序）。在数据之外，数据库系统还维护着满足特定查找算法的数据结构，这些数据结构以某种方式引用（指向）数据，这样就可以在这些数据结构上实现高级查找算法，这种数据结构就是索引。</p>
-<h3 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">优势</th>
-<th style="text-align:left">劣势</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">提高数据检索的效率，降低数据库的IO成本</td>
-<td style="text-align:left">索引列也会占用空间</td>
-</tr>
-<tr>
-<td style="text-align:left">通过索引列对数据进行排序，降低数据排序的成本，降低CPU的消耗。</td>
-<td style="text-align:left">索引大大提高了查询效率，同时却也降低更新表的速度，如对表进行INSERT、UPDATE、DELETE时,效率降低。</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>但是：</p>
-<blockquote>
-<p><strong>目前磁盘很便宜，无所谓占用空间</strong></p>
-<p><strong>目前业务查询 SELECT 频次很高，INSERT、UPDATE、DELETE等操作频次较少</strong></p>
-<p><strong>综上，使用索引是非常有必要的</strong></p>
-</blockquote>
-<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>索引结构</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>B+Tree索引</td>
-<td>最常见的索引类型，大部分引擎都支持B+树索引</td>
-</tr>
-<tr>
-<td>Hash索引</td>
-<td>底层数据结构是用哈希表实现的，只有精确匹配索引列的查询才有效不支持范围查询</td>
-</tr>
-<tr>
-<td>R-tree（空间索引）</td>
-<td>空间索引是MylSAM引擎的一个特殊索引类型，主要用于地理空间数据类型，使用较少</td>
-</tr>
-<tr>
-<td>Full-text（全文索引）</td>
-<td>是一种通过建立倒排索引,快速匹配文档的方式。类似于Lucene，Solr，ES</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h4 id="引擎对于索引的支持情况"><a href="#引擎对于索引的支持情况" class="headerlink" title="引擎对于索引的支持情况"></a>引擎对于索引的支持情况</h4><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">索引</th>
-<th style="text-align:center">InnoDB</th>
-<th style="text-align:center">MyISAM</th>
-<th style="text-align:center">Memory</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">B+tree索引</td>
-<td style="text-align:center">支持</td>
-<td style="text-align:center">支持</td>
-<td style="text-align:center">支持</td>
-</tr>
-<tr>
-<td style="text-align:center">Hash索引</td>
-<td style="text-align:center">不支持</td>
-<td style="text-align:center">不支持</td>
-<td style="text-align:center">支持</td>
-</tr>
-<tr>
-<td style="text-align:center">R-tree索引</td>
-<td style="text-align:center">不支持</td>
-<td style="text-align:center">支持</td>
-<td style="text-align:center">不支持</td>
-</tr>
-<tr>
-<td style="text-align:center">Full-text</td>
-<td style="text-align:center">5.6版本之后支持</td>
-<td style="text-align:center">支持</td>
-<td style="text-align:center">不支持</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>具体结构可以点击以下链接进入页面进行模拟操作：</p>
-<p><a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">点击此处链接进行模拟数据结构</a></p>
-<p><a href="https://www.cs.usfca.edu/~galles/visualization/BPlusTree.html">点击此处链接进行模拟B+树结构</a></p>
-<p>具体数据结构在《数据结构》课中都有详细描述。</p>
-<h4 id="B树结构样例如下："><a href="#B树结构样例如下：" class="headerlink" title="B树结构样例如下："></a>B树结构样例如下：</h4><p><img src="https://wang-nine.cn/iamges/MySQL03-01-01B%E6%A0%91.png" alt="MySQL03-01-01B树"></p>
-<h4 id="B-树结构样例如下："><a href="#B-树结构样例如下：" class="headerlink" title="B+树结构样例如下："></a>B+树结构样例如下：</h4><p><img src="http://wang-nine.cn/iamges/MySQL03-01-02B+%E6%A0%91.png" alt="MySQL03-01-02B+树"></p>
-<p><strong>B树与B+树的区别：</strong></p>
-<blockquote>
-<p>1.所有的数据都会出现在叶子节点</p>
-<p>2.叶子节点形成了一个单向链表</p>
-<p>3.MySQL索引数据结构对经典的B+Tree进行了优化。在原B+Tree的基础上，增加一个指向相邻叶子节点的链表指针，就形成了带有顺序指针的B+Tree，提高区间访问的性能。即MySQL将单向链表优化为双向链表。</p>
-</blockquote>
-<h4 id="Hash索引"><a href="#Hash索引" class="headerlink" title="Hash索引"></a>Hash索引</h4><p>Hash通过hash算法将键值对映射到指定位置，出现碰撞（hash冲突）可以通过链表解决。</p>
-<blockquote>
-<p>Hash索引特点<br>1.Hash索引只能用于对等比较(=，in)，不支持范围查询(between，&gt;，&lt;，….<br>2.无法利用索引完成排序操作<br>3.查询效率高，通常只需要一次检索就可以了，效率通常要高于B+tree索引</p>
-</blockquote>
-<p>在MySQL中，支持hash索引的是Memory引擎，而InnoDB中具有<strong>自适应hash功能</strong>，hash索引是存储引擎根据B+Tree索引在指定条件下自动构建的。</p>
-<h4 id="为什么InnoDB存储引擎选择使用B-tree索引结构"><a href="#为什么InnoDB存储引擎选择使用B-tree索引结构" class="headerlink" title="为什么InnoDB存储引擎选择使用B+tree索引结构?"></a>为什么InnoDB存储引擎选择使用B+tree索引结构?</h4><blockquote>
-<p>1.相对于二叉树，层级更少，搜索效率高;<br>2.对于B-tree，无论是叶子节点还是非叶子节点，都会保存数据，这样导致一页中存储的键值减少，指针跟着减少，要同样保存大量    数据，只能增加树的高度，导致性能降低;<br>3.相对Hash索引，B+tree支持范围匹配及排序操作;</p>
-</blockquote>
-<h3 id="索引分类"><a href="#索引分类" class="headerlink" title="索引分类"></a>索引分类</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">分类</th>
-<th style="text-align:center">含义</th>
-<th style="text-align:center">特点</th>
-<th style="text-align:center">关键字</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">主键索引</td>
-<td style="text-align:center">针对表中主键创建的索引</td>
-<td style="text-align:center">默认自动创建，只能有一个</td>
-<td style="text-align:center">PRIMARY</td>
-</tr>
-<tr>
-<td style="text-align:center">唯一索引</td>
-<td style="text-align:center">避免数据列重复</td>
-<td style="text-align:center">可以多个</td>
-<td style="text-align:center">UNIQUE</td>
-</tr>
-<tr>
-<td style="text-align:center">常规索引</td>
-<td style="text-align:center">快速查询</td>
-<td style="text-align:center">可以多个</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td style="text-align:center">全文索引</td>
-<td style="text-align:center">查找文本关键词，并非比较索引值</td>
-<td style="text-align:center">可以多个</td>
-<td style="text-align:center">FULLTEXT</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="InnoDB索引分类"><a href="#InnoDB索引分类" class="headerlink" title="InnoDB索引分类"></a>InnoDB索引分类</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>分类</th>
-<th>含义</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>聚集索引(Clustered Index)</td>
-<td>数据与索引放在一起，叶子节点保存了一行的数据</td>
-<td>必须存在，且只有一个</td>
-</tr>
-<tr>
-<td>二级索引(Secondary Index)</td>
-<td>数据与索引分开存储，叶子节点存储对应主键</td>
-<td>可以多个</td>
-</tr>
-</tbody>
-</table>
-</div>
-<blockquote>
-<p>聚集索引选取规则：<br>1.如果存在主键，主键索引就是聚集索引。<br>2.如果不存在主键，将使用第一含唯一（UNIQUE）索引作为聚集索引。<br>3.如果表没有主键，或没有合适的唯一索引，则InnoDB会自动生成一个rowid作为隐藏的聚集索引。</p>
-</blockquote>
-<p><strong>回表查询：</strong></p>
-<p><strong>在二级索引中查询到主键，在聚集索引中根据主键查询到想要的数据</strong></p>
-<blockquote>
-<p>InnoDB主键索引的B+树高度为多高呢？</p>
-<p>假设:<br>一行数据大小为1k，一页中可以存储16行这样的数据。InnoDB的指针占用6个字节的空间，主键即使为bigint，占用字节数为8。<br>高度为2:<br>n <em> 8 + (n + 1) </em> 6 = 16 <em> 1024，算出n约为1170<br>1171 </em> 16=18736<br>高度为3:<br>1171 <em> 1171 </em> 16 = 21939856</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL03-索引03-使用规则</title>
     <url>/posts/10404.html</url>
     <content><![CDATA[<p>详细的描述了MySQL中的索引的使用规则和设计原则。<br><span id="more"></span></p>
@@ -1069,6 +1069,69 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始的SSM框架-01-Spring中的Bean</title>
+    <url>/posts/10300.html</url>
+    <content><![CDATA[<p> 简单的介绍了Spring中的架构以及IOC和DI。<br><span id="more"></span></p>
+<h3 id="Spring-FrameWork架构"><a href="#Spring-FrameWork架构" class="headerlink" title="Spring FrameWork架构"></a>Spring FrameWork架构</h3><p><strong>Spring Framework是Spring生态圈中最基础的项目，是其他项目的根基</strong></p>
+<p><strong>Spirng FrameWork的架构</strong></p>
+<p><img src="https://wang-nine.cn/images/SSM01-01SpringFrameWork%E6%9E%B6%E6%9E%84.png" alt="SSM01-01SpringFrameWork架构"></p>
+<h3 id="Spring核心概念"><a href="#Spring核心概念" class="headerlink" title="Spring核心概念"></a>Spring核心概念</h3><h4 id="IoC-Inversion-of-Control-控制反转"><a href="#IoC-Inversion-of-Control-控制反转" class="headerlink" title="IoC ( Inversion of Control )控制反转"></a><strong>IoC ( Inversion of Control )控制反转</strong></h4><blockquote>
+<p>使用对象时，由主动new产生对象转换为由<strong>外部</strong>提供对象，此过程中对象创建控制权由程序转移到<strong>外部</strong>，此思想称为控制反转</p>
+<p>Spring技术对IoC思想进行了实现Spring提供了一个容器，，称为IoC容器，用来充当IoC思想中的”<strong>外部</strong>“</p>
+<p>IoC容器负责对象的创建、初始化等一系列工作，被创建或被管理的对象在IoC容器中统称为Bean</p>
+</blockquote>
+<h4 id="DI-Dependency-Injection-依赖注入"><a href="#DI-Dependency-Injection-依赖注入" class="headerlink" title="DI ( Dependency Injection)依赖注入"></a><strong>DI ( Dependency Injection)依赖注入</strong></h4><blockquote>
+<p>在容器中建立bean与bean之间的依赖关系的整个过程，称为依赖注入</p>
+</blockquote>
+<h3 id="IoC入门案例"><a href="#IoC入门案例" class="headerlink" title="IoC入门案例"></a>IoC入门案例</h3><blockquote>
+<p>思路分析：<br>1.管理什么? （Service与Dao）<br>2.如何将被管理的对象告知IoC容器?（配置）<br>3.被管理的对象交给IoC容器，如何获取到IoC容器?（接口）<br>4.IoC容器得到后，如何从容器中获取bean ?（接口方法）<br>5.使用Spring导入哪些坐标?（pom.xml）</p>
+</blockquote>
+<h4 id="非Spring环境下"><a href="#非Spring环境下" class="headerlink" title="非Spring环境下"></a>非Spring环境下</h4><p>案例代码如下：</p>
+<p>Service层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.dao.impl.DaoImpl;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DaoImpl</span>();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>DAO层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaoImpl</span> <span class="keyword">implements</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao save() ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>主函数代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"><span class="keyword">import</span> wang.service.impl.ServiceImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServiceImpl</span>();</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><img src="https://wang-nine.cn/images/SSM01-02%E9%9D%9ESpring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-02非Spring环境样例"></p>
+<h4 id="Spring环境下"><a href="#Spring环境下" class="headerlink" title="Spring环境下"></a>Spring环境下</h4><p>别忘记在pom.xml中引入spring-context<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.10.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>在resources中创建配置文件（名称：applicationContext.xml）：如图<br><img src="https://wang-nine.cn/images/SSM01-03%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" alt="SSM01-03配置文件"></p>
+<p>在配置文件中输入以下的代码<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--导入spring的坐标spring-context，对应版本是5.2.10.RELEASE--&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--配置bean--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--bean标签标示配置bean</span></span><br><span class="line"><span class="comment">    id属性标示给bean起名字</span></span><br><span class="line"><span class="comment">    class属性表示给bean定义类型--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Dao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>主函数代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 获取IoC容器</span></span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取Bean</span></span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> (Service) ctx.getBean(<span class="string">&quot;Service&quot;</span>);</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>此时运行样例与非Spring方式相同如下：<br><img src="https://wang-nine.cn/images/SSM01-04Spring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-04Spring环境样例"></p>
+<p><strong>综上：可以分为四步</strong></p>
+<blockquote>
+<p><strong>1.导入Spring坐标</strong></p>
+<p><strong>2.定义Spring管理的类（接口）</strong></p>
+<p><strong>3.创建Spring配置文件进行配置</strong></p>
+<p><strong>4.初始化IoC容器，从容器中获取Bean（getBean方法）</strong></p>
+</blockquote>
+<p><strong>问题：业务层中仍然是使用new创建对象，仍然耦合，那么如何解耦合呢？</strong></p>
+<h3 id="DI入门案例"><a href="#DI入门案例" class="headerlink" title="DI入门案例"></a>DI入门案例</h3><blockquote>
+<p>思路分析：<br>1.基于IoC管理bean<br>2.Service使用new形式创建的Dao对象是否保留?（否）<br>3.Service中需要的Dao对象如何进入到service中?（提供方法）<br>4.Service与Dao间的关系如何描述?（配置）</p>
+</blockquote>
+<p>改变Service层实现代码如下<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="comment">// 删除业务层以new的方式创建Dao对象</span></span><br><span class="line">    <span class="comment">//private Dao dao = new DaoImpl();</span></span><br><span class="line">    <span class="keyword">private</span> Dao dao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提供对应的set方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setDao</span><span class="params">(Dao dao)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.dao = dao;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>修改applicationContext.xml中配置：<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--7.配置server与dao的关系--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--property标签表示配置当前bean的属性</span></span><br><span class="line"><span class="comment">        name属性表示配置哪一个具体的属性</span></span><br><span class="line"><span class="comment">        ref属性表示参照哪一个bean--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dao&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;Dao&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>注意：name是上述的（private Dao dao;）语句中的变量名，ref是bean的名字。</strong></p>
+</blockquote>
+<p>运行结果与上述一样：<br><img src="https://wang-nine.cn/images/SSM01-05DI.png" alt="SSM01-05DI"></p>
+<p><strong>综上：可以分为三步</strong></p>
+<blockquote>
+<p>1.<strong>删除以new的形式创建对象的代码</strong></p>
+<p>2.<strong>提供对应的Set方法</strong></p>
+<p>3.<strong>配置Service与Dao之间的关系</strong></p>
+</blockquote>
+<p><strong>注意在Bean标签中还可以进行以下的配置：</strong></p>
+<p><strong>属性name：定义Bean的别名</strong></p>
+<p><strong>属性scope：定义作用范围 singleton（默认，单例）  prototype（非单例）</strong></p>
+]]></content>
+      <categories>
+        <category>SSM</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
@@ -1142,174 +1205,6 @@
       </tags>
   </entry>
   <entry>
-    <title>从零开始的SSM框架-01-Spring中的Bean</title>
-    <url>/posts/10300.html</url>
-    <content><![CDATA[<p> 简单的介绍了Spring中的架构以及IOC和DI。<br><span id="more"></span></p>
-<h3 id="Spring-FrameWork架构"><a href="#Spring-FrameWork架构" class="headerlink" title="Spring FrameWork架构"></a>Spring FrameWork架构</h3><p><strong>Spring Framework是Spring生态圈中最基础的项目，是其他项目的根基</strong></p>
-<p><strong>Spirng FrameWork的架构</strong></p>
-<p><img src="https://wang-nine.cn/iamges/SSM01-01SpringFrameWork%E6%9E%B6%E6%9E%84.png" alt="SSM01-01SpringFrameWork架构"></p>
-<h3 id="Spring核心概念"><a href="#Spring核心概念" class="headerlink" title="Spring核心概念"></a>Spring核心概念</h3><h4 id="IoC-Inversion-of-Control-控制反转"><a href="#IoC-Inversion-of-Control-控制反转" class="headerlink" title="IoC ( Inversion of Control )控制反转"></a><strong>IoC ( Inversion of Control )控制反转</strong></h4><blockquote>
-<p>使用对象时，由主动new产生对象转换为由<strong>外部</strong>提供对象，此过程中对象创建控制权由程序转移到<strong>外部</strong>，此思想称为控制反转</p>
-<p>Spring技术对IoC思想进行了实现Spring提供了一个容器，，称为IoC容器，用来充当IoC思想中的”<strong>外部</strong>“</p>
-<p>IoC容器负责对象的创建、初始化等一系列工作，被创建或被管理的对象在IoC容器中统称为Bean</p>
-</blockquote>
-<h4 id="DI-Dependency-Injection-依赖注入"><a href="#DI-Dependency-Injection-依赖注入" class="headerlink" title="DI ( Dependency Injection)依赖注入"></a><strong>DI ( Dependency Injection)依赖注入</strong></h4><blockquote>
-<p>在容器中建立bean与bean之间的依赖关系的整个过程，称为依赖注入</p>
-</blockquote>
-<h3 id="IoC入门案例"><a href="#IoC入门案例" class="headerlink" title="IoC入门案例"></a>IoC入门案例</h3><blockquote>
-<p>思路分析：<br>1.管理什么? （Service与Dao）<br>2.如何将被管理的对象告知IoC容器?（配置）<br>3.被管理的对象交给IoC容器，如何获取到IoC容器?（接口）<br>4.IoC容器得到后，如何从容器中获取bean ?（接口方法）<br>5.使用Spring导入哪些坐标?（pom.xml）</p>
-</blockquote>
-<h4 id="非Spring环境下"><a href="#非Spring环境下" class="headerlink" title="非Spring环境下"></a>非Spring环境下</h4><p>案例代码如下：</p>
-<p>Service层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.dao.impl.DaoImpl;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DaoImpl</span>();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>DAO层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaoImpl</span> <span class="keyword">implements</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao save() ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>主函数代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"><span class="keyword">import</span> wang.service.impl.ServiceImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServiceImpl</span>();</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><img src="https://wang-nine.cn/iamges/SSM01-02%E9%9D%9ESpring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-02非Spring环境样例"></p>
-<h4 id="Spring环境下"><a href="#Spring环境下" class="headerlink" title="Spring环境下"></a>Spring环境下</h4><p>别忘记在pom.xml中引入spring-context<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.10.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>在resources中创建配置文件（名称：applicationContext.xml）：如图<br><img src="https://wang-nine.cn/iamges/SSM01-03%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" alt="SSM01-03配置文件"></p>
-<p>在配置文件中输入以下的代码<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--导入spring的坐标spring-context，对应版本是5.2.10.RELEASE--&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--配置bean--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--bean标签标示配置bean</span></span><br><span class="line"><span class="comment">    id属性标示给bean起名字</span></span><br><span class="line"><span class="comment">    class属性表示给bean定义类型--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Dao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>主函数代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 获取IoC容器</span></span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取Bean</span></span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> (Service) ctx.getBean(<span class="string">&quot;Service&quot;</span>);</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>此时运行样例与非Spring方式相同如下：<br><img src="https://wang-nine.cn/iamges/SSM01-04Spring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-04Spring环境样例"></p>
-<p><strong>综上：可以分为四步</strong></p>
-<blockquote>
-<p><strong>1.导入Spring坐标</strong></p>
-<p><strong>2.定义Spring管理的类（接口）</strong></p>
-<p><strong>3.创建Spring配置文件进行配置</strong></p>
-<p><strong>4.初始化IoC容器，从容器中获取Bean（getBean方法）</strong></p>
-</blockquote>
-<p><strong>问题：业务层中仍然是使用new创建对象，仍然耦合，那么如何解耦合呢？</strong></p>
-<h3 id="DI入门案例"><a href="#DI入门案例" class="headerlink" title="DI入门案例"></a>DI入门案例</h3><blockquote>
-<p>思路分析：<br>1.基于IoC管理bean<br>2.Service使用new形式创建的Dao对象是否保留?（否）<br>3.Service中需要的Dao对象如何进入到service中?（提供方法）<br>4.Service与Dao间的关系如何描述?（配置）</p>
-</blockquote>
-<p>改变Service层实现代码如下<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="comment">// 删除业务层以new的方式创建Dao对象</span></span><br><span class="line">    <span class="comment">//private Dao dao = new DaoImpl();</span></span><br><span class="line">    <span class="keyword">private</span> Dao dao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提供对应的set方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setDao</span><span class="params">(Dao dao)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.dao = dao;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>修改applicationContext.xml中配置：<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--7.配置server与dao的关系--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--property标签表示配置当前bean的属性</span></span><br><span class="line"><span class="comment">        name属性表示配置哪一个具体的属性</span></span><br><span class="line"><span class="comment">        ref属性表示参照哪一个bean--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dao&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;Dao&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>注意：name是上述的（private Dao dao;）语句中的变量名，ref是bean的名字。</strong></p>
-</blockquote>
-<p>运行结果与上述一样：<br><img src="https://wang-nine.cn/iamges/SSM01-05DI.png" alt="SSM01-05DI"></p>
-<p><strong>综上：可以分为三步</strong></p>
-<blockquote>
-<p>1.<strong>删除以new的形式创建对象的代码</strong></p>
-<p>2.<strong>提供对应的Set方法</strong></p>
-<p>3.<strong>配置Service与Dao之间的关系</strong></p>
-</blockquote>
-<p><strong>注意在Bean标签中还可以进行以下的配置：</strong></p>
-<p><strong>属性name：定义Bean的别名</strong></p>
-<p><strong>属性scope：定义作用范围 singleton（默认，单例）  prototype（非单例）</strong></p>
-]]></content>
-      <categories>
-        <category>SSM</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SSM02-Spring中Bean的实例化与依赖注入</title>
-    <url>/posts/10301.html</url>
-    <content><![CDATA[<p>详细的描述了Spring中Bean的实例化与依赖注入。<br><span id="more"></span></p>
-<h3 id="Bean的实例化"><a href="#Bean的实例化" class="headerlink" title="Bean的实例化"></a>Bean的实例化</h3><h4 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h4><p>Spring创建Bean的时候调用无参构造。（有参构造会报错，私有无参也可以，底层使用了反射）</p>
-<p>注意：Spring中的报错从下向上看，直到找到有用的信息。</p>
-<p>注意：若不存在无参构造方法，会抛出异常：BeanCreationException</p>
-<p>添加无参构造后：<br>运行结果：<br><img src="https://wang-nine.cn/iamges/SSM02-01%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95.png" alt="SSM02-01构造方法"></p>
-<h4 id="静态工厂"><a href="#静态工厂" class="headerlink" title="静态工厂"></a>静态工厂</h4><p>创建对象不需要自己new，创建一个工厂创建对象达到解耦的效果</p>
-<p>样例代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.factory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.dao.impl.DaoImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaoFactory</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Dao <span class="title function_">getDao</span><span class="params">()</span> &#123;</span><br><span class="line">    	System.out.println(<span class="string">&quot;factory set up ...&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">DaoImpl</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>配置文件添加如下代码：<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactory&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.factory.DaoFactory&quot;</span> <span class="attr">factory-method</span>=<span class="string">&quot;getDao&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>主函数：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App3</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line">        <span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> (Dao) ctx.getBean(<span class="string">&quot;daoFactory&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：</p>
-<p><img src="https://wang-nine.cn/iamges/SSM02-02%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82.png" alt="SSM02-02静态工厂"></p>
-<h4 id="实例工厂"><a href="#实例工厂" class="headerlink" title="实例工厂"></a>实例工厂</h4><p>工厂代码同上</p>
-<p>配置文件修改为如下代码：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactorytemp&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.factory.DaoFactory&quot;</span>/&gt;</span>                 <span class="comment">&lt;!-- 创建工厂bean --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactory&quot;</span> <span class="attr">factory-bean</span>=<span class="string">&quot;daoFactorytemp&quot;</span> <span class="attr">factory-method</span>=<span class="string">&quot;getDao&quot;</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- factory-bean指定工厂bean --&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>第一行为一个无用的bean，改良后即为第四种方法</strong></p>
-<p>主函数不变</p>
-<p>运行结果：</p>
-<p><img src="https://wang-nine.cn/iamges/SSM02-03FactoryBean.png" alt="SSM02-03FactoryBean"></p>
-<h4 id="FactoryBean（重要！）"><a href="#FactoryBean（重要！）" class="headerlink" title="FactoryBean（重要！）"></a>FactoryBean（重要！）</h4><p><strong>在第三种方法存在两个问题</strong><br><strong>一、factory-bean属性使用时会创建一个无用的Bean</strong><br><strong>二、factory-method属性方法名不固定，非动态实现</strong></p>
-<p>因此，对此方法做了改良</p>
-<p>factory实现一个接口FactoryBean<T> </p>
-<p>工厂代码</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.factory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.FactoryBean;</span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.dao.impl.DaoImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaoFactoryBean</span> <span class="keyword">implements</span> <span class="title class_">FactoryBean</span>&lt;Dao&gt; &#123;</span><br><span class="line">    <span class="comment">// 代替原始实例工厂创建对象的方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Dao <span class="title function_">getObject</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">DaoImpl</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 得到Bean的类型</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Class&lt;?&gt; getObjectType() &#123;</span><br><span class="line">        <span class="keyword">return</span> Dao.class;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 设置Bean是否单例子，return true为单例，false为非单例</span></span><br><span class="line">    <span class="comment">// 该方法一般不重写</span></span><br><span class="line">    <span class="comment">/*@Override</span></span><br><span class="line"><span class="comment">    public boolean isSingleton() &#123;</span></span><br><span class="line"><span class="comment">        return true;</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>配置文件修改为如下代码：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactory&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.factory.DaoFactoryBean&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p>主函数不变</p>
-<p>运行结果：</p>
-<p><img src="https://wang-nine.cn/iamges/SSM02-03FactoryBean.png" alt="SSM02-03FactoryBean"></p>
-<h4 id="补充：Bean的生命周期"><a href="#补充：Bean的生命周期" class="headerlink" title="补充：Bean的生命周期"></a>补充：Bean的生命周期</h4><h5 id="控制生命周期"><a href="#控制生命周期" class="headerlink" title="控制生命周期"></a>控制生命周期</h5><h6 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h6><p>控制方法代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> DaoImpl <span class="keyword">implements</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao save ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao init ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao destroy ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>配置控制方法：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Dao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span> <span class="attr">init-method</span>=<span class="string">&quot;init&quot;</span> <span class="attr">destroy-method</span>=<span class="string">&quot;destory&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<h6 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h6><p>实现InitializingBean, DisposableBean接口</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> DaoImpl <span class="keyword">implements</span> <span class="title class_">Dao</span>, InitializingBean, DisposableBean &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao save ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao init ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao destroy ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h5><blockquote>
-<p><strong>初始化容器</strong><br>1.创建对象（内存分配）<br>2.执行构造方法<br>3.执行属性注入( set操作）<br>4.执行bean初始化方法</p>
-<p><strong>使用bean</strong><br>1.行业务操作</p>
-<p><strong>关闭/销毁容器</strong><br>1.执行bean销毁方法</p>
-</blockquote>
-<p>注：<strong>销毁的时机：</strong>容器关闭前触发bean的销毁<br>关闭容器方式：<br>手工关闭容器<br>ConfigurableApplicationContext接口close（）</p>
-<p>操作注册关闭钩子，在虚拟机退出前先关闭容器再退出虚拟机<br>ConfigurableApplicationcontext接口registerShutdownHook （）操作</p>
-<h3 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h3><h4 id="setter注入"><a href="#setter注入" class="headerlink" title="setter注入"></a>setter注入</h4><h5 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h5><p>详情见博客 SSM01-Spring中的Bean </p>
-<blockquote>
-<p>步骤如下<br>1.在bean中定义引用类型属性并提供可访问的set方法<br>2.配置中使用property标签ref属性注入引用类型对象</p>
-</blockquote>
-<h5 id="简单类型"><a href="#简单类型" class="headerlink" title="简单类型"></a>简单类型</h5><blockquote>
-<p>步骤如下<br>1.在bean中定义引用类型属性并提供可访问的set方法<br>2.配置中使用property标签value属性注入简单类型数据</p>
-</blockquote>
-<h4 id="构造器注入"><a href="#构造器注入" class="headerlink" title="构造器注入"></a>构造器注入</h4><h5 id="引用类型（仅做了解）"><a href="#引用类型（仅做了解）" class="headerlink" title="引用类型（仅做了解）"></a>引用类型（仅做了解）</h5><blockquote>
-<p>步骤如下<br>1.在bean中定义引用类型属性并提供可访问的构造方法<br>2.配置中使用constructor-arg标签ref属性注入引用类型对象</p>
-</blockquote>
-<h5 id="简单类型-1"><a href="#简单类型-1" class="headerlink" title="简单类型"></a>简单类型</h5><blockquote>
-<p>步骤如下<br>1.在bean中定义引用类型属性并提供可访问的set方法<br>2.配置中使用property标签value属性注入简单类型数据<br>注意：<br>配置中使用constructor-arg标签type属性设置按形参类型注入<br>配置中使用constructor-arg标签index属性设置按形参位置注入</p>
-</blockquote>
-<h4 id="依赖注入方式的选择（总结自黑马程序员，侵删）"><a href="#依赖注入方式的选择（总结自黑马程序员，侵删）" class="headerlink" title="依赖注入方式的选择（总结自黑马程序员，侵删）"></a>依赖注入方式的选择（总结自黑马程序员，侵删）</h4><p>1.强制依赖使用构造器进行，使用setter注入有概率不进行注入导致null对象出现<br>2.可选依赖使用setter注入进行，灵活性强<br>3.Spring框架倡导使用构造器，第三方框架内部大多数采用构造器注入的形式进行数据初始化，相对严谨<br>4.如果有必要可以两者同时使用，使用构造器注入完成强制依赖的注入，使用setter注入完成可选依赖的注入<br>5.实际开发过程中还要根据实际情况分析，如果受控对象没有提供setter方法就必须使用构造器注入<br>6.自己开发的模块推荐使用setter注入</p>
-<h4 id="自动装配（优先级低于setter注入与构造器注入）"><a href="#自动装配（优先级低于setter注入与构造器注入）" class="headerlink" title="自动装配（优先级低于setter注入与构造器注入）"></a>自动装配（优先级低于setter注入与构造器注入）</h4><p>IoC容器根据bean所依赖的资源在容器中自动查找并注入到bean中的过程称为自动装配</p>
-<p>自动装配方式</p>
-<h5 id="按类型（常用）（不能对简单类型装配）"><a href="#按类型（常用）（不能对简单类型装配）" class="headerlink" title="按类型（常用）（不能对简单类型装配）"></a>按类型（常用）（不能对简单类型装配）</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactory&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span> <span class="attr">autowire</span>=<span class="string">&quot;byType&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p>注意：需要set方法</p>
-<p>注意：按类型（byType）时，同类型的应该只有一个bean，否则分不清。</p>
-<h5 id="按名称-set方法第一个字母改为小写的名称，即标椎的变量名"><a href="#按名称-set方法第一个字母改为小写的名称，即标椎的变量名" class="headerlink" title="按名称(set方法第一个字母改为小写的名称，即标椎的变量名)"></a>按名称(set方法第一个字母改为小写的名称，即标椎的变量名)</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactory&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span> <span class="attr">autowire</span>=<span class="string">&quot;byName&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-<p>注意：因为变量名与byName耦合度高，不建议使用。</p>
-<h5 id="按构造方法"><a href="#按构造方法" class="headerlink" title="按构造方法"></a>按构造方法</h5><h4 id="集合注入（主要学习格式）"><a href="#集合注入（主要学习格式）" class="headerlink" title="集合注入（主要学习格式）"></a>集合注入（主要学习格式）</h4><p>Dao接口</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">DataDao</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Dao实现</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.DataDao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DataDaoImpl</span> <span class="keyword">implements</span> <span class="title class_">DataDao</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] array;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; list;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Set&lt;String&gt; set;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Map&lt;String,String&gt; map;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Properties properties;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setArray</span><span class="params">(<span class="type">int</span>[] array)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.array = array;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setList</span><span class="params">(List&lt;String&gt; list)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.list = list;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setSet</span><span class="params">(Set&lt;String&gt; set)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.set = set;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setMap</span><span class="params">(Map&lt;String, String&gt; map)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.map = map;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setProperties</span><span class="params">(Properties properties)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.properties = properties;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;book dao save ...&quot;</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;遍历数组:&quot;</span> + Arrays.toString(array));</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;遍历List&quot;</span> + list);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;遍历Set&quot;</span> + set);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;遍历Map&quot;</span> + map);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;遍历Properties&quot;</span> + properties);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>配置文件：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;dataDao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DataDaoImpl&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--数组注入--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;array&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>100<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>200<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>300<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--list集合注入--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;list&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>java<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>c++<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>python<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>php<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--set集合注入--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;set&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>java<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>python<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>java<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>php<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--map集合注入--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;map&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">map</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">&quot;country&quot;</span> <span class="attr">value</span>=<span class="string">&quot;china&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">&quot;province&quot;</span> <span class="attr">value</span>=<span class="string">&quot;shanxi&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">&quot;city&quot;</span> <span class="attr">value</span>=<span class="string">&quot;xian&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--Properties注入--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;properties&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">props</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">&quot;country&quot;</span>&gt;</span>china<span class="tag">&lt;/<span class="name">prop</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">&quot;province&quot;</span>&gt;</span>shanxi<span class="tag">&lt;/<span class="name">prop</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">&quot;city&quot;</span>&gt;</span>xian<span class="tag">&lt;/<span class="name">prop</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">props</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>主函数：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App6</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line">        <span class="type">DataDao</span> <span class="variable">dataDao</span> <span class="operator">=</span> (DataDao) ctx.getBean(<span class="string">&quot;dataDao&quot;</span>);</span><br><span class="line">        dataDao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果：</p>
-<p><img src="https://wang-nine.cn/iamges/SSM02-04%E9%9B%86%E5%90%88%E6%B3%A8%E5%85%A5.png" alt="SSM02-04集合注入"></p>
-<h4 id="第三方资源注入"><a href="#第三方资源注入" class="headerlink" title="第三方资源注入"></a>第三方资源注入</h4><h3 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h3><h4 id="两种加载容器的方式"><a href="#两种加载容器的方式" class="headerlink" title="两种加载容器的方式"></a>两种加载容器的方式</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>); <span class="comment">//推荐</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileSystemXmlApplicationContext</span>(<span class="string">&quot;D:\\ssm\\ssm\\springtest\\springtest\\src\\main\\resources\\applicationContext.xml&quot;</span>)	<span class="comment">//绝对路径寻找</span></span><br></pre></td></tr></table></figure>
-<h4 id="两种获取bean的方式"><a href="#两种获取bean的方式" class="headerlink" title="两种获取bean的方式"></a>两种获取bean的方式</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> (DataDao) ctx.getBean(<span class="string">&quot;dao&quot;</span>);</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> ctx.getBean(<span class="string">&quot;dao&quot;</span>, Dao.class);  <span class="comment">//多个同种类型报错</span></span><br></pre></td></tr></table></figure>
-<h4 id="对比ApplicationContext和BeanFactory"><a href="#对比ApplicationContext和BeanFactory" class="headerlink" title="对比ApplicationContext和BeanFactory"></a>对比ApplicationContext和BeanFactory</h4><p>BeanFactory是顶级接口的Bean是延迟加载</p>
-<p>ApplicationContext是子接口（常用）也可以延迟加载，在bean中加入参数 lazy-init=“true” 即可</p>
-<h4 id="加载第三方Bean"><a href="#加载第三方Bean" class="headerlink" title="加载第三方Bean"></a>加载第三方Bean</h4><h4 id="加载Properties文件"><a href="#加载Properties文件" class="headerlink" title="加载Properties文件"></a>加载Properties文件</h4><p>步骤如下：</p>
-<ol>
-<li>开启Context命名空间</li>
-<li>使用context加载properties文件</li>
-<li>使用属性占位符${}读取properties配置文件中的属性</li>
-</ol>
-<p>样例代码如下：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:context</span>=<span class="string">&quot;http://www.springframework.org/schema/context&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="tag">           http://www.springframework.org/schema/beans</span></span></span><br><span class="line"><span class="string"><span class="tag">           http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="string"><span class="tag">           http://www.springframework.org/schema/context</span></span></span><br><span class="line"><span class="string"><span class="tag">           http://www.springframework.org/schema/context/spring-context.xsd</span></span></span><br><span class="line"><span class="string"><span class="tag">            &quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--步骤--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--1.开启命名空间--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--2.使用context加载properties文件--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">&quot;xxxx.properties&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--3.使用属性占位符$&#123;&#125;读取properties配置文件中的属性--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">&quot;xxxx&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;xxxx&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123; 配置中的变量名称 &#125;&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>注意：加载时可以关闭系统属性，因为系统属性的优先级高于</p>
-<p>注意：多个配置文件用逗号隔开</p>
-<p>注意：专业的写法加载所有配置文件如下</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 加载properties文件标准格式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">&quot;classpath:*.properties&quot;</span> <span class="attr">system-properties-mode</span>=<span class="string">&quot;NEVER&quot;</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 从类路径或jar包中搜索并加载properties文件</span></span><br><span class="line"><span class="comment">&lt;context:property-placeholder location=&quot;classpath*:*.properties&quot; system-properties-mode=&quot;NEVER&quot;/&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="总结（来自黑马程序员，侵删）"><a href="#总结（来自黑马程序员，侵删）" class="headerlink" title="总结（来自黑马程序员，侵删）"></a>总结（来自黑马程序员，侵删）</h3><h4 id="容器相关"><a href="#容器相关" class="headerlink" title="容器相关"></a>容器相关</h4><p><img src="https://wang-nine.cn/iamges/SSM02-05%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3.png" alt="SSM02-05容器相关"></p>
-<h4 id="bean相关"><a href="#bean相关" class="headerlink" title="bean相关"></a>bean相关</h4><p><img src="https://wang-nine.cn/iamges/SSM02-06bean%E7%9B%B8%E5%85%B3.png" alt="SSM02-06bean相关"></p>
-<h4 id="依赖注入相关"><a href="#依赖注入相关" class="headerlink" title="依赖注入相关"></a>依赖注入相关</h4><p><img src="https://wang-nine.cn/iamges/SSM02-07%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E7%9B%B8%E5%85%B3.png" alt="SSM02-07依赖注入相关"></p>
-]]></content>
-      <categories>
-        <category>SSM</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SSM03-Spring的纯注解开发模式</title>
     <url>/posts/10302.html</url>
     <content><![CDATA[<p>详细的描述了Spring中的注解开发。<br><span id="more"></span></p>
@@ -1331,7 +1226,7 @@
 <p>主函数：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App4</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml.bak&quot;</span>);</span><br><span class="line">        <span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> (Dao) ctx.getBean(<span class="string">&quot;dao&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>运行结果：</p>
-<p><img src="https://wang-nine.cn/iamges/SSM03-01%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E5%AE%9A%E4%B9%89Bean%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png" alt="SSM03-01注解开发定义Bean运行结果"></p>
+<p><img src="https://wang-nine.cn/images/SSM03-01%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E5%AE%9A%E4%B9%89Bean%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png" alt="SSM03-01注解开发定义Bean运行结果"></p>
 <h3 id="纯注解开发模式"><a href="#纯注解开发模式" class="headerlink" title="纯注解开发模式"></a>纯注解开发模式</h3><p>Spring3.0升级了纯注解开发模式，使用Java类替代配置文件，开启了Spring快速开发赛道</p>
 <p><strong>如何取消配置文件呢，使用一个配置类来代替配置文件</strong></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.ComponentScan;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan(&quot;wang&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SpringConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1340,14 +1235,14 @@
 <p><strong>@ComponentScan(“wang”) 代替了中间的组件扫描器的功能</strong></p>
 <p><strong>@Configuration代替了 xml 配置文件中的其他配置，如下图：</strong></p>
 </blockquote>
-<p><img src="https://wang-nine.cn/iamges/SSM03-02%E7%BA%AF%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E4%BB%A3%E6%9B%BF.png" alt="SSM03-02纯注解开发代替"></p>
+<p><img src="https://wang-nine.cn/images/SSM03-02%E7%BA%AF%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E4%BB%A3%E6%9B%BF.png" alt="SSM03-02纯注解开发代替"></p>
 <p>注意：ComponentScan({“wang.xxx01”, “wang.xxx02”}) 可以扫描多个类</p>
 <p>主函数中需要改变一行代码：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br></pre></td></tr></table></figure>
 <p>改为：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AnnotationConfigApplicationContext</span>(SpringConfig.class);</span><br></pre></td></tr></table></figure>
 <p>此时删除xml配置文件运行结果相同：</p>
-<p><img src="https://wang-nine.cn/iamges/SSM03-03%E7%BA%AF%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E5%AE%9A%E4%B9%89Bean%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png" alt="SSM03-03纯注解开发定义Bean运行结果"></p>
+<p><img src="https://wang-nine.cn/images/SSM03-03%E7%BA%AF%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91%E5%AE%9A%E4%B9%89Bean%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png" alt="SSM03-03纯注解开发定义Bean运行结果"></p>
 <h3 id="Bean的管理"><a href="#Bean的管理" class="headerlink" title="Bean的管理"></a>Bean的管理</h3><h4 id="Bean的作用范围"><a href="#Bean的作用范围" class="headerlink" title="Bean的作用范围"></a>Bean的作用范围</h4><blockquote>
 <p><strong>@Scope(“prototype”)即可更改</strong></p>
 </blockquote>
@@ -1357,7 +1252,7 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.AnnotationConfigApplicationContext;</span><br><span class="line"><span class="keyword">import</span> wang.config.SpringConfig;</span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AppForAnnotation</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">AnnotationConfigApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AnnotationConfigApplicationContext</span>(SpringConfig.class);</span><br><span class="line">        <span class="type">Dao</span> <span class="variable">dao1</span> <span class="operator">=</span> ctx.getBean(Dao.class);</span><br><span class="line">        <span class="type">Dao</span> <span class="variable">dao2</span> <span class="operator">=</span> ctx.getBean(Dao.class);</span><br><span class="line">        System.out.println(dao1);</span><br><span class="line">        System.out.println(dao2);</span><br><span class="line">        ctx.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意关闭容器或关闭钩子可以看到销毁操作</p>
 <p>运行结果如下：</p>
-<p><img src="https://wang-nine.cn/iamges/SSM03-04bean%E7%9A%84%E7%AE%A1%E7%90%86.png" alt="SSM03-04bean的管理"></p>
+<p><img src="https://wang-nine.cn/images/SSM03-04bean%E7%9A%84%E7%AE%A1%E7%90%86.png" alt="SSM03-04bean的管理"></p>
 <h3 id="注解开发依赖注入"><a href="#注解开发依赖注入" class="headerlink" title="注解开发依赖注入"></a>注解开发依赖注入</h3><blockquote>
 <p><strong>@AutoWired</strong>   —&gt; 实现了引用类型的注入</p>
 <p>注意：自动装配基于反射设计创建对象并<strong>暴力反射</strong>对应属性为私有属性初始化数据，因此无需提供setter方法</p>
@@ -1428,6 +1323,111 @@
 </tbody>
 </table>
 </div>
+]]></content>
+      <categories>
+        <category>SSM</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SSM02-Spring中Bean的实例化与依赖注入</title>
+    <url>/posts/10301.html</url>
+    <content><![CDATA[<p>详细的描述了Spring中Bean的实例化与依赖注入。<br><span id="more"></span></p>
+<h3 id="Bean的实例化"><a href="#Bean的实例化" class="headerlink" title="Bean的实例化"></a>Bean的实例化</h3><h4 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h4><p>Spring创建Bean的时候调用无参构造。（有参构造会报错，私有无参也可以，底层使用了反射）</p>
+<p>注意：Spring中的报错从下向上看，直到找到有用的信息。</p>
+<p>注意：若不存在无参构造方法，会抛出异常：BeanCreationException</p>
+<p>添加无参构造后：<br>运行结果：<br><img src="https://wang-nine.cn/images/SSM02-01%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95.png" alt="SSM02-01构造方法"></p>
+<h4 id="静态工厂"><a href="#静态工厂" class="headerlink" title="静态工厂"></a>静态工厂</h4><p>创建对象不需要自己new，创建一个工厂创建对象达到解耦的效果</p>
+<p>样例代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.factory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.dao.impl.DaoImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaoFactory</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Dao <span class="title function_">getDao</span><span class="params">()</span> &#123;</span><br><span class="line">    	System.out.println(<span class="string">&quot;factory set up ...&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">DaoImpl</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>配置文件添加如下代码：<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactory&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.factory.DaoFactory&quot;</span> <span class="attr">factory-method</span>=<span class="string">&quot;getDao&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>主函数：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App3</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line">        <span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> (Dao) ctx.getBean(<span class="string">&quot;daoFactory&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：</p>
+<p><img src="https://wang-nine.cn/images/SSM02-02%E9%9D%99%E6%80%81%E5%B7%A5%E5%8E%82.png" alt="SSM02-02静态工厂"></p>
+<h4 id="实例工厂"><a href="#实例工厂" class="headerlink" title="实例工厂"></a>实例工厂</h4><p>工厂代码同上</p>
+<p>配置文件修改为如下代码：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactorytemp&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.factory.DaoFactory&quot;</span>/&gt;</span>                 <span class="comment">&lt;!-- 创建工厂bean --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactory&quot;</span> <span class="attr">factory-bean</span>=<span class="string">&quot;daoFactorytemp&quot;</span> <span class="attr">factory-method</span>=<span class="string">&quot;getDao&quot;</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- factory-bean指定工厂bean --&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>第一行为一个无用的bean，改良后即为第四种方法</strong></p>
+<p>主函数不变</p>
+<p>运行结果：</p>
+<p><img src="https://wang-nine.cn/images/SSM02-03FactoryBean.png" alt="SSM02-03FactoryBean"></p>
+<h4 id="FactoryBean（重要！）"><a href="#FactoryBean（重要！）" class="headerlink" title="FactoryBean（重要！）"></a>FactoryBean（重要！）</h4><p><strong>在第三种方法存在两个问题</strong><br><strong>一、factory-bean属性使用时会创建一个无用的Bean</strong><br><strong>二、factory-method属性方法名不固定，非动态实现</strong></p>
+<p>因此，对此方法做了改良</p>
+<p>factory实现一个接口FactoryBean<T> </p>
+<p>工厂代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.factory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.FactoryBean;</span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.dao.impl.DaoImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaoFactoryBean</span> <span class="keyword">implements</span> <span class="title class_">FactoryBean</span>&lt;Dao&gt; &#123;</span><br><span class="line">    <span class="comment">// 代替原始实例工厂创建对象的方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Dao <span class="title function_">getObject</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">DaoImpl</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 得到Bean的类型</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Class&lt;?&gt; getObjectType() &#123;</span><br><span class="line">        <span class="keyword">return</span> Dao.class;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 设置Bean是否单例子，return true为单例，false为非单例</span></span><br><span class="line">    <span class="comment">// 该方法一般不重写</span></span><br><span class="line">    <span class="comment">/*@Override</span></span><br><span class="line"><span class="comment">    public boolean isSingleton() &#123;</span></span><br><span class="line"><span class="comment">        return true;</span></span><br><span class="line"><span class="comment">    &#125;*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>配置文件修改为如下代码：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactory&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.factory.DaoFactoryBean&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>主函数不变</p>
+<p>运行结果：</p>
+<p><img src="https://wang-nine.cn/images/SSM02-03FactoryBean.png" alt="SSM02-03FactoryBean"></p>
+<h4 id="补充：Bean的生命周期"><a href="#补充：Bean的生命周期" class="headerlink" title="补充：Bean的生命周期"></a>补充：Bean的生命周期</h4><h5 id="控制生命周期"><a href="#控制生命周期" class="headerlink" title="控制生命周期"></a>控制生命周期</h5><h6 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h6><p>控制方法代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> DaoImpl <span class="keyword">implements</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao save ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao init ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao destroy ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>配置控制方法：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Dao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span> <span class="attr">init-method</span>=<span class="string">&quot;init&quot;</span> <span class="attr">destroy-method</span>=<span class="string">&quot;destory&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<h6 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h6><p>实现InitializingBean, DisposableBean接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> DaoImpl <span class="keyword">implements</span> <span class="title class_">Dao</span>, InitializingBean, DisposableBean &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao save ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao init ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao destroy ... &quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h5><blockquote>
+<p><strong>初始化容器</strong><br>1.创建对象（内存分配）<br>2.执行构造方法<br>3.执行属性注入( set操作）<br>4.执行bean初始化方法</p>
+<p><strong>使用bean</strong><br>1.行业务操作</p>
+<p><strong>关闭/销毁容器</strong><br>1.执行bean销毁方法</p>
+</blockquote>
+<p>注：<strong>销毁的时机：</strong>容器关闭前触发bean的销毁<br>关闭容器方式：<br>手工关闭容器<br>ConfigurableApplicationContext接口close（）</p>
+<p>操作注册关闭钩子，在虚拟机退出前先关闭容器再退出虚拟机<br>ConfigurableApplicationcontext接口registerShutdownHook （）操作</p>
+<h3 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h3><h4 id="setter注入"><a href="#setter注入" class="headerlink" title="setter注入"></a>setter注入</h4><h5 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h5><p>详情见博客 SSM01-Spring中的Bean </p>
+<blockquote>
+<p>步骤如下<br>1.在bean中定义引用类型属性并提供可访问的set方法<br>2.配置中使用property标签ref属性注入引用类型对象</p>
+</blockquote>
+<h5 id="简单类型"><a href="#简单类型" class="headerlink" title="简单类型"></a>简单类型</h5><blockquote>
+<p>步骤如下<br>1.在bean中定义引用类型属性并提供可访问的set方法<br>2.配置中使用property标签value属性注入简单类型数据</p>
+</blockquote>
+<h4 id="构造器注入"><a href="#构造器注入" class="headerlink" title="构造器注入"></a>构造器注入</h4><h5 id="引用类型（仅做了解）"><a href="#引用类型（仅做了解）" class="headerlink" title="引用类型（仅做了解）"></a>引用类型（仅做了解）</h5><blockquote>
+<p>步骤如下<br>1.在bean中定义引用类型属性并提供可访问的构造方法<br>2.配置中使用constructor-arg标签ref属性注入引用类型对象</p>
+</blockquote>
+<h5 id="简单类型-1"><a href="#简单类型-1" class="headerlink" title="简单类型"></a>简单类型</h5><blockquote>
+<p>步骤如下<br>1.在bean中定义引用类型属性并提供可访问的set方法<br>2.配置中使用property标签value属性注入简单类型数据<br>注意：<br>配置中使用constructor-arg标签type属性设置按形参类型注入<br>配置中使用constructor-arg标签index属性设置按形参位置注入</p>
+</blockquote>
+<h4 id="依赖注入方式的选择（总结自黑马程序员，侵删）"><a href="#依赖注入方式的选择（总结自黑马程序员，侵删）" class="headerlink" title="依赖注入方式的选择（总结自黑马程序员，侵删）"></a>依赖注入方式的选择（总结自黑马程序员，侵删）</h4><p>1.强制依赖使用构造器进行，使用setter注入有概率不进行注入导致null对象出现<br>2.可选依赖使用setter注入进行，灵活性强<br>3.Spring框架倡导使用构造器，第三方框架内部大多数采用构造器注入的形式进行数据初始化，相对严谨<br>4.如果有必要可以两者同时使用，使用构造器注入完成强制依赖的注入，使用setter注入完成可选依赖的注入<br>5.实际开发过程中还要根据实际情况分析，如果受控对象没有提供setter方法就必须使用构造器注入<br>6.自己开发的模块推荐使用setter注入</p>
+<h4 id="自动装配（优先级低于setter注入与构造器注入）"><a href="#自动装配（优先级低于setter注入与构造器注入）" class="headerlink" title="自动装配（优先级低于setter注入与构造器注入）"></a>自动装配（优先级低于setter注入与构造器注入）</h4><p>IoC容器根据bean所依赖的资源在容器中自动查找并注入到bean中的过程称为自动装配</p>
+<p>自动装配方式</p>
+<h5 id="按类型（常用）（不能对简单类型装配）"><a href="#按类型（常用）（不能对简单类型装配）" class="headerlink" title="按类型（常用）（不能对简单类型装配）"></a>按类型（常用）（不能对简单类型装配）</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactory&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span> <span class="attr">autowire</span>=<span class="string">&quot;byType&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注意：需要set方法</p>
+<p>注意：按类型（byType）时，同类型的应该只有一个bean，否则分不清。</p>
+<h5 id="按名称-set方法第一个字母改为小写的名称，即标椎的变量名"><a href="#按名称-set方法第一个字母改为小写的名称，即标椎的变量名" class="headerlink" title="按名称(set方法第一个字母改为小写的名称，即标椎的变量名)"></a>按名称(set方法第一个字母改为小写的名称，即标椎的变量名)</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;daoFactory&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span> <span class="attr">autowire</span>=<span class="string">&quot;byName&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注意：因为变量名与byName耦合度高，不建议使用。</p>
+<h5 id="按构造方法"><a href="#按构造方法" class="headerlink" title="按构造方法"></a>按构造方法</h5><h4 id="集合注入（主要学习格式）"><a href="#集合注入（主要学习格式）" class="headerlink" title="集合注入（主要学习格式）"></a>集合注入（主要学习格式）</h4><p>Dao接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">DataDao</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Dao实现</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.DataDao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DataDaoImpl</span> <span class="keyword">implements</span> <span class="title class_">DataDao</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span>[] array;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> List&lt;String&gt; list;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Set&lt;String&gt; set;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Map&lt;String,String&gt; map;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Properties properties;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setArray</span><span class="params">(<span class="type">int</span>[] array)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.array = array;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setList</span><span class="params">(List&lt;String&gt; list)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.list = list;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setSet</span><span class="params">(Set&lt;String&gt; set)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.set = set;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setMap</span><span class="params">(Map&lt;String, String&gt; map)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.map = map;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setProperties</span><span class="params">(Properties properties)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.properties = properties;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;book dao save ...&quot;</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;遍历数组:&quot;</span> + Arrays.toString(array));</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;遍历List&quot;</span> + list);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;遍历Set&quot;</span> + set);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;遍历Map&quot;</span> + map);</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">&quot;遍历Properties&quot;</span> + properties);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>配置文件：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;dataDao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DataDaoImpl&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--数组注入--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;array&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>100<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>200<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>300<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--list集合注入--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;list&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>java<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>c++<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>python<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>php<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--set集合注入--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;set&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>java<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>python<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>java<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">value</span>&gt;</span>php<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--map集合注入--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;map&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">map</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">&quot;country&quot;</span> <span class="attr">value</span>=<span class="string">&quot;china&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">&quot;province&quot;</span> <span class="attr">value</span>=<span class="string">&quot;shanxi&quot;</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">&quot;city&quot;</span> <span class="attr">value</span>=<span class="string">&quot;xian&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--Properties注入--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;properties&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">props</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">&quot;country&quot;</span>&gt;</span>china<span class="tag">&lt;/<span class="name">prop</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">&quot;province&quot;</span>&gt;</span>shanxi<span class="tag">&lt;/<span class="name">prop</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">&quot;city&quot;</span>&gt;</span>xian<span class="tag">&lt;/<span class="name">prop</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">props</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>主函数：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App6</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line">        <span class="type">DataDao</span> <span class="variable">dataDao</span> <span class="operator">=</span> (DataDao) ctx.getBean(<span class="string">&quot;dataDao&quot;</span>);</span><br><span class="line">        dataDao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<p><img src="https://wang-nine.cn/images/SSM02-04%E9%9B%86%E5%90%88%E6%B3%A8%E5%85%A5.png" alt="SSM02-04集合注入"></p>
+<h4 id="第三方资源注入"><a href="#第三方资源注入" class="headerlink" title="第三方资源注入"></a>第三方资源注入</h4><h3 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h3><h4 id="两种加载容器的方式"><a href="#两种加载容器的方式" class="headerlink" title="两种加载容器的方式"></a>两种加载容器的方式</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>); <span class="comment">//推荐</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileSystemXmlApplicationContext</span>(<span class="string">&quot;D:\\ssm\\ssm\\springtest\\springtest\\src\\main\\resources\\applicationContext.xml&quot;</span>)	<span class="comment">//绝对路径寻找</span></span><br></pre></td></tr></table></figure>
+<h4 id="两种获取bean的方式"><a href="#两种获取bean的方式" class="headerlink" title="两种获取bean的方式"></a>两种获取bean的方式</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> (DataDao) ctx.getBean(<span class="string">&quot;dao&quot;</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> ctx.getBean(<span class="string">&quot;dao&quot;</span>, Dao.class);  <span class="comment">//多个同种类型报错</span></span><br></pre></td></tr></table></figure>
+<h4 id="对比ApplicationContext和BeanFactory"><a href="#对比ApplicationContext和BeanFactory" class="headerlink" title="对比ApplicationContext和BeanFactory"></a>对比ApplicationContext和BeanFactory</h4><p>BeanFactory是顶级接口的Bean是延迟加载</p>
+<p>ApplicationContext是子接口（常用）也可以延迟加载，在bean中加入参数 lazy-init=“true” 即可</p>
+<h4 id="加载第三方Bean"><a href="#加载第三方Bean" class="headerlink" title="加载第三方Bean"></a>加载第三方Bean</h4><h4 id="加载Properties文件"><a href="#加载Properties文件" class="headerlink" title="加载Properties文件"></a>加载Properties文件</h4><p>步骤如下：</p>
+<ol>
+<li>开启Context命名空间</li>
+<li>使用context加载properties文件</li>
+<li>使用属性占位符${}读取properties配置文件中的属性</li>
+</ol>
+<p>样例代码如下：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:context</span>=<span class="string">&quot;http://www.springframework.org/schema/context&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;</span></span></span><br><span class="line"><span class="string"><span class="tag">           http://www.springframework.org/schema/beans</span></span></span><br><span class="line"><span class="string"><span class="tag">           http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="string"><span class="tag">           http://www.springframework.org/schema/context</span></span></span><br><span class="line"><span class="string"><span class="tag">           http://www.springframework.org/schema/context/spring-context.xsd</span></span></span><br><span class="line"><span class="string"><span class="tag">            &quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--步骤--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--1.开启命名空间--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--2.使用context加载properties文件--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">&quot;xxxx.properties&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--3.使用属性占位符$&#123;&#125;读取properties配置文件中的属性--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">&quot;xxxx&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;xxxx&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123; 配置中的变量名称 &#125;&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注意：加载时可以关闭系统属性，因为系统属性的优先级高于</p>
+<p>注意：多个配置文件用逗号隔开</p>
+<p>注意：专业的写法加载所有配置文件如下</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 加载properties文件标准格式 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">&quot;classpath:*.properties&quot;</span> <span class="attr">system-properties-mode</span>=<span class="string">&quot;NEVER&quot;</span>/&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 从类路径或jar包中搜索并加载properties文件</span></span><br><span class="line"><span class="comment">&lt;context:property-placeholder location=&quot;classpath*:*.properties&quot; system-properties-mode=&quot;NEVER&quot;/&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="总结（来自黑马程序员，侵删）"><a href="#总结（来自黑马程序员，侵删）" class="headerlink" title="总结（来自黑马程序员，侵删）"></a>总结（来自黑马程序员，侵删）</h3><h4 id="容器相关"><a href="#容器相关" class="headerlink" title="容器相关"></a>容器相关</h4><p><img src="https://wang-nine.cn/images/SSM02-05%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3.png" alt="SSM02-05容器相关"></p>
+<h4 id="bean相关"><a href="#bean相关" class="headerlink" title="bean相关"></a>bean相关</h4><p><img src="https://wang-nine.cn/images/SSM02-06bean%E7%9B%B8%E5%85%B3.png" alt="SSM02-06bean相关"></p>
+<h4 id="依赖注入相关"><a href="#依赖注入相关" class="headerlink" title="依赖注入相关"></a>依赖注入相关</h4><p><img src="https://wang-nine.cn/images/SSM02-07%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E7%9B%B8%E5%85%B3.png" alt="SSM02-07依赖注入相关"></p>
 ]]></content>
       <categories>
         <category>SSM</category>
@@ -1515,7 +1515,7 @@
 </li>
 </ol>
 <p>样例（源自黑马程序员，<strong>侵删</strong>）</p>
-<p><img src="https://wang-nine.cn/iamges/SSM04-01AOP%E6%A0%B7%E4%BE%8B.png" alt="SSM04-01AOP样例"></p>
+<p><img src="https://wang-nine.cn/images/SSM04-01AOP%E6%A0%B7%E4%BE%8B.png" alt="SSM04-01AOP样例"></p>
 <h3 id="AOP入门案例"><a href="#AOP入门案例" class="headerlink" title="AOP入门案例"></a>AOP入门案例</h3><p>案例设定:测定接口执行效率<br>简化设定:在接口执行前输出当前系统时间<br>开发模式:XML or <strong>注解</strong></p>
 <p>思路分析∶</p>
 <ol>
@@ -1879,11 +1879,6 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>关于</title>
     <url>/about/index.html</url>
     <content><![CDATA[]]></content>
@@ -1894,11 +1889,6 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>资源</title>
-    <url>/resources/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>相册</title>
     <url>/gallery/index.html</url>
     <content><![CDATA[]]></content>
@@ -1906,6 +1896,16 @@
   <entry>
     <title>标签</title>
     <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>资源</title>
+    <url>/resources/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
