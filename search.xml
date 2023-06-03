@@ -222,6 +222,35 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo-Butterfly主题博客搭建02</title>
+    <url>/posts/10002.html</url>
+    <content><![CDATA[<p>Hexo+Butterfly主题博客搭建02 ——— 下载有关butterfly主题并进行配置<br><span id="more"></span></p>
+<h3 id="Butterfly主题的安装"><a href="#Butterfly主题的安装" class="headerlink" title="Butterfly主题的安装"></a>Butterfly主题的安装</h3><ol>
+<li>在 hexo 项目根目录下执行操作clone主题</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure>
+<ol>
+<li>如果沒有 pug 以及 <a href="https://so.csdn.net/so/search?q=stylus&amp;spm=1001.2101.3001.7020">stylus</a> 的渲染器，还需要下载，否则在项目运行时会报错：</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
+<ol>
+<li>修改项目根目录下的_config.yml文件（称为站点配置文件），开启主题</li>
+</ol>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">#theme: landscape</span><br><span class="line">theme: butterfly</span><br></pre></td></tr></table></figure>
+<ol>
+<li>升级建议</li>
+</ol>
+<p>为了減少升级主题带来的不便，我们还需要做以下操作：<br>把主题文件夹中的 _config.yml 复制到 Hexo 根目录下，同重命名为 _config.butterfly.yml</p>
+<p>Hexo会自动合并主题中的  _config.yml  和   _config.butterfly.yml  里的配置，如果存在同名配置，会使用  _config.butterfly.yml  的配置，其优先度较高。</p>
+<h3 id="ButterFly主题"><a href="#ButterFly主题" class="headerlink" title="ButterFly主题"></a>ButterFly主题</h3>]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo-Butterfly主题博客搭建03</title>
     <url>/posts/10003.html</url>
     <content><![CDATA[]]></content>
@@ -652,35 +681,6 @@
       </categories>
       <tags>
         <tag>JavaSE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo-Butterfly主题博客搭建02</title>
-    <url>/posts/10002.html</url>
-    <content><![CDATA[<p>Hexo+Butterfly主题博客搭建02 ——— 下载有关butterfly主题并进行配置<br><span id="more"></span></p>
-<h3 id="Butterfly主题的安装"><a href="#Butterfly主题的安装" class="headerlink" title="Butterfly主题的安装"></a>Butterfly主题的安装</h3><ol>
-<li>在 hexo 项目根目录下执行操作clone主题</li>
-</ol>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure>
-<ol>
-<li>如果沒有 pug 以及 <a href="https://so.csdn.net/so/search?q=stylus&amp;spm=1001.2101.3001.7020">stylus</a> 的渲染器，还需要下载，否则在项目运行时会报错：</li>
-</ol>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
-<ol>
-<li>修改项目根目录下的_config.yml文件（称为站点配置文件），开启主题</li>
-</ol>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">#theme: landscape</span><br><span class="line">theme: butterfly</span><br></pre></td></tr></table></figure>
-<ol>
-<li>升级建议</li>
-</ol>
-<p>为了減少升级主题带来的不便，我们还需要做以下操作：<br>把主题文件夹中的 _config.yml 复制到 Hexo 根目录下，同重命名为 _config.butterfly.yml</p>
-<p>Hexo会自动合并主题中的  _config.yml  和   _config.butterfly.yml  里的配置，如果存在同名配置，会使用  _config.butterfly.yml  的配置，其优先度较高。</p>
-<h3 id="ButterFly主题"><a href="#ButterFly主题" class="headerlink" title="ButterFly主题"></a>ButterFly主题</h3>]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -1320,6 +1320,76 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL04-SQL优化</title>
+    <url>/posts/10405.html</url>
+    <content><![CDATA[<p>详细的描述了MySQL中的SQL语句的优化。<br><span id="more"></span></p>
+<h3 id="MySQL语句优化"><a href="#MySQL语句优化" class="headerlink" title="MySQL语句优化"></a>MySQL语句优化</h3><h4 id="插入数据优化"><a href="#插入数据优化" class="headerlink" title="插入数据优化"></a>插入数据优化</h4><h5 id="批量插入"><a href="#批量插入" class="headerlink" title="批量插入"></a>批量插入</h5><blockquote>
+<h1 id="客户端连接服务端时，加上参数"><a href="#客户端连接服务端时，加上参数" class="headerlink" title="客户端连接服务端时，加上参数"></a>客户端连接服务端时，加上参数</h1><p>—local-infilemysql —local-infile -u root -p</p>
+<h1 id="设置全局参数local-infile为，开启从本地加载文件导入数据的开关"><a href="#设置全局参数local-infile为，开启从本地加载文件导入数据的开关" class="headerlink" title="设置全局参数local_infile为，开启从本地加载文件导入数据的开关"></a>设置全局参数local_infile为，开启从本地加载文件导入数据的开关</h1><p>set global local_infile = 1;</p>
+<h1 id="执行load指令将准备好的数据，加载到表结构中"><a href="#执行load指令将准备好的数据，加载到表结构中" class="headerlink" title="执行load指令将准备好的数据，加载到表结构中"></a>执行load指令将准备好的数据，加载到表结构中</h1><p>load data local infile ‘/root/sql1.log’ into table ‘table’ fields terminated by ‘,’ lines terminated by ‘\n’;</p>
+</blockquote>
+<h5 id="手动提交事务"><a href="#手动提交事务" class="headerlink" title="手动提交事务"></a>手动提交事务</h5><h5 id="主键顺序插入"><a href="#主键顺序插入" class="headerlink" title="主键顺序插入"></a>主键顺序插入</h5><p>主键顺序插入性能高于乱序插入</p>
+<h4 id="主键优化"><a href="#主键优化" class="headerlink" title="主键优化"></a>主键优化</h4><h5 id="数据组织方式"><a href="#数据组织方式" class="headerlink" title="数据组织方式"></a>数据组织方式</h5><blockquote>
+<p>在InnoDB存储引擎中，表数据都是根据主键顺序组织存放的，这种存储方式的表称为索引组织表(index organized table IOT)。</p>
+</blockquote>
+<h5 id="页分裂"><a href="#页分裂" class="headerlink" title="页分裂"></a>页分裂</h5><blockquote>
+<p>页可以为空，也可以填充一半，也可以填充100%。每个页包含了2-N行数据(如果一行数据多大，会行溢出)，根据主键排列。<br>主键乱序插入</p>
+</blockquote>
+<h5 id="页合并"><a href="#页合并" class="headerlink" title="页合并"></a>页合并</h5><blockquote>
+<p>当删除一行记录时，实际上记录并没有被物理删除，只是记录被标记（flaged)为删除并且它的空间变得允许被其他记录声明使用。<br>当页中删除的记录达到MERGE_THRESHOLD(默认为页的50%)，InnoDB会开始寻找最靠近的页（前或后）看看是否可以将两个页合并以优化空间使用。</p>
+</blockquote>
+<h5 id="主键设计原则"><a href="#主键设计原则" class="headerlink" title="主键设计原则"></a>主键设计原则</h5><blockquote>
+<ol>
+<li>满足业务需求的情况下，尽量降低主键的长度。</li>
+<li>插入数据时，尽量选择顺序插入，选择使用AUTO_INCREMENT自增主键。</li>
+<li>尽量不要使用UUID做主键或者是其他自然主键，如身份证号。</li>
+</ol>
+</blockquote>
+<h4 id="order-by-语句优化"><a href="#order-by-语句优化" class="headerlink" title="order by 语句优化"></a>order by 语句优化</h4><h5 id="Using-flesort"><a href="#Using-flesort" class="headerlink" title="Using flesort"></a>Using flesort</h5><p>通过表的索引或全表扫描，读取满足条件的数据行，然后在排序缓冲区sort buffer中完成排序操作，所有不是通过索引直接返回排序结果的排序都叫FileSort排序。</p>
+<h5 id="Using-index"><a href="#Using-index" class="headerlink" title="Using index"></a>Using index</h5><p>通过有序索引顺序扫描直接返回有序数据，这种情况即为using index，不需要额外排序，操作效率高。</p>
+<h5 id="优化原则"><a href="#优化原则" class="headerlink" title="优化原则"></a>优化原则</h5><blockquote>
+<ol>
+<li>根据排序字段建立合适的索引，多字段排序时，也遵循最左前缀法则。</li>
+<li>尽量使用覆盖索引。</li>
+<li>多字段排序,一个升序一个降序，此时需要注意联合索引在创建时的规则(ASC/DESC)。</li>
+<li>如果不可避免的出现filesort，大数据量排序时，可以适当增大排序缓冲区大小 sort_buffer_size(默认256k)。</li>
+</ol>
+</blockquote>
+<h4 id="group-by-语句优化"><a href="#group-by-语句优化" class="headerlink" title="group by 语句优化"></a>group by 语句优化</h4><h5 id="优化原则-1"><a href="#优化原则-1" class="headerlink" title="优化原则"></a>优化原则</h5><blockquote>
+<ol>
+<li>在分组操作时，可以通过索引来提高效率。</li>
+<li>分组操作时，索引的使用也是满足最左前缀法则的。</li>
+</ol>
+</blockquote>
+<h4 id="limit-语句优化"><a href="#limit-语句优化" class="headerlink" title="limit 语句优化"></a>limit 语句优化</h4><p><strong>一个常见又非常头疼的问题就是limit 20000000,10，此时需要MySQL排序前2000010记录，仅仅返回2000000 - 2000010的记录，其他记录丢弃，查询排序的代价非常大。</strong></p>
+<h5 id="优化原则-2"><a href="#优化原则-2" class="headerlink" title="优化原则"></a>优化原则</h5><p>一般分页查询时，通过创建覆盖索引能够比较好地提高性能，可以通过覆盖索引加子查询形式进行优化。</p>
+<h4 id="count-语句优化"><a href="#count-语句优化" class="headerlink" title="count 语句优化"></a>count 语句优化</h4><p>MylSAM引擎把二个表的总行数存在了磁盘上，因此执行count(*)的时候会直接返回这个数，效率很高<br>InnoDB引擎就麻烦了，它执行count(*)的时候，需要把数据一行一行地从引擎里面读出来，然后累积计数</p>
+<h5 id="优化原则：自己计数"><a href="#优化原则：自己计数" class="headerlink" title="优化原则：自己计数"></a>优化原则：自己计数</h5><blockquote>
+<ol>
+<li>count (主键)<br> InnoDB引擎会遍历整张表，把每一行的主键id值都取出来，返回给服务层。服务层拿到主键后，直接按行进行累加(主键不可能为null)</li>
+<li>count (字段)<br> 没有not null约束: InnoDB引擎会遍历整张表把每一行的字段值都取出来，返回给服务层，服务层判断，不为null，计数累加。有not null约束: InnoDB引擎会遍历整张表把每一行的字段值都取出来，返回给服务层，直接按行进行累加。</li>
+<li>count (1)<br> InnoDB引擎遍历整张表，但不取值。服务层对于返回的每一行，放一个数字“1”进去，直接按行进行累加。</li>
+<li>count (*)<br> lnnoDB引擎并不会把全部字段取出来，而是专门做了优化，不取值，服务层直接按行进行累加。</li>
+</ol>
+</blockquote>
+<p><strong>按照效率排序的话，count(字段):xcount(主键id)&lt; count(1) = count(<em>)，所以尽量使用count(</em>)。</strong></p>
+<h4 id="update-语句优化-避免行级锁变为表级锁"><a href="#update-语句优化-避免行级锁变为表级锁" class="headerlink" title="update 语句优化(避免行级锁变为表级锁)"></a>update 语句优化(避免行级锁变为表级锁)</h4><h5 id="优化原则-3"><a href="#优化原则-3" class="headerlink" title="优化原则"></a>优化原则</h5><p>InnoDB的行锁是针对索引加的锁，不是针对记录加的锁,并且该索引不能失效，否则会从行锁升级为表锁。</p>
+<h3 id="MySQL优化总结"><a href="#MySQL优化总结" class="headerlink" title="MySQL优化总结"></a>MySQL优化总结</h3><h5 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h5><p>insert:批量插入、手动控制事务、主键顺序插入<br>大批量插入: load data local infile</p>
+<h5 id="主键优化-1"><a href="#主键优化-1" class="headerlink" title="主键优化"></a>主键优化</h5><p>主键长度尽量短、顺序插入<br>AUTO_INCREMENT  <del>UUID</del></p>
+<h5 id="order-by优化"><a href="#order-by优化" class="headerlink" title="order by优化"></a>order by优化</h5><p>using index:直接通过索引返回数据，性能高<br>using filesort:需要将返回的结果在排序缓冲区排序</p>
+<h5 id="group-by优化"><a href="#group-by优化" class="headerlink" title="group by优化"></a>group by优化</h5><p>索引，多字段分组满足最左前缀法则</p>
+<h5 id="limit优化"><a href="#limit优化" class="headerlink" title="limit优化"></a>limit优化</h5><p>覆盖索引+子查询</p>
+<h5 id="count优化"><a href="#count优化" class="headerlink" title="count优化"></a>count优化</h5><p>性能: count(字段) &lt; count(主键id) &lt; count(1) &lt; count(*)</p>
+<h5 id="update优化"><a href="#update优化" class="headerlink" title="update优化"></a>update优化</h5><p>尽量根据主键/索引字段进行数据更新</p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SSM02-Spring中Bean的实例化与依赖注入</title>
     <url>/posts/10302.html</url>
     <content><![CDATA[<p>详细的描述了Spring中Bean的实例化与依赖注入。<br><span id="more"></span></p>
@@ -1425,73 +1495,47 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL04-SQL优化</title>
-    <url>/posts/10405.html</url>
-    <content><![CDATA[<p>详细的描述了MySQL中的SQL语句的优化。<br><span id="more"></span></p>
-<h3 id="MySQL语句优化"><a href="#MySQL语句优化" class="headerlink" title="MySQL语句优化"></a>MySQL语句优化</h3><h4 id="插入数据优化"><a href="#插入数据优化" class="headerlink" title="插入数据优化"></a>插入数据优化</h4><h5 id="批量插入"><a href="#批量插入" class="headerlink" title="批量插入"></a>批量插入</h5><blockquote>
-<h1 id="客户端连接服务端时，加上参数"><a href="#客户端连接服务端时，加上参数" class="headerlink" title="客户端连接服务端时，加上参数"></a>客户端连接服务端时，加上参数</h1><p>—local-infilemysql —local-infile -u root -p</p>
-<h1 id="设置全局参数local-infile为，开启从本地加载文件导入数据的开关"><a href="#设置全局参数local-infile为，开启从本地加载文件导入数据的开关" class="headerlink" title="设置全局参数local_infile为，开启从本地加载文件导入数据的开关"></a>设置全局参数local_infile为，开启从本地加载文件导入数据的开关</h1><p>set global local_infile = 1;</p>
-<h1 id="执行load指令将准备好的数据，加载到表结构中"><a href="#执行load指令将准备好的数据，加载到表结构中" class="headerlink" title="执行load指令将准备好的数据，加载到表结构中"></a>执行load指令将准备好的数据，加载到表结构中</h1><p>load data local infile ‘/root/sql1.log’ into table ‘table’ fields terminated by ‘,’ lines terminated by ‘\n’;</p>
+    <title>SSM04-Spring整合MyBatis</title>
+    <url>/posts/10304.html</url>
+    <content><![CDATA[<p>详细的描述了Spring整合myBatis和Spring整合Junit。<br><span id="more"></span></p>
+<h3 id="Spring整合myBatis"><a href="#Spring整合myBatis" class="headerlink" title="Spring整合myBatis"></a>Spring整合myBatis</h3><p>正常的mybatis核心代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        </span><br><span class="line"><span class="comment">//----------------------------------------------------------------------------------------------------//</span></span><br><span class="line">        <span class="comment">// 1. 创建SqlSessionFactoryBuilder对象</span></span><br><span class="line">        <span class="type">SqlSessionFactoryBuilder</span> <span class="variable">sqlSessionFactoryBuilder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SqlSessionFactoryBuilder</span>();</span><br><span class="line">        <span class="comment">// 2. 加载SqlMapConfig.xml配置文件</span></span><br><span class="line">        <span class="type">InputStream</span> <span class="variable">inputStream</span> <span class="operator">=</span> Resources.getResourceAsStream(<span class="string">&quot;SqlMapConfig.xml.bak&quot;</span>);</span><br><span class="line">        <span class="comment">// 3. 创建SqlSessionFactory对象</span></span><br><span class="line">        <span class="type">SqlSessionFactory</span> <span class="variable">sqlSessionFactory</span> <span class="operator">=</span> sqlSessionFactoryBuilder.build(inputStream);</span><br><span class="line"><span class="comment">//---------------------------------  一、初始化SqlSessionFactory对象   ----------------------------------//</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4. 获取SqlSession</span></span><br><span class="line">        <span class="type">SqlSession</span> <span class="variable">sqlSession</span> <span class="operator">=</span> sqlSessionFactory.openSession();</span><br><span class="line">        <span class="comment">// 5. 执行SqlSession对象执行查询，获取结果User</span></span><br><span class="line">        <span class="type">AccountDao</span> <span class="variable">accountDao</span> <span class="operator">=</span> sqlSession.getMapper(AccountDao.class);</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------------------------------  二、获取连接，获取实现   --------------------------------------------//</span></span><br><span class="line"></span><br><span class="line">        <span class="type">Account</span> <span class="variable">ac</span> <span class="operator">=</span> accountDao.findById(<span class="number">2</span>);</span><br><span class="line">        System.out.println(ac);</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------------------------------  三、获取数据层接口   -----------------------------------------------//</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 6. 释放资源</span></span><br><span class="line">        sqlSession.close();</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------------------------------  四、关闭连接   ----------------------------------------------------//</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那么上述的代码需要将那个核心对象放入IoC中进行管理呢 </p>
+<p><strong>SqlSessionFactory</strong> 最核心</p>
+<h4 id="原来的整合方法"><a href="#原来的整合方法" class="headerlink" title="原来的整合方法"></a>原来的整合方法</h4><p>xml配置：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">configuration</span></span></span><br><span class="line"><span class="meta">        <span class="keyword">PUBLIC</span> <span class="string">&quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="string">&quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span> <span class="attr">resource</span>=<span class="string">&quot;jdbc.properties&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">typeAliases</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">&quot;com.itheima.domain&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">typeAliases</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">&quot;mysql&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">&quot;mysql&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">&quot;JDBC&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">transactionManager</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">&quot;POOLED&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;driver&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.driver&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;url&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.url&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.username&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.password&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">&quot;com.itheima.dao&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>主函数：</p>
+<p>即上述的mybatis核心代码</p>
+<p><strong>注意：xml配置与配置类的写法一一对应，原来的配置文件被新的配置类所代替，如下位配置类。</strong></p>
+<h4 id="更改后的"><a href="#更改后的" class="headerlink" title="更改后的"></a>更改后的</h4><p>配置类：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.mybatis.spring.SqlSessionFactoryBean;</span><br><span class="line"><span class="keyword">import</span> org.mybatis.spring.mapper.MapperScannerConfigurer;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.sql.DataSource;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MybatisConfig</span> &#123;</span><br><span class="line">    <span class="comment">//定义bean，SqlSessionFactoryBean，用于产生SqlSessionFactory对象</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> SqlSessionFactoryBean <span class="title function_">sqlSessionFactory</span><span class="params">(DataSource dataSource)</span>&#123;</span><br><span class="line">        <span class="type">SqlSessionFactoryBean</span> <span class="variable">ssfb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SqlSessionFactoryBean</span>();</span><br><span class="line">        ssfb.setTypeAliasesPackage(<span class="string">&quot;com.itheima.domain&quot;</span>);</span><br><span class="line">        ssfb.setDataSource(dataSource);</span><br><span class="line">        <span class="keyword">return</span> ssfb;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//定义bean，返回MapperScannerConfigurer对象</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MapperScannerConfigurer <span class="title function_">mapperScannerConfigurer</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">MapperScannerConfigurer</span> <span class="variable">msc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MapperScannerConfigurer</span>();</span><br><span class="line">        msc.setBasePackage(<span class="string">&quot;com.itheima.dao&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> msc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意在主配置类中添加当前配置类的扫描</p>
+<p>注意：第二种方法中 pom.xml 新增两个坐标</p>
 </blockquote>
-<h5 id="手动提交事务"><a href="#手动提交事务" class="headerlink" title="手动提交事务"></a>手动提交事务</h5><h5 id="主键顺序插入"><a href="#主键顺序插入" class="headerlink" title="主键顺序插入"></a>主键顺序插入</h5><p>主键顺序插入性能高于乱序插入</p>
-<h4 id="主键优化"><a href="#主键优化" class="headerlink" title="主键优化"></a>主键优化</h4><h5 id="数据组织方式"><a href="#数据组织方式" class="headerlink" title="数据组织方式"></a>数据组织方式</h5><blockquote>
-<p>在InnoDB存储引擎中，表数据都是根据主键顺序组织存放的，这种存储方式的表称为索引组织表(index organized table IOT)。</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-jdbc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.10.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>主函数：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.itheima.config.SpringConfig;</span><br><span class="line"><span class="keyword">import</span> com.itheima.domain.Account;</span><br><span class="line"><span class="keyword">import</span> com.itheima.service.AccountService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.AnnotationConfigApplicationContext;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AnnotationConfigApplicationContext</span>(SpringConfig.class);</span><br><span class="line"></span><br><span class="line">        <span class="type">AccountService</span> <span class="variable">accountService</span> <span class="operator">=</span> ctx.getBean(AccountService.class);</span><br><span class="line"></span><br><span class="line">        <span class="type">Account</span> <span class="variable">ac</span> <span class="operator">=</span> accountService.findById(<span class="number">1</span>);</span><br><span class="line">        System.out.println(ac);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Spring整合Junit"><a href="#Spring整合Junit" class="headerlink" title="Spring整合Junit"></a>Spring整合Junit</h3><p>新增依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.10.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>测试样例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package com.itheima.service;</span><br><span class="line"></span><br><span class="line">import com.itheima.config.SpringConfig;</span><br><span class="line">import org.junit.Test;</span><br><span class="line">import org.junit.runner.RunWith;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.test.context.ContextConfiguration;</span><br><span class="line">import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;</span><br><span class="line">//设置类运行器</span><br><span class="line">@RunWith(SpringJUnit4ClassRunner.class)</span><br><span class="line">//设置Spring环境对应的配置类</span><br><span class="line">@ContextConfiguration(classes = SpringConfig.class)</span><br><span class="line">public class AccountServiceTest &#123;</span><br><span class="line">    //支持自动装配注入bean</span><br><span class="line">    @Autowired</span><br><span class="line">    private AccountService accountService;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testFindById()&#123; System.out.println(accountService.findById(1)); &#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testFindAll()&#123; System.out.println(accountService.findAll()); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意两点</p>
+<blockquote>
+<ul>
+<li><p>设置类运行器：@RunWith(SpringJUnit4ClassRunner.class)</p>
+<p>  设置Spring环境对应的配置类：@ContextConfiguration(classes = SpringConfig.class)</p>
+</li>
+<li><p>想用什么用@Autowired自动注入即可</p>
+</li>
+</ul>
 </blockquote>
-<h5 id="页分裂"><a href="#页分裂" class="headerlink" title="页分裂"></a>页分裂</h5><blockquote>
-<p>页可以为空，也可以填充一半，也可以填充100%。每个页包含了2-N行数据(如果一行数据多大，会行溢出)，根据主键排列。<br>主键乱序插入</p>
-</blockquote>
-<h5 id="页合并"><a href="#页合并" class="headerlink" title="页合并"></a>页合并</h5><blockquote>
-<p>当删除一行记录时，实际上记录并没有被物理删除，只是记录被标记（flaged)为删除并且它的空间变得允许被其他记录声明使用。<br>当页中删除的记录达到MERGE_THRESHOLD(默认为页的50%)，InnoDB会开始寻找最靠近的页（前或后）看看是否可以将两个页合并以优化空间使用。</p>
-</blockquote>
-<h5 id="主键设计原则"><a href="#主键设计原则" class="headerlink" title="主键设计原则"></a>主键设计原则</h5><blockquote>
-<ol>
-<li>满足业务需求的情况下，尽量降低主键的长度。</li>
-<li>插入数据时，尽量选择顺序插入，选择使用AUTO_INCREMENT自增主键。</li>
-<li>尽量不要使用UUID做主键或者是其他自然主键，如身份证号。</li>
-</ol>
-</blockquote>
-<h4 id="order-by-语句优化"><a href="#order-by-语句优化" class="headerlink" title="order by 语句优化"></a>order by 语句优化</h4><h5 id="Using-flesort"><a href="#Using-flesort" class="headerlink" title="Using flesort"></a>Using flesort</h5><p>通过表的索引或全表扫描，读取满足条件的数据行，然后在排序缓冲区sort buffer中完成排序操作，所有不是通过索引直接返回排序结果的排序都叫FileSort排序。</p>
-<h5 id="Using-index"><a href="#Using-index" class="headerlink" title="Using index"></a>Using index</h5><p>通过有序索引顺序扫描直接返回有序数据，这种情况即为using index，不需要额外排序，操作效率高。</p>
-<h5 id="优化原则"><a href="#优化原则" class="headerlink" title="优化原则"></a>优化原则</h5><blockquote>
-<ol>
-<li>根据排序字段建立合适的索引，多字段排序时，也遵循最左前缀法则。</li>
-<li>尽量使用覆盖索引。</li>
-<li>多字段排序,一个升序一个降序，此时需要注意联合索引在创建时的规则(ASC/DESC)。</li>
-<li>如果不可避免的出现filesort，大数据量排序时，可以适当增大排序缓冲区大小 sort_buffer_size(默认256k)。</li>
-</ol>
-</blockquote>
-<h4 id="group-by-语句优化"><a href="#group-by-语句优化" class="headerlink" title="group by 语句优化"></a>group by 语句优化</h4><h5 id="优化原则-1"><a href="#优化原则-1" class="headerlink" title="优化原则"></a>优化原则</h5><blockquote>
-<ol>
-<li>在分组操作时，可以通过索引来提高效率。</li>
-<li>分组操作时，索引的使用也是满足最左前缀法则的。</li>
-</ol>
-</blockquote>
-<h4 id="limit-语句优化"><a href="#limit-语句优化" class="headerlink" title="limit 语句优化"></a>limit 语句优化</h4><p><strong>一个常见又非常头疼的问题就是limit 20000000,10，此时需要MySQL排序前2000010记录，仅仅返回2000000 - 2000010的记录，其他记录丢弃，查询排序的代价非常大。</strong></p>
-<h5 id="优化原则-2"><a href="#优化原则-2" class="headerlink" title="优化原则"></a>优化原则</h5><p>一般分页查询时，通过创建覆盖索引能够比较好地提高性能，可以通过覆盖索引加子查询形式进行优化。</p>
-<h4 id="count-语句优化"><a href="#count-语句优化" class="headerlink" title="count 语句优化"></a>count 语句优化</h4><p>MylSAM引擎把二个表的总行数存在了磁盘上，因此执行count(*)的时候会直接返回这个数，效率很高<br>InnoDB引擎就麻烦了，它执行count(*)的时候，需要把数据一行一行地从引擎里面读出来，然后累积计数</p>
-<h5 id="优化原则：自己计数"><a href="#优化原则：自己计数" class="headerlink" title="优化原则：自己计数"></a>优化原则：自己计数</h5><blockquote>
-<ol>
-<li>count (主键)<br> InnoDB引擎会遍历整张表，把每一行的主键id值都取出来，返回给服务层。服务层拿到主键后，直接按行进行累加(主键不可能为null)</li>
-<li>count (字段)<br> 没有not null约束: InnoDB引擎会遍历整张表把每一行的字段值都取出来，返回给服务层，服务层判断，不为null，计数累加。有not null约束: InnoDB引擎会遍历整张表把每一行的字段值都取出来，返回给服务层，直接按行进行累加。</li>
-<li>count (1)<br> InnoDB引擎遍历整张表，但不取值。服务层对于返回的每一行，放一个数字“1”进去，直接按行进行累加。</li>
-<li>count (*)<br> lnnoDB引擎并不会把全部字段取出来，而是专门做了优化，不取值，服务层直接按行进行累加。</li>
-</ol>
-</blockquote>
-<p><strong>按照效率排序的话，count(字段):xcount(主键id)&lt; count(1) = count(<em>)，所以尽量使用count(</em>)。</strong></p>
-<h4 id="update-语句优化-避免行级锁变为表级锁"><a href="#update-语句优化-避免行级锁变为表级锁" class="headerlink" title="update 语句优化(避免行级锁变为表级锁)"></a>update 语句优化(避免行级锁变为表级锁)</h4><h5 id="优化原则-3"><a href="#优化原则-3" class="headerlink" title="优化原则"></a>优化原则</h5><p>InnoDB的行锁是针对索引加的锁，不是针对记录加的锁,并且该索引不能失效，否则会从行锁升级为表锁。</p>
-<h3 id="MySQL优化总结"><a href="#MySQL优化总结" class="headerlink" title="MySQL优化总结"></a>MySQL优化总结</h3><h5 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h5><p>insert:批量插入、手动控制事务、主键顺序插入<br>大批量插入: load data local infile</p>
-<h5 id="主键优化-1"><a href="#主键优化-1" class="headerlink" title="主键优化"></a>主键优化</h5><p>主键长度尽量短、顺序插入<br>AUTO_INCREMENT  <del>UUID</del></p>
-<h5 id="order-by优化"><a href="#order-by优化" class="headerlink" title="order by优化"></a>order by优化</h5><p>using index:直接通过索引返回数据，性能高<br>using filesort:需要将返回的结果在排序缓冲区排序</p>
-<h5 id="group-by优化"><a href="#group-by优化" class="headerlink" title="group by优化"></a>group by优化</h5><p>索引，多字段分组满足最左前缀法则</p>
-<h5 id="limit优化"><a href="#limit优化" class="headerlink" title="limit优化"></a>limit优化</h5><p>覆盖索引+子查询</p>
-<h5 id="count优化"><a href="#count优化" class="headerlink" title="count优化"></a>count优化</h5><p>性能: count(字段) &lt; count(主键id) &lt; count(1) &lt; count(*)</p>
-<h5 id="update优化"><a href="#update优化" class="headerlink" title="update优化"></a>update优化</h5><p>尽量根据主键/索引字段进行数据更新</p>
 ]]></content>
       <categories>
-        <category>MySQL</category>
+        <category>SSM</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
+        <tag>Spring</tag>
       </tags>
   </entry>
   <entry>
@@ -1622,41 +1666,80 @@
       </tags>
   </entry>
   <entry>
-    <title>SSM04-Spring整合MyBatis</title>
-    <url>/posts/10304.html</url>
-    <content><![CDATA[<p>详细的描述了Spring整合myBatis和Spring整合Junit。<br><span id="more"></span></p>
-<h3 id="Spring整合myBatis"><a href="#Spring整合myBatis" class="headerlink" title="Spring整合myBatis"></a>Spring整合myBatis</h3><p>正常的mybatis核心代码如下：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        </span><br><span class="line"><span class="comment">//----------------------------------------------------------------------------------------------------//</span></span><br><span class="line">        <span class="comment">// 1. 创建SqlSessionFactoryBuilder对象</span></span><br><span class="line">        <span class="type">SqlSessionFactoryBuilder</span> <span class="variable">sqlSessionFactoryBuilder</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SqlSessionFactoryBuilder</span>();</span><br><span class="line">        <span class="comment">// 2. 加载SqlMapConfig.xml配置文件</span></span><br><span class="line">        <span class="type">InputStream</span> <span class="variable">inputStream</span> <span class="operator">=</span> Resources.getResourceAsStream(<span class="string">&quot;SqlMapConfig.xml.bak&quot;</span>);</span><br><span class="line">        <span class="comment">// 3. 创建SqlSessionFactory对象</span></span><br><span class="line">        <span class="type">SqlSessionFactory</span> <span class="variable">sqlSessionFactory</span> <span class="operator">=</span> sqlSessionFactoryBuilder.build(inputStream);</span><br><span class="line"><span class="comment">//---------------------------------  一、初始化SqlSessionFactory对象   ----------------------------------//</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4. 获取SqlSession</span></span><br><span class="line">        <span class="type">SqlSession</span> <span class="variable">sqlSession</span> <span class="operator">=</span> sqlSessionFactory.openSession();</span><br><span class="line">        <span class="comment">// 5. 执行SqlSession对象执行查询，获取结果User</span></span><br><span class="line">        <span class="type">AccountDao</span> <span class="variable">accountDao</span> <span class="operator">=</span> sqlSession.getMapper(AccountDao.class);</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------------------------------  二、获取连接，获取实现   --------------------------------------------//</span></span><br><span class="line"></span><br><span class="line">        <span class="type">Account</span> <span class="variable">ac</span> <span class="operator">=</span> accountDao.findById(<span class="number">2</span>);</span><br><span class="line">        System.out.println(ac);</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------------------------------  三、获取数据层接口   -----------------------------------------------//</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 6. 释放资源</span></span><br><span class="line">        sqlSession.close();</span><br><span class="line"></span><br><span class="line"><span class="comment">//---------------------------------  四、关闭连接   ----------------------------------------------------//</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>那么上述的代码需要将那个核心对象放入IoC中进行管理呢 </p>
-<p><strong>SqlSessionFactory</strong> 最核心</p>
-<h4 id="原来的整合方法"><a href="#原来的整合方法" class="headerlink" title="原来的整合方法"></a>原来的整合方法</h4><p>xml配置：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">configuration</span></span></span><br><span class="line"><span class="meta">        <span class="keyword">PUBLIC</span> <span class="string">&quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span></span></span><br><span class="line"><span class="meta">        <span class="string">&quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span> <span class="attr">resource</span>=<span class="string">&quot;jdbc.properties&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">typeAliases</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">&quot;com.itheima.domain&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">typeAliases</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">&quot;mysql&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">&quot;mysql&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">&quot;JDBC&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">transactionManager</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">&quot;POOLED&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;driver&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.driver&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;url&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.url&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.username&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;jdbc.password&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">&quot;com.itheima.dao&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>主函数：</p>
-<p>即上述的mybatis核心代码</p>
-<p><strong>注意：xml配置与配置类的写法一一对应，原来的配置文件被新的配置类所代替，如下位配置类。</strong></p>
-<h4 id="更改后的"><a href="#更改后的" class="headerlink" title="更改后的"></a>更改后的</h4><p>配置类：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.mybatis.spring.SqlSessionFactoryBean;</span><br><span class="line"><span class="keyword">import</span> org.mybatis.spring.mapper.MapperScannerConfigurer;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.sql.DataSource;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MybatisConfig</span> &#123;</span><br><span class="line">    <span class="comment">//定义bean，SqlSessionFactoryBean，用于产生SqlSessionFactory对象</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> SqlSessionFactoryBean <span class="title function_">sqlSessionFactory</span><span class="params">(DataSource dataSource)</span>&#123;</span><br><span class="line">        <span class="type">SqlSessionFactoryBean</span> <span class="variable">ssfb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SqlSessionFactoryBean</span>();</span><br><span class="line">        ssfb.setTypeAliasesPackage(<span class="string">&quot;com.itheima.domain&quot;</span>);</span><br><span class="line">        ssfb.setDataSource(dataSource);</span><br><span class="line">        <span class="keyword">return</span> ssfb;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//定义bean，返回MapperScannerConfigurer对象</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> MapperScannerConfigurer <span class="title function_">mapperScannerConfigurer</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="type">MapperScannerConfigurer</span> <span class="variable">msc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MapperScannerConfigurer</span>();</span><br><span class="line">        msc.setBasePackage(<span class="string">&quot;com.itheima.dao&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> msc;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意在主配置类中添加当前配置类的扫描</p>
-<p>注意：第二种方法中 pom.xml 新增两个坐标</p>
-</blockquote>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-jdbc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.10.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>主函数：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.itheima.config.SpringConfig;</span><br><span class="line"><span class="keyword">import</span> com.itheima.domain.Account;</span><br><span class="line"><span class="keyword">import</span> com.itheima.service.AccountService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.AnnotationConfigApplicationContext;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AnnotationConfigApplicationContext</span>(SpringConfig.class);</span><br><span class="line"></span><br><span class="line">        <span class="type">AccountService</span> <span class="variable">accountService</span> <span class="operator">=</span> ctx.getBean(AccountService.class);</span><br><span class="line"></span><br><span class="line">        <span class="type">Account</span> <span class="variable">ac</span> <span class="operator">=</span> accountService.findById(<span class="number">1</span>);</span><br><span class="line">        System.out.println(ac);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Spring整合Junit"><a href="#Spring整合Junit" class="headerlink" title="Spring整合Junit"></a>Spring整合Junit</h3><p>新增依赖</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.10.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>测试样例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package com.itheima.service;</span><br><span class="line"></span><br><span class="line">import com.itheima.config.SpringConfig;</span><br><span class="line">import org.junit.Test;</span><br><span class="line">import org.junit.runner.RunWith;</span><br><span class="line">import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">import org.springframework.test.context.ContextConfiguration;</span><br><span class="line">import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;</span><br><span class="line">//设置类运行器</span><br><span class="line">@RunWith(SpringJUnit4ClassRunner.class)</span><br><span class="line">//设置Spring环境对应的配置类</span><br><span class="line">@ContextConfiguration(classes = SpringConfig.class)</span><br><span class="line">public class AccountServiceTest &#123;</span><br><span class="line">    //支持自动装配注入bean</span><br><span class="line">    @Autowired</span><br><span class="line">    private AccountService accountService;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testFindById()&#123; System.out.println(accountService.findById(1)); &#125;</span><br><span class="line"></span><br><span class="line">    @Test</span><br><span class="line">    public void testFindAll()&#123; System.out.println(accountService.findAll()); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注意两点</p>
-<blockquote>
-<ul>
-<li><p>设置类运行器：@RunWith(SpringJUnit4ClassRunner.class)</p>
-<p>  设置Spring环境对应的配置类：@ContextConfiguration(classes = SpringConfig.class)</p>
+    <title>SSM06-Spring中的事务</title>
+    <url>/posts/10306.html</url>
+    <content><![CDATA[<p>详细的描述了Spring中的事务概念。<br><span id="more"></span></p>
+<h3 id="事务的简介"><a href="#事务的简介" class="headerlink" title="事务的简介"></a>事务的简介</h3><p>事务作用：在数据层保障一系列的数据库操作同成功同失败<br>Spring事务作用：在数据层或业务层保障一系列的数据库操作同成功同失败</p>
+<p>如何开启事务管理？</p>
+<p>步骤如下：</p>
+<ol>
+<li>在业务层接口上添加Spring事务管理</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">xxxxx</span> &#123;</span><br><span class="line">    <span class="meta">@Transactional</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> xxx &#123;</span><br><span class="line">        代码体</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注意事项</strong>：<br>Spring注解式事务通常添加在业务层接口中而不会添加到业务层实现类中，降低耦合<br>注解式事务可以添加到业务方法上表示当前方法开启事务，也可以添加到接口上表示当前接口所有方法开启事务</p>
+<ol>
+<li>设置事务管理器</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> PlatformTransactionManager <span class="title function_">transactionManager</span><span class="params">(DataSource dataSource)</span>&#123;</span><br><span class="line">	<span class="type">DataSourceTransactionManager</span> <span class="variable">ptm</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DataSourceTransactionManager</span>();</span><br><span class="line">    ptm.setDataSource(dataSource);</span><br><span class="line">	<span class="keyword">return</span> ptm;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>在主配置类中开启事务型驱动</p>
+<p>添加如下注解：</p>
 </li>
-<li><p>想用什么用@Autowired自动注入即可</p>
-</li>
-</ul>
-</blockquote>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@EnableTransactionmanagement</span></span><br></pre></td></tr></table></figure>
+<h3 id="Spring事务角色"><a href="#Spring事务角色" class="headerlink" title="Spring事务角色"></a>Spring事务角色</h3><p>事务角色</p>
+<h4 id="事务管理员"><a href="#事务管理员" class="headerlink" title="事务管理员"></a>事务管理员</h4><p>发起事务方，在Spring中通常指代业务层开启事务的方法</p>
+<h4 id="事务协调员"><a href="#事务协调员" class="headerlink" title="事务协调员"></a>事务协调员</h4><p>加入事务方，在Spring中通常指代数据层方法，也可以是业务层方法</p>
+<h3 id="事务属性"><a href="#事务属性" class="headerlink" title="事务属性"></a>事务属性</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">readOnly</td>
+<td style="text-align:center">设置是否为只读事务</td>
+<td style="text-align:center">readOnly = true   只读事务</td>
+</tr>
+<tr>
+<td style="text-align:center">timeout</td>
+<td style="text-align:center">设置事务的超过时间</td>
+<td style="text-align:center">timeout = -1   永不超时</td>
+</tr>
+<tr>
+<td style="text-align:center">rollbackFor</td>
+<td style="text-align:center">设置事务回滚异常(class)</td>
+<td style="text-align:center">rollbackFor = (NullPointException.class)</td>
+</tr>
+<tr>
+<td style="text-align:center">rollbackForClassName</td>
+<td style="text-align:center">设置事务回滚异常(String)</td>
+<td style="text-align:center">同上格式为字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">noRollbackFor</td>
+<td style="text-align:center">设置事务不回滚异常(class)</td>
+<td style="text-align:center">noRollbackFor = (NullPointException.class)</td>
+</tr>
+<tr>
+<td style="text-align:center">noRollbackForClassName</td>
+<td style="text-align:center">设置事务不回滚异常(String)</td>
+<td style="text-align:center">同上格式为字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">propagation</td>
+<td style="text-align:center">设置事务传播行为</td>
+<td style="text-align:center">…</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>事务传播行为</strong>：事务协调员对事务管理员所携带事务的处理态度</p>
+<p><img src="https://wang-nine.cn/images/image-20230603190452697.png" alt="SSM05-01事务传播行为"></p>
 ]]></content>
       <categories>
         <category>SSM</category>
@@ -1863,89 +1946,6 @@
       </tags>
   </entry>
   <entry>
-    <title>SSM06-Spring中的事务</title>
-    <url>/posts/10306.html</url>
-    <content><![CDATA[<p>详细的描述了Spring中的事务概念。<br><span id="more"></span></p>
-<h3 id="事务的简介"><a href="#事务的简介" class="headerlink" title="事务的简介"></a>事务的简介</h3><p>事务作用：在数据层保障一系列的数据库操作同成功同失败<br>Spring事务作用：在数据层或业务层保障一系列的数据库操作同成功同失败</p>
-<p>如何开启事务管理？</p>
-<p>步骤如下：</p>
-<ol>
-<li>在业务层接口上添加Spring事务管理</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">xxxxx</span> &#123;</span><br><span class="line">    <span class="meta">@Transactional</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> xxx &#123;</span><br><span class="line">        代码体</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>注意事项</strong>：<br>Spring注解式事务通常添加在业务层接口中而不会添加到业务层实现类中，降低耦合<br>注解式事务可以添加到业务方法上表示当前方法开启事务，也可以添加到接口上表示当前接口所有方法开启事务</p>
-<ol>
-<li>设置事务管理器</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="keyword">public</span> PlatformTransactionManager <span class="title function_">transactionManager</span><span class="params">(DataSource dataSource)</span>&#123;</span><br><span class="line">	<span class="type">DataSourceTransactionManager</span> <span class="variable">ptm</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DataSourceTransactionManager</span>();</span><br><span class="line">    ptm.setDataSource(dataSource);</span><br><span class="line">	<span class="keyword">return</span> ptm;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>在主配置类中开启事务型驱动</p>
-<p>添加如下注解：</p>
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@EnableTransactionmanagement</span></span><br></pre></td></tr></table></figure>
-<h3 id="Spring事务角色"><a href="#Spring事务角色" class="headerlink" title="Spring事务角色"></a>Spring事务角色</h3><p>事务角色</p>
-<h4 id="事务管理员"><a href="#事务管理员" class="headerlink" title="事务管理员"></a>事务管理员</h4><p>发起事务方，在Spring中通常指代业务层开启事务的方法</p>
-<h4 id="事务协调员"><a href="#事务协调员" class="headerlink" title="事务协调员"></a>事务协调员</h4><p>加入事务方，在Spring中通常指代数据层方法，也可以是业务层方法</p>
-<h3 id="事务属性"><a href="#事务属性" class="headerlink" title="事务属性"></a>事务属性</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">属性</th>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">实例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">readOnly</td>
-<td style="text-align:center">设置是否为只读事务</td>
-<td style="text-align:center">readOnly = true   只读事务</td>
-</tr>
-<tr>
-<td style="text-align:center">timeout</td>
-<td style="text-align:center">设置事务的超过时间</td>
-<td style="text-align:center">timeout = -1   永不超时</td>
-</tr>
-<tr>
-<td style="text-align:center">rollbackFor</td>
-<td style="text-align:center">设置事务回滚异常(class)</td>
-<td style="text-align:center">rollbackFor = (NullPointException.class)</td>
-</tr>
-<tr>
-<td style="text-align:center">rollbackForClassName</td>
-<td style="text-align:center">设置事务回滚异常(String)</td>
-<td style="text-align:center">同上格式为字符串</td>
-</tr>
-<tr>
-<td style="text-align:center">noRollbackFor</td>
-<td style="text-align:center">设置事务不回滚异常(class)</td>
-<td style="text-align:center">noRollbackFor = (NullPointException.class)</td>
-</tr>
-<tr>
-<td style="text-align:center">noRollbackForClassName</td>
-<td style="text-align:center">设置事务不回滚异常(String)</td>
-<td style="text-align:center">同上格式为字符串</td>
-</tr>
-<tr>
-<td style="text-align:center">propagation</td>
-<td style="text-align:center">设置事务传播行为</td>
-<td style="text-align:center">…</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p><strong>事务传播行为</strong>：事务协调员对事务管理员所携带事务的处理态度</p>
-<p><img src="https://wang-nine.cn/images/image-20230603190452697.png" alt="SSM05-01事务传播行为"></p>
-]]></content>
-      <categories>
-        <category>SSM</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SSM总览</title>
     <url>/posts/10300.html</url>
     <content><![CDATA[<h3 id="SSM01-Spring中的Bean"><a href="#SSM01-Spring中的Bean" class="headerlink" title="SSM01-Spring中的Bean"></a>SSM01-Spring中的Bean</h3><p><a href="https://wang-nine.cn/posts/10301.html">SSM01-Spring中的Bean</a></p>
@@ -1961,6 +1961,20 @@
       </categories>
       <tags>
         <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客搭建教程总览</title>
+    <url>/posts/10001.html</url>
+    <content><![CDATA[<h3 id="Hexo-Butterfly主题博客搭建01"><a href="#Hexo-Butterfly主题博客搭建01" class="headerlink" title="Hexo+Butterfly主题博客搭建01"></a>Hexo+Butterfly主题博客搭建01</h3><p><a href="https://wang-nine.cn/posts/10001.html">Hexo+Butterfly主题博客搭建01</a></p>
+<h3 id="Hexo-Butterfly主题博客搭建02"><a href="#Hexo-Butterfly主题博客搭建02" class="headerlink" title="Hexo+Butterfly主题博客搭建02"></a>Hexo+Butterfly主题博客搭建02</h3><p><a href="https://wang-nine.cn/posts/10002.html">Hexo+Butterfly主题博客搭建02</a></p>
+<h3 id="Hexo-Butterfly主题博客搭建03"><a href="#Hexo-Butterfly主题博客搭建03" class="headerlink" title="Hexo+Butterfly主题博客搭建03"></a>Hexo+Butterfly主题博客搭建03</h3><p><a href="https://wang-nine.cn/posts/10003.html">Hexo+Butterfly主题博客搭建03</a></p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
       </tags>
   </entry>
   <entry>
@@ -2183,27 +2197,13 @@
       </tags>
   </entry>
   <entry>
-    <title>博客搭建教程总览</title>
-    <url>/posts/10001.html</url>
-    <content><![CDATA[<h3 id="Hexo-Butterfly主题博客搭建01"><a href="#Hexo-Butterfly主题博客搭建01" class="headerlink" title="Hexo+Butterfly主题博客搭建01"></a>Hexo+Butterfly主题博客搭建01</h3><p><a href="https://wang-nine.cn/posts/10001.html">Hexo+Butterfly主题博客搭建01</a></p>
-<h3 id="Hexo-Butterfly主题博客搭建02"><a href="#Hexo-Butterfly主题博客搭建02" class="headerlink" title="Hexo+Butterfly主题博客搭建02"></a>Hexo+Butterfly主题博客搭建02</h3><p><a href="https://wang-nine.cn/posts/10002.html">Hexo+Butterfly主题博客搭建02</a></p>
-<h3 id="Hexo-Butterfly主题博客搭建03"><a href="#Hexo-Butterfly主题博客搭建03" class="headerlink" title="Hexo+Butterfly主题博客搭建03"></a>Hexo+Butterfly主题博客搭建03</h3><p><a href="https://wang-nine.cn/posts/10003.html">Hexo+Butterfly主题博客搭建03</a></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于</title>
     <url>/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>相册</title>
-    <url>/gallery/index.html</url>
+    <title>分类</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -2212,8 +2212,8 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
+    <title>相册</title>
+    <url>/gallery/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
