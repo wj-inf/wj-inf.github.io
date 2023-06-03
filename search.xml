@@ -77,6 +77,96 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL01-事务</title>
+    <url>/posts/10400.html</url>
+    <content><![CDATA[<p>详细的描述了MySQL中的事务的四大特性以及事务的隔离级别。<br><span id="more"></span></p>
+<h3 id="事务的简介"><a href="#事务的简介" class="headerlink" title="事务的简介"></a>事务的简介</h3><blockquote>
+<p><strong>事务</strong>是一组操作的集合，它是一个不可分割的工作单位，事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求，即这些操作要么同时成功，要么同时失败。</p>
+<p>默认MySQL的事务是自动提交的，也就是说，当执行一条DML语句，MySQL会立即隐式的提交事务。</p>
+</blockquote>
+<h3 id="事务的操作"><a href="#事务的操作" class="headerlink" title="事务的操作"></a>事务的操作</h3><h4 id="提交事务的方式"><a href="#提交事务的方式" class="headerlink" title="提交事务的方式"></a>提交事务的方式</h4><h5 id="1-方式一"><a href="#1-方式一" class="headerlink" title="1.方式一"></a>1.方式一</h5><h6 id="①-查看-设置事务的提交方式"><a href="#①-查看-设置事务的提交方式" class="headerlink" title="① 查看/设置事务的提交方式"></a>① 查看/设置事务的提交方式</h6><blockquote>
+<p>SELECT @@autocommit;<br>SET @@autocommit = 0;    —1是自动 0是手动</p>
+<h6 id="②-提交事务"><a href="#②-提交事务" class="headerlink" title="② 提交事务"></a>② 提交事务</h6><p>COMMIT;    —提交事务</p>
+<h6 id="③-回滚事务"><a href="#③-回滚事务" class="headerlink" title="③ 回滚事务"></a>③ 回滚事务</h6><p>ROLLBACK;    —回滚事务</p>
+</blockquote>
+<h5 id="2-方式二（手动开启并且提交）"><a href="#2-方式二（手动开启并且提交）" class="headerlink" title="2.方式二（手动开启并且提交）"></a>2.方式二（手动开启并且提交）</h5><h6 id="①-开启事务"><a href="#①-开启事务" class="headerlink" title="① 开启事务"></a>① 开启事务</h6><blockquote>
+<p>START TRANSACTION / BEGIN;</p>
+<h6 id="②-提交事务-1"><a href="#②-提交事务-1" class="headerlink" title="② 提交事务"></a>② 提交事务</h6><p>COMMIT；</p>
+<h6 id="③-回滚事务-1"><a href="#③-回滚事务-1" class="headerlink" title="③ 回滚事务"></a>③ 回滚事务</h6><p>ROLLBACK;</p>
+</blockquote>
+<h3 id="事务的四大特性（ACID）"><a href="#事务的四大特性（ACID）" class="headerlink" title="事务的四大特性（ACID）"></a>事务的四大特性（ACID）</h3><blockquote>
+<h4 id="原子性（Atomicity-∶事务是不可分割的最小操作单元，要么全部成功，要么全部失败。"><a href="#原子性（Atomicity-∶事务是不可分割的最小操作单元，要么全部成功，要么全部失败。" class="headerlink" title="原子性（Atomicity)∶事务是不可分割的最小操作单元，要么全部成功，要么全部失败。"></a><font size=3>原子性（<strong>A</strong>tomicity)∶事务是不可分割的最小操作单元，要么全部成功，要么全部失败。</font></h4><h4 id="一致性（Consistency-事务完成时，必须使所有的数据都保持一致状态。"><a href="#一致性（Consistency-事务完成时，必须使所有的数据都保持一致状态。" class="headerlink" title="一致性（Consistency) :事务完成时，必须使所有的数据都保持一致状态。"></a><font size=3>一致性（Consistency) :事务完成时，必须使所有的数据都保持一致状态。</font></h4><h4 id="隔离性（lsolation-数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。"><a href="#隔离性（lsolation-数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。" class="headerlink" title="隔离性（lsolation):数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。"></a><font size=3>隔离性（<strong>l</strong>solation):数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。</font></h4><h4 id="持久性（Durability-事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。"><a href="#持久性（Durability-事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。" class="headerlink" title="持久性（Durability) :事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。"></a><font size=3>持久性（Durability) :事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</font></h4></blockquote>
+<h3 id="并发事务的问题"><a href="#并发事务的问题" class="headerlink" title="并发事务的问题"></a>并发事务的问题</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>问题</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>脏读</td>
+<td>一个事务读到另外一个事务还没有提交的数据。</td>
+</tr>
+<tr>
+<td>不可重复读</td>
+<td>一个事务先后读取同一条记录，但两次读取的数据不同，称之为不可重复读。</td>
+</tr>
+<tr>
+<td>幻读</td>
+<td>一个事务按照条件查询数据时，没有对应的数据行，但是在插入数据时，又发现这行数据已存在，好像出现了’幻影”。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">隔离级别</th>
+<th style="text-align:center">脏读</th>
+<th style="text-align:center">不可重复读</th>
+<th style="text-align:center">幻读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Read Uncommitted</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">Read Committed</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">Repeatable Read（默认）</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">Serializable</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+<td style="text-align:center">×</td>
+</tr>
+</tbody>
+</table>
+</div>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java中的多线程</title>
     <url>/posts/10100.html</url>
     <content><![CDATA[<p>详细的描述了Java中多线程的创建、使用、同步问题，以及线程池的创建、使用问题，详细的描述了定时器的创建和使用，详细的分析了Java中六种不同的线程转态以及转换。<br><span id="more"></span></p>
@@ -499,96 +589,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL01-事务</title>
-    <url>/posts/10400.html</url>
-    <content><![CDATA[<p>详细的描述了MySQL中的事务的四大特性以及事务的隔离级别。<br><span id="more"></span></p>
-<h3 id="事务的简介"><a href="#事务的简介" class="headerlink" title="事务的简介"></a>事务的简介</h3><blockquote>
-<p><strong>事务</strong>是一组操作的集合，它是一个不可分割的工作单位，事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求，即这些操作要么同时成功，要么同时失败。</p>
-<p>默认MySQL的事务是自动提交的，也就是说，当执行一条DML语句，MySQL会立即隐式的提交事务。</p>
-</blockquote>
-<h3 id="事务的操作"><a href="#事务的操作" class="headerlink" title="事务的操作"></a>事务的操作</h3><h4 id="提交事务的方式"><a href="#提交事务的方式" class="headerlink" title="提交事务的方式"></a>提交事务的方式</h4><h5 id="1-方式一"><a href="#1-方式一" class="headerlink" title="1.方式一"></a>1.方式一</h5><h6 id="①-查看-设置事务的提交方式"><a href="#①-查看-设置事务的提交方式" class="headerlink" title="① 查看/设置事务的提交方式"></a>① 查看/设置事务的提交方式</h6><blockquote>
-<p>SELECT @@autocommit;<br>SET @@autocommit = 0;    —1是自动 0是手动</p>
-<h6 id="②-提交事务"><a href="#②-提交事务" class="headerlink" title="② 提交事务"></a>② 提交事务</h6><p>COMMIT;    —提交事务</p>
-<h6 id="③-回滚事务"><a href="#③-回滚事务" class="headerlink" title="③ 回滚事务"></a>③ 回滚事务</h6><p>ROLLBACK;    —回滚事务</p>
-</blockquote>
-<h5 id="2-方式二（手动开启并且提交）"><a href="#2-方式二（手动开启并且提交）" class="headerlink" title="2.方式二（手动开启并且提交）"></a>2.方式二（手动开启并且提交）</h5><h6 id="①-开启事务"><a href="#①-开启事务" class="headerlink" title="① 开启事务"></a>① 开启事务</h6><blockquote>
-<p>START TRANSACTION / BEGIN;</p>
-<h6 id="②-提交事务-1"><a href="#②-提交事务-1" class="headerlink" title="② 提交事务"></a>② 提交事务</h6><p>COMMIT；</p>
-<h6 id="③-回滚事务-1"><a href="#③-回滚事务-1" class="headerlink" title="③ 回滚事务"></a>③ 回滚事务</h6><p>ROLLBACK;</p>
-</blockquote>
-<h3 id="事务的四大特性（ACID）"><a href="#事务的四大特性（ACID）" class="headerlink" title="事务的四大特性（ACID）"></a>事务的四大特性（ACID）</h3><blockquote>
-<h4 id="原子性（Atomicity-∶事务是不可分割的最小操作单元，要么全部成功，要么全部失败。"><a href="#原子性（Atomicity-∶事务是不可分割的最小操作单元，要么全部成功，要么全部失败。" class="headerlink" title="原子性（Atomicity)∶事务是不可分割的最小操作单元，要么全部成功，要么全部失败。"></a><font size=3>原子性（<strong>A</strong>tomicity)∶事务是不可分割的最小操作单元，要么全部成功，要么全部失败。</font></h4><h4 id="一致性（Consistency-事务完成时，必须使所有的数据都保持一致状态。"><a href="#一致性（Consistency-事务完成时，必须使所有的数据都保持一致状态。" class="headerlink" title="一致性（Consistency) :事务完成时，必须使所有的数据都保持一致状态。"></a><font size=3>一致性（Consistency) :事务完成时，必须使所有的数据都保持一致状态。</font></h4><h4 id="隔离性（lsolation-数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。"><a href="#隔离性（lsolation-数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。" class="headerlink" title="隔离性（lsolation):数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。"></a><font size=3>隔离性（<strong>l</strong>solation):数据库系统提供的隔离机制，保证事务在不受外部并发操作影响的独立环境下运行。</font></h4><h4 id="持久性（Durability-事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。"><a href="#持久性（Durability-事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。" class="headerlink" title="持久性（Durability) :事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。"></a><font size=3>持久性（Durability) :事务一旦提交或回滚，它对数据库中的数据的改变就是永久的。</font></h4></blockquote>
-<h3 id="并发事务的问题"><a href="#并发事务的问题" class="headerlink" title="并发事务的问题"></a>并发事务的问题</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>问题</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>脏读</td>
-<td>一个事务读到另外一个事务还没有提交的数据。</td>
-</tr>
-<tr>
-<td>不可重复读</td>
-<td>一个事务先后读取同一条记录，但两次读取的数据不同，称之为不可重复读。</td>
-</tr>
-<tr>
-<td>幻读</td>
-<td>一个事务按照条件查询数据时，没有对应的数据行，但是在插入数据时，又发现这行数据已存在，好像出现了’幻影”。</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th style="text-align:center">隔离级别</th>
-<th style="text-align:center">脏读</th>
-<th style="text-align:center">不可重复读</th>
-<th style="text-align:center">幻读</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Read Uncommitted</td>
-<td style="text-align:center">√</td>
-<td style="text-align:center">√</td>
-<td style="text-align:center">√</td>
-</tr>
-<tr>
-<td style="text-align:center">Read Committed</td>
-<td style="text-align:center">×</td>
-<td style="text-align:center">√</td>
-<td style="text-align:center">√</td>
-</tr>
-<tr>
-<td style="text-align:center">Repeatable Read（默认）</td>
-<td style="text-align:center">×</td>
-<td style="text-align:center">×</td>
-<td style="text-align:center">√</td>
-</tr>
-<tr>
-<td style="text-align:center">Serializable</td>
-<td style="text-align:center">×</td>
-<td style="text-align:center">×</td>
-<td style="text-align:center">×</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL02-存储引擎</title>
     <url>/posts/10401.html</url>
     <content><![CDATA[<p>详细的描述了MySQL中的引擎之间的区别和选择。<br><span id="more"></span></p>
@@ -695,111 +695,6 @@
 <p>InnoDB:是Mysql的默认存储引擎，支持事务、外键。如果应用对事务的完整性有比较高的要求，在并发条件下要求数据的一致性，数据操怍除了插入和查询之外，还包含很多的更新、删除操作，那么InnoDB存储引擎是比较合适的选择。</p>
 <p>MyISAM:如果应用是以读操作和插入操作为主，只有很少的更新和删除操作，并且对事务的完整性、并发性要求不是很高，那么选择这个存储引擎是非常合适的。（被MongoDB取代）</p>
 <p>MEMORY:将所有数据保存在内存中，访问速度快，通常用于临时表及缓存。MEMORY的缺陷就是对表的大小有限制，太大的表无法缓存在内存中，而且无法保障数据的安全性。（被Redis取代）</p>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL03-索引02-性能分析</title>
-    <url>/posts/10403.html</url>
-    <content><![CDATA[<p>详细的描述了MySQL中的索引的性能分析。<br><span id="more"></span></p>
-<h3 id="索引创建的语法"><a href="#索引创建的语法" class="headerlink" title="索引创建的语法"></a>索引创建的语法</h3><h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h4><p>CREATE [UNIQUE|FULLTEXT] INDEX index_name ON table_name ( index_col_name … ) ;</p>
-<h4 id="查看索引"><a href="#查看索引" class="headerlink" title="查看索引"></a>查看索引</h4><p>SHOW INDEX FROM table_name ;</p>
-<h4 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引"></a>删除索引</h4><p>DROP INDEX index_name ON table_name ;</p>
-<h3 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h3><h4 id="SQL执行频次"><a href="#SQL执行频次" class="headerlink" title="SQL执行频次"></a>SQL执行频次</h4><p>MySQL客户端连接成功后，通过show [session] global status 命令可以提供服务器状态信息。通过如下指令，可以查看当前数据库的INSERT、UPDATE、DELETE、SELECT的访问频次:<br>SHOW GLOBAL STATUS LIKE ‘Com<strong>__</strong>‘；<br><strong>注：Com后面六个下划线即为INSERT、UPDATE、DELETE、SELECTINSERT、UPDATE、DELETE、SELECT等单词的长度。</strong></p>
-<h4 id="慢查询日志"><a href="#慢查询日志" class="headerlink" title="慢查询日志"></a>慢查询日志</h4><p>慢查询日志记录了所有执行时间超过指定参数 (long_query_time，单位:秒，默认10秒) 的所有SQL语句的日志。</p>
-<p>MySQL的慢查询日志默认没有开启，需要在MySQL的配置文件 (/etc/my.cnf) 中配置如下信息:</p>
-<blockquote>
-<p>#开启MySQL慢日志查询开关<br>slow_query_log=1<br>#设置慢日志的时间为2秒，SQL语句执行时间超过2秒，就会视为慢查询，记录慢查询日志<br>long_query_time=2</p>
-</blockquote>
-<p>配置完毕之后，通过以下指令重新启动MySQL服务器进行测试，查看慢日志文件中记录的信息/var/lib/mysql/localhost-slow.log</p>
-<h4 id="profile详情"><a href="#profile详情" class="headerlink" title="profile详情"></a>profile详情</h4><p>show profiles能够在做SQL优化时帮助我们了解时间的具体耗费。通过have_profiling参数，能够看到当前MySQL是否支持profile操作</p>
-<blockquote>
-<p>SELECT @@have_profiling;</p>
-</blockquote>
-<p>默认profiling是关闭的，可以通过set语句在session/global级别开启profiling</p>
-<blockquote>
-<p>SET profiling = 1;</p>
-</blockquote>
-<h4 id="重要！！！-explain执行计划"><a href="#重要！！！-explain执行计划" class="headerlink" title="(重要！！！)explain执行计划"></a>(重要！！！)explain执行计划</h4><p>EXPLAIN 或者 DESC 命令获取MySQL如何执行SELECT语句的信息，包括在SELECT语句执行过程中表如何连接和连接的顺序。</p>
-<p>语法：</p>
-<blockquote>
-<h1 id="直接在select语句之前加上关键字explain-desc"><a href="#直接在select语句之前加上关键字explain-desc" class="headerlink" title="直接在select语句之前加上关键字explain / desc"></a>直接在select语句之前加上关键字explain / desc</h1><p>EXPLAIN SELECT 字段列表 FROM 表名 WHERE 条件;</p>
-</blockquote>
-<p>explain执行计划中包含的信息如下：</p>
-<ul>
-<li>id:  查询序列号</li>
-<li>select_type: 查询类型</li>
-<li>table: 表名或者别名</li>
-<li>partitions: 匹配的分区</li>
-<li>type: 访问类型</li>
-<li>possible_keys: 可能用到的索引</li>
-<li>key: 实际用到的索引</li>
-<li>key_len: 索引长度</li>
-<li>ref: 与索引比较的列</li>
-<li>rows: 估算的行数</li>
-<li>filtered: 按表条件筛选的行百分比</li>
-<li>Extra: 额外信息</li>
-</ul>
-<h5 id="一、id列"><a href="#一、id列" class="headerlink" title="一、id列"></a>一、id列</h5><p>select查询的序列号(一组数字)，表示查询中执行select子句或者操作表的顺序。<br>id列分为三种情况：</p>
-<ol>
-<li>如果id相同，那么执行顺序从上到下</li>
-<li>如果id不同，如果是子查询，id的序号会递增，id值越大优先级越高，越先被执行</li>
-<li>id相同和不同的，同时存在，同时满足以上两种规则即可。</li>
-</ol>
-<h5 id="二、select-type列"><a href="#二、select-type列" class="headerlink" title="二、select_type列"></a>二、select_type列</h5><p>复制代码主要用来分辨查询的类型，是普通查询还是联合查询还是子查询</p>
-<ol>
-<li>sample: 简单的查询，不包含子查询和union</li>
-<li>primary: 查询中若包含任何复杂的子查询，最外层查询则被标记为Primary</li>
-<li>union: 在union，union all和子查询中的第二个和随后的select被标记为union</li>
-<li>dependent union: 在包含UNION或者UNION ALL的大查询中，如果各个小查询都依赖于外层查询的话，那除了最左边的那个小查询之外，其余的小查询的select_type的值就是DEPENDENT UNION。</li>
-<li>union result: 从union表获取结果的select。</li>
-<li>subquery: 在select或者where列表中包含子查询（不在from子句中）</li>
-<li>dependent subquery: 子查询中的第一个select（不在from子句中），而且取决于外面的查询。</li>
-<li>derived: 在FROM列表中包含的子查询被标记为DERIVED，也叫做派生类</li>
-<li>UNCACHEABLE SUBQUERY：一个子查询的结果不能被缓存，必须重新评估外链接的第一行对于外层的主表，子查询不可被物化，每次都需要计算（耗时操作）</li>
-<li>uncacheable union: 表示union的查询结果不能被缓存：没找到具体的sql语句验证</li>
-</ol>
-<h5 id="三、table列"><a href="#三、table列" class="headerlink" title="三、table列"></a>三、table列</h5><p>对应行正在访问哪一个表，表名或者别名，可能是临时表或者union合并结果集.</p>
-<ol>
-<li>如果是具体的表名，则表明从实际的物理表中获取数据，当然也可以是表的别名.</li>
-<li>表名是derivedN的形式，表示使用了id为N的查询产生的衍生表.</li>
-<li>当有union result的时候，表名是union n1,n2等的形式，n1,n2表示参与union的id.</li>
-</ol>
-<h5 id="四，type列"><a href="#四，type列" class="headerlink" title="四，type列"></a>四，type列</h5><p>type是访问类型，访问类型表示以何种方式去访问我们的数据，<br>访问类型很多，效率从最好到最坏是：<br><strong>NULL &gt; system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL</strong></p>
-<ol>
-<li>all: 全表扫描，需要扫描整张表，从头到尾找到需要的数据行。一般情况下出现这样的sql语句而且数据量比较大的话那么就需要进行优化。</li>
-<li>index：全索引扫描这个比all的效率要好，主要有两种情况，一种是当前的查询时覆盖索引，即我们需要的数据在索引中就可以索取，或者是使用了索引进行排序，这样就避免数据的重排序</li>
-<li>range：表示利用索引查询的时候限制了范围，在指定范围内进行查询，这样避免了index的全索引扫描，适用的操作符：=, &lt;&gt;, &gt;, &gt;=, &lt;, &lt;=, IS NULL, BETWEEN, LIKE, or IN() </li>
-<li>index_subquery：利用索引来关联子查询，不再扫描全表但是大多数情况下使用SELECT子查询时，MySQL查询优化器会自动将子查询优化为联表查询，因此 type 不会显示为 index_subquery,而是ref</li>
-<li>unique_subquery: 该连接类型类似于index_subquery,使用的是唯一索引。大多数情况下使用SELECT子查询时，MySQL查询优化器会自动将子查询优化为联表查询，因此 type 不会显示为 index_subquery,而是eq_ref</li>
-<li>index_merge：在查询过程中需要多个索引组合使用.</li>
-<li>ref_or_null：对于某个字段即需要关联条件，也需要null值的情况下，查询优化器会选择这种访问方式.</li>
-<li>ref：使用了非唯一性索引进行数据的查找</li>
-<li>eq_ref ：当进行等值联表查询使用主键索引或者唯一性非空索引进行数据查找(实际上唯一索引等值查询type不是eq_ref而是const)</li>
-<li>const：最多只能匹配到一条数据，通常使用主键或唯一索引进行等值条件查询</li>
-<li>system：表只有一行记录（等于系统表），这是const类型的特例，平时不会出现,不需要进行磁盘io</li>
-<li>NULL：直接显示，例如 SELECT ‘A’ ，一般业务不可能优化为NULL</li>
-</ol>
-<h5 id="五、possible-keys列"><a href="#五、possible-keys列" class="headerlink" title="五、possible_keys列"></a>五、possible_keys列</h5><p>显示可能应用在这张表中的索引，一个或多个，查询涉及到的字段上若存在索引，则该索引将被列出，但不一定被查询实际使用。</p>
-<h5 id="六、key列"><a href="#六、key列" class="headerlink" title="六、key列"></a>六、key列</h5><p>实际使用的索引，如果为null，则没有使用索引，查询中若使用了覆盖索引，则该索引和查询的select字段重叠。</p>
-<h5 id="七、key-len列"><a href="#七、key-len列" class="headerlink" title="七、key_len列"></a>七、key_len列</h5><p>表示索引中使用的字节数，可以通过key_len计算查询中使用的索引长度，在不损失精度的情况下长度越短越好。<br>索引越大占用存储空间越大，这样io的次数和量就会增加，影响执行效率</p>
-<h5 id="八、ref列"><a href="#八、ref列" class="headerlink" title="八、ref列"></a>八、ref列</h5><p>显示之前的表在key列记录的索引中查找值所用的列或者常量</p>
-<h5 id="九、rows列"><a href="#九、rows列" class="headerlink" title="九、rows列"></a>九、rows列</h5><p>根据表的统计信息及索引使用情况，大致估算出找出所需记录需要读取的行数，此参数很重要，直接反应的sql找了多少数据，在完成目的的情况下越少越好。</p>
-<h5 id="十、filtered列"><a href="#十、filtered列" class="headerlink" title="十、filtered列"></a>十、filtered列</h5><p>针对表中符合某个条件(where子句或者联接条件)的记录数的百分比所做的一个悲观估算。</p>
-<h5 id="十一、extra列"><a href="#十一、extra列" class="headerlink" title="十一、extra列"></a>十一、extra列</h5><p>包含额外的信息。</p>
-<ol>
-<li>using filesort: 说明mysql无法利用索引进行排序，只能利用排序算法进行排序，会消耗额外的位置</li>
-<li>using temporary: 建立临时表来保存中间结果，查询完成之后把临时表删除</li>
-<li>using index: 这个表示当前的查询是覆盖索引的，直接从索引中读取数据，而不用访问数据表。如果同时出现using where 表名索引被用来执行索引键值的查找，如果没有，表面索引被用来读取数据，而不是真的查找</li>
-<li>using where: 使用where进行条件过滤</li>
-<li>using join buffer: 使用连接缓存</li>
-<li>impossible where：where语句的结果总是false</li>
-</ol>
 ]]></content>
       <categories>
         <category>MySQL</category>
@@ -1004,6 +899,139 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL04-SQL优化</title>
+    <url>/posts/10405.html</url>
+    <content><![CDATA[<p>详细的描述了MySQL中的SQL语句的优化。<br><span id="more"></span></p>
+<h3 id="MySQL语句优化"><a href="#MySQL语句优化" class="headerlink" title="MySQL语句优化"></a>MySQL语句优化</h3><h4 id="插入数据优化"><a href="#插入数据优化" class="headerlink" title="插入数据优化"></a>插入数据优化</h4><h5 id="批量插入"><a href="#批量插入" class="headerlink" title="批量插入"></a>批量插入</h5><blockquote>
+<h1 id="客户端连接服务端时，加上参数"><a href="#客户端连接服务端时，加上参数" class="headerlink" title="客户端连接服务端时，加上参数"></a>客户端连接服务端时，加上参数</h1><p>—local-infilemysql —local-infile -u root -p</p>
+<h1 id="设置全局参数local-infile为，开启从本地加载文件导入数据的开关"><a href="#设置全局参数local-infile为，开启从本地加载文件导入数据的开关" class="headerlink" title="设置全局参数local_infile为，开启从本地加载文件导入数据的开关"></a>设置全局参数local_infile为，开启从本地加载文件导入数据的开关</h1><p>set global local_infile = 1;</p>
+<h1 id="执行load指令将准备好的数据，加载到表结构中"><a href="#执行load指令将准备好的数据，加载到表结构中" class="headerlink" title="执行load指令将准备好的数据，加载到表结构中"></a>执行load指令将准备好的数据，加载到表结构中</h1><p>load data local infile ‘/root/sql1.log’ into table ‘table’ fields terminated by ‘,’ lines terminated by ‘\n’;</p>
+</blockquote>
+<h5 id="手动提交事务"><a href="#手动提交事务" class="headerlink" title="手动提交事务"></a>手动提交事务</h5><h5 id="主键顺序插入"><a href="#主键顺序插入" class="headerlink" title="主键顺序插入"></a>主键顺序插入</h5><p>主键顺序插入性能高于乱序插入</p>
+<h4 id="主键优化"><a href="#主键优化" class="headerlink" title="主键优化"></a>主键优化</h4><h5 id="数据组织方式"><a href="#数据组织方式" class="headerlink" title="数据组织方式"></a>数据组织方式</h5><blockquote>
+<p>在InnoDB存储引擎中，表数据都是根据主键顺序组织存放的，这种存储方式的表称为索引组织表(index organized table IOT)。</p>
+</blockquote>
+<h5 id="页分裂"><a href="#页分裂" class="headerlink" title="页分裂"></a>页分裂</h5><blockquote>
+<p>页可以为空，也可以填充一半，也可以填充100%。每个页包含了2-N行数据(如果一行数据多大，会行溢出)，根据主键排列。<br>主键乱序插入</p>
+</blockquote>
+<h5 id="页合并"><a href="#页合并" class="headerlink" title="页合并"></a>页合并</h5><blockquote>
+<p>当删除一行记录时，实际上记录并没有被物理删除，只是记录被标记（flaged)为删除并且它的空间变得允许被其他记录声明使用。<br>当页中删除的记录达到MERGE_THRESHOLD(默认为页的50%)，InnoDB会开始寻找最靠近的页（前或后）看看是否可以将两个页合并以优化空间使用。</p>
+</blockquote>
+<h5 id="主键设计原则"><a href="#主键设计原则" class="headerlink" title="主键设计原则"></a>主键设计原则</h5><blockquote>
+<ol>
+<li>满足业务需求的情况下，尽量降低主键的长度。</li>
+<li>插入数据时，尽量选择顺序插入，选择使用AUTO_INCREMENT自增主键。</li>
+<li>尽量不要使用UUID做主键或者是其他自然主键，如身份证号。</li>
+</ol>
+</blockquote>
+<h4 id="order-by-语句优化"><a href="#order-by-语句优化" class="headerlink" title="order by 语句优化"></a>order by 语句优化</h4><h5 id="Using-flesort"><a href="#Using-flesort" class="headerlink" title="Using flesort"></a>Using flesort</h5><p>通过表的索引或全表扫描，读取满足条件的数据行，然后在排序缓冲区sort buffer中完成排序操作，所有不是通过索引直接返回排序结果的排序都叫FileSort排序。</p>
+<h5 id="Using-index"><a href="#Using-index" class="headerlink" title="Using index"></a>Using index</h5><p>通过有序索引顺序扫描直接返回有序数据，这种情况即为using index，不需要额外排序，操作效率高。</p>
+<h5 id="优化原则"><a href="#优化原则" class="headerlink" title="优化原则"></a>优化原则</h5><blockquote>
+<ol>
+<li>根据排序字段建立合适的索引，多字段排序时，也遵循最左前缀法则。</li>
+<li>尽量使用覆盖索引。</li>
+<li>多字段排序,一个升序一个降序，此时需要注意联合索引在创建时的规则(ASC/DESC)。</li>
+<li>如果不可避免的出现filesort，大数据量排序时，可以适当增大排序缓冲区大小 sort_buffer_size(默认256k)。</li>
+</ol>
+</blockquote>
+<h4 id="group-by-语句优化"><a href="#group-by-语句优化" class="headerlink" title="group by 语句优化"></a>group by 语句优化</h4><h5 id="优化原则-1"><a href="#优化原则-1" class="headerlink" title="优化原则"></a>优化原则</h5><blockquote>
+<ol>
+<li>在分组操作时，可以通过索引来提高效率。</li>
+<li>分组操作时，索引的使用也是满足最左前缀法则的。</li>
+</ol>
+</blockquote>
+<h4 id="limit-语句优化"><a href="#limit-语句优化" class="headerlink" title="limit 语句优化"></a>limit 语句优化</h4><p><strong>一个常见又非常头疼的问题就是limit 20000000,10，此时需要MySQL排序前2000010记录，仅仅返回2000000 - 2000010的记录，其他记录丢弃，查询排序的代价非常大。</strong></p>
+<h5 id="优化原则-2"><a href="#优化原则-2" class="headerlink" title="优化原则"></a>优化原则</h5><p>一般分页查询时，通过创建覆盖索引能够比较好地提高性能，可以通过覆盖索引加子查询形式进行优化。</p>
+<h4 id="count-语句优化"><a href="#count-语句优化" class="headerlink" title="count 语句优化"></a>count 语句优化</h4><p>MylSAM引擎把二个表的总行数存在了磁盘上，因此执行count(*)的时候会直接返回这个数，效率很高<br>InnoDB引擎就麻烦了，它执行count(*)的时候，需要把数据一行一行地从引擎里面读出来，然后累积计数</p>
+<h5 id="优化原则：自己计数"><a href="#优化原则：自己计数" class="headerlink" title="优化原则：自己计数"></a>优化原则：自己计数</h5><blockquote>
+<ol>
+<li>count (主键)<br> InnoDB引擎会遍历整张表，把每一行的主键id值都取出来，返回给服务层。服务层拿到主键后，直接按行进行累加(主键不可能为null)</li>
+<li>count (字段)<br> 没有not null约束: InnoDB引擎会遍历整张表把每一行的字段值都取出来，返回给服务层，服务层判断，不为null，计数累加。有not null约束: InnoDB引擎会遍历整张表把每一行的字段值都取出来，返回给服务层，直接按行进行累加。</li>
+<li>count (1)<br> InnoDB引擎遍历整张表，但不取值。服务层对于返回的每一行，放一个数字“1”进去，直接按行进行累加。</li>
+<li>count (*)<br> lnnoDB引擎并不会把全部字段取出来，而是专门做了优化，不取值，服务层直接按行进行累加。</li>
+</ol>
+</blockquote>
+<p><strong>按照效率排序的话，count(字段):xcount(主键id)&lt; count(1) = count(<em>)，所以尽量使用count(</em>)。</strong></p>
+<h4 id="update-语句优化-避免行级锁变为表级锁"><a href="#update-语句优化-避免行级锁变为表级锁" class="headerlink" title="update 语句优化(避免行级锁变为表级锁)"></a>update 语句优化(避免行级锁变为表级锁)</h4><h5 id="优化原则-3"><a href="#优化原则-3" class="headerlink" title="优化原则"></a>优化原则</h5><p>InnoDB的行锁是针对索引加的锁，不是针对记录加的锁,并且该索引不能失效，否则会从行锁升级为表锁。</p>
+<h3 id="MySQL优化总结"><a href="#MySQL优化总结" class="headerlink" title="MySQL优化总结"></a>MySQL优化总结</h3><h5 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h5><p>insert:批量插入、手动控制事务、主键顺序插入<br>大批量插入: load data local infile</p>
+<h5 id="主键优化-1"><a href="#主键优化-1" class="headerlink" title="主键优化"></a>主键优化</h5><p>主键长度尽量短、顺序插入<br>AUTO_INCREMENT  <del>UUID</del></p>
+<h5 id="order-by优化"><a href="#order-by优化" class="headerlink" title="order by优化"></a>order by优化</h5><p>using index:直接通过索引返回数据，性能高<br>using filesort:需要将返回的结果在排序缓冲区排序</p>
+<h5 id="group-by优化"><a href="#group-by优化" class="headerlink" title="group by优化"></a>group by优化</h5><p>索引，多字段分组满足最左前缀法则</p>
+<h5 id="limit优化"><a href="#limit优化" class="headerlink" title="limit优化"></a>limit优化</h5><p>覆盖索引+子查询</p>
+<h5 id="count优化"><a href="#count优化" class="headerlink" title="count优化"></a>count优化</h5><p>性能: count(字段) &lt; count(主键id) &lt; count(1) &lt; count(*)</p>
+<h5 id="update优化"><a href="#update优化" class="headerlink" title="update优化"></a>update优化</h5><p>尽量根据主键/索引字段进行数据更新</p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始的SSM框架-01-Spring中的Bean</title>
+    <url>/posts/10300.html</url>
+    <content><![CDATA[<p> 简单的介绍了Spring中的架构以及IOC和DI。<br><span id="more"></span></p>
+<h3 id="Spring-FrameWork架构"><a href="#Spring-FrameWork架构" class="headerlink" title="Spring FrameWork架构"></a>Spring FrameWork架构</h3><p><strong>Spring Framework是Spring生态圈中最基础的项目，是其他项目的根基</strong></p>
+<p><strong>Spirng FrameWork的架构</strong></p>
+<p><img src="https://wang-nine.cn/iamges/SSM01-01SpringFrameWork%E6%9E%B6%E6%9E%84.png" alt="SSM01-01SpringFrameWork架构"></p>
+<h3 id="Spring核心概念"><a href="#Spring核心概念" class="headerlink" title="Spring核心概念"></a>Spring核心概念</h3><h4 id="IoC-Inversion-of-Control-控制反转"><a href="#IoC-Inversion-of-Control-控制反转" class="headerlink" title="IoC ( Inversion of Control )控制反转"></a><strong>IoC ( Inversion of Control )控制反转</strong></h4><blockquote>
+<p>使用对象时，由主动new产生对象转换为由<strong>外部</strong>提供对象，此过程中对象创建控制权由程序转移到<strong>外部</strong>，此思想称为控制反转</p>
+<p>Spring技术对IoC思想进行了实现Spring提供了一个容器，，称为IoC容器，用来充当IoC思想中的”<strong>外部</strong>“</p>
+<p>IoC容器负责对象的创建、初始化等一系列工作，被创建或被管理的对象在IoC容器中统称为Bean</p>
+</blockquote>
+<h4 id="DI-Dependency-Injection-依赖注入"><a href="#DI-Dependency-Injection-依赖注入" class="headerlink" title="DI ( Dependency Injection)依赖注入"></a><strong>DI ( Dependency Injection)依赖注入</strong></h4><blockquote>
+<p>在容器中建立bean与bean之间的依赖关系的整个过程，称为依赖注入</p>
+</blockquote>
+<h3 id="IoC入门案例"><a href="#IoC入门案例" class="headerlink" title="IoC入门案例"></a>IoC入门案例</h3><blockquote>
+<p>思路分析：<br>1.管理什么? （Service与Dao）<br>2.如何将被管理的对象告知IoC容器?（配置）<br>3.被管理的对象交给IoC容器，如何获取到IoC容器?（接口）<br>4.IoC容器得到后，如何从容器中获取bean ?（接口方法）<br>5.使用Spring导入哪些坐标?（pom.xml）</p>
+</blockquote>
+<h4 id="非Spring环境下"><a href="#非Spring环境下" class="headerlink" title="非Spring环境下"></a>非Spring环境下</h4><p>案例代码如下：</p>
+<p>Service层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.dao.impl.DaoImpl;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DaoImpl</span>();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>DAO层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaoImpl</span> <span class="keyword">implements</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao save() ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>主函数代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"><span class="keyword">import</span> wang.service.impl.ServiceImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServiceImpl</span>();</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果：<br><img src="https://wang-nine.cn/iamges/SSM01-02%E9%9D%9ESpring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-02非Spring环境样例"></p>
+<h4 id="Spring环境下"><a href="#Spring环境下" class="headerlink" title="Spring环境下"></a>Spring环境下</h4><p>别忘记在pom.xml中引入spring-context<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.10.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>在resources中创建配置文件（名称：applicationContext.xml）：如图<br><img src="https://wang-nine.cn/iamges/SSM01-03%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" alt="SSM01-03配置文件"></p>
+<p>在配置文件中输入以下的代码<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--导入spring的坐标spring-context，对应版本是5.2.10.RELEASE--&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--配置bean--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--bean标签标示配置bean</span></span><br><span class="line"><span class="comment">    id属性标示给bean起名字</span></span><br><span class="line"><span class="comment">    class属性表示给bean定义类型--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Dao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>主函数代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 获取IoC容器</span></span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取Bean</span></span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> (Service) ctx.getBean(<span class="string">&quot;Service&quot;</span>);</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>此时运行样例与非Spring方式相同如下：<br><img src="https://wang-nine.cn/iamges/SSM01-04Spring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-04Spring环境样例"></p>
+<p><strong>综上：可以分为四步</strong></p>
+<blockquote>
+<p><strong>1.导入Spring坐标</strong></p>
+<p><strong>2.定义Spring管理的类（接口）</strong></p>
+<p><strong>3.创建Spring配置文件进行配置</strong></p>
+<p><strong>4.初始化IoC容器，从容器中获取Bean（getBean方法）</strong></p>
+</blockquote>
+<p><strong>问题：业务层中仍然是使用new创建对象，仍然耦合，那么如何解耦合呢？</strong></p>
+<h3 id="DI入门案例"><a href="#DI入门案例" class="headerlink" title="DI入门案例"></a>DI入门案例</h3><blockquote>
+<p>思路分析：<br>1.基于IoC管理bean<br>2.Service使用new形式创建的Dao对象是否保留?（否）<br>3.Service中需要的Dao对象如何进入到service中?（提供方法）<br>4.Service与Dao间的关系如何描述?（配置）</p>
+</blockquote>
+<p>改变Service层实现代码如下<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="comment">// 删除业务层以new的方式创建Dao对象</span></span><br><span class="line">    <span class="comment">//private Dao dao = new DaoImpl();</span></span><br><span class="line">    <span class="keyword">private</span> Dao dao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提供对应的set方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setDao</span><span class="params">(Dao dao)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.dao = dao;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>修改applicationContext.xml中配置：<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--7.配置server与dao的关系--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--property标签表示配置当前bean的属性</span></span><br><span class="line"><span class="comment">        name属性表示配置哪一个具体的属性</span></span><br><span class="line"><span class="comment">        ref属性表示参照哪一个bean--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dao&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;Dao&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><strong>注意：name是上述的（private Dao dao;）语句中的变量名，ref是bean的名字。</strong></p>
+</blockquote>
+<p>运行结果与上述一样：<br><img src="https://wang-nine.cn/iamges/SSM01-05DI.png" alt="SSM01-05DI"></p>
+<p><strong>综上：可以分为三步</strong></p>
+<blockquote>
+<p>1.<strong>删除以new的形式创建对象的代码</strong></p>
+<p>2.<strong>提供对应的Set方法</strong></p>
+<p>3.<strong>配置Service与Dao之间的关系</strong></p>
+</blockquote>
+<p><strong>注意在Bean标签中还可以进行以下的配置：</strong></p>
+<p><strong>属性name：定义Bean的别名</strong></p>
+<p><strong>属性scope：定义作用范围 singleton（默认，单例）  prototype（非单例）</strong></p>
+]]></content>
+      <categories>
+        <category>SSM</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL03-索引03-使用规则</title>
     <url>/posts/10404.html</url>
     <content><![CDATA[<p>详细的描述了MySQL中的索引的使用规则和设计原则。<br><span id="more"></span></p>
@@ -1072,67 +1100,102 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL04-SQL优化</title>
-    <url>/posts/10405.html</url>
-    <content><![CDATA[<p>详细的描述了MySQL中的SQL语句的优化。<br><span id="more"></span></p>
-<h3 id="MySQL语句优化"><a href="#MySQL语句优化" class="headerlink" title="MySQL语句优化"></a>MySQL语句优化</h3><h4 id="插入数据优化"><a href="#插入数据优化" class="headerlink" title="插入数据优化"></a>插入数据优化</h4><h5 id="批量插入"><a href="#批量插入" class="headerlink" title="批量插入"></a>批量插入</h5><blockquote>
-<h1 id="客户端连接服务端时，加上参数"><a href="#客户端连接服务端时，加上参数" class="headerlink" title="客户端连接服务端时，加上参数"></a>客户端连接服务端时，加上参数</h1><p>—local-infilemysql —local-infile -u root -p</p>
-<h1 id="设置全局参数local-infile为，开启从本地加载文件导入数据的开关"><a href="#设置全局参数local-infile为，开启从本地加载文件导入数据的开关" class="headerlink" title="设置全局参数local_infile为，开启从本地加载文件导入数据的开关"></a>设置全局参数local_infile为，开启从本地加载文件导入数据的开关</h1><p>set global local_infile = 1;</p>
-<h1 id="执行load指令将准备好的数据，加载到表结构中"><a href="#执行load指令将准备好的数据，加载到表结构中" class="headerlink" title="执行load指令将准备好的数据，加载到表结构中"></a>执行load指令将准备好的数据，加载到表结构中</h1><p>load data local infile ‘/root/sql1.log’ into table ‘table’ fields terminated by ‘,’ lines terminated by ‘\n’;</p>
+    <title>MySQL03-索引02-性能分析</title>
+    <url>/posts/10403.html</url>
+    <content><![CDATA[<p>详细的描述了MySQL中的索引的性能分析。<br><span id="more"></span></p>
+<h3 id="索引创建的语法"><a href="#索引创建的语法" class="headerlink" title="索引创建的语法"></a>索引创建的语法</h3><h4 id="创建索引"><a href="#创建索引" class="headerlink" title="创建索引"></a>创建索引</h4><p>CREATE [UNIQUE|FULLTEXT] INDEX index_name ON table_name ( index_col_name … ) ;</p>
+<h4 id="查看索引"><a href="#查看索引" class="headerlink" title="查看索引"></a>查看索引</h4><p>SHOW INDEX FROM table_name ;</p>
+<h4 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引"></a>删除索引</h4><p>DROP INDEX index_name ON table_name ;</p>
+<h3 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h3><h4 id="SQL执行频次"><a href="#SQL执行频次" class="headerlink" title="SQL执行频次"></a>SQL执行频次</h4><p>MySQL客户端连接成功后，通过show [session] global status 命令可以提供服务器状态信息。通过如下指令，可以查看当前数据库的INSERT、UPDATE、DELETE、SELECT的访问频次:<br>SHOW GLOBAL STATUS LIKE ‘Com<strong>__</strong>‘；<br><strong>注：Com后面六个下划线即为INSERT、UPDATE、DELETE、SELECTINSERT、UPDATE、DELETE、SELECT等单词的长度。</strong></p>
+<h4 id="慢查询日志"><a href="#慢查询日志" class="headerlink" title="慢查询日志"></a>慢查询日志</h4><p>慢查询日志记录了所有执行时间超过指定参数 (long_query_time，单位:秒，默认10秒) 的所有SQL语句的日志。</p>
+<p>MySQL的慢查询日志默认没有开启，需要在MySQL的配置文件 (/etc/my.cnf) 中配置如下信息:</p>
+<blockquote>
+<p>#开启MySQL慢日志查询开关<br>slow_query_log=1<br>#设置慢日志的时间为2秒，SQL语句执行时间超过2秒，就会视为慢查询，记录慢查询日志<br>long_query_time=2</p>
 </blockquote>
-<h5 id="手动提交事务"><a href="#手动提交事务" class="headerlink" title="手动提交事务"></a>手动提交事务</h5><h5 id="主键顺序插入"><a href="#主键顺序插入" class="headerlink" title="主键顺序插入"></a>主键顺序插入</h5><p>主键顺序插入性能高于乱序插入</p>
-<h4 id="主键优化"><a href="#主键优化" class="headerlink" title="主键优化"></a>主键优化</h4><h5 id="数据组织方式"><a href="#数据组织方式" class="headerlink" title="数据组织方式"></a>数据组织方式</h5><blockquote>
-<p>在InnoDB存储引擎中，表数据都是根据主键顺序组织存放的，这种存储方式的表称为索引组织表(index organized table IOT)。</p>
+<p>配置完毕之后，通过以下指令重新启动MySQL服务器进行测试，查看慢日志文件中记录的信息/var/lib/mysql/localhost-slow.log</p>
+<h4 id="profile详情"><a href="#profile详情" class="headerlink" title="profile详情"></a>profile详情</h4><p>show profiles能够在做SQL优化时帮助我们了解时间的具体耗费。通过have_profiling参数，能够看到当前MySQL是否支持profile操作</p>
+<blockquote>
+<p>SELECT @@have_profiling;</p>
 </blockquote>
-<h5 id="页分裂"><a href="#页分裂" class="headerlink" title="页分裂"></a>页分裂</h5><blockquote>
-<p>页可以为空，也可以填充一半，也可以填充100%。每个页包含了2-N行数据(如果一行数据多大，会行溢出)，根据主键排列。<br>主键乱序插入</p>
+<p>默认profiling是关闭的，可以通过set语句在session/global级别开启profiling</p>
+<blockquote>
+<p>SET profiling = 1;</p>
 </blockquote>
-<h5 id="页合并"><a href="#页合并" class="headerlink" title="页合并"></a>页合并</h5><blockquote>
-<p>当删除一行记录时，实际上记录并没有被物理删除，只是记录被标记（flaged)为删除并且它的空间变得允许被其他记录声明使用。<br>当页中删除的记录达到MERGE_THRESHOLD(默认为页的50%)，InnoDB会开始寻找最靠近的页（前或后）看看是否可以将两个页合并以优化空间使用。</p>
+<h4 id="重要！！！-explain执行计划"><a href="#重要！！！-explain执行计划" class="headerlink" title="(重要！！！)explain执行计划"></a>(重要！！！)explain执行计划</h4><p>EXPLAIN 或者 DESC 命令获取MySQL如何执行SELECT语句的信息，包括在SELECT语句执行过程中表如何连接和连接的顺序。</p>
+<p>语法：</p>
+<blockquote>
+<h1 id="直接在select语句之前加上关键字explain-desc"><a href="#直接在select语句之前加上关键字explain-desc" class="headerlink" title="直接在select语句之前加上关键字explain / desc"></a>直接在select语句之前加上关键字explain / desc</h1><p>EXPLAIN SELECT 字段列表 FROM 表名 WHERE 条件;</p>
 </blockquote>
-<h5 id="主键设计原则"><a href="#主键设计原则" class="headerlink" title="主键设计原则"></a>主键设计原则</h5><blockquote>
+<p>explain执行计划中包含的信息如下：</p>
+<ul>
+<li>id:  查询序列号</li>
+<li>select_type: 查询类型</li>
+<li>table: 表名或者别名</li>
+<li>partitions: 匹配的分区</li>
+<li>type: 访问类型</li>
+<li>possible_keys: 可能用到的索引</li>
+<li>key: 实际用到的索引</li>
+<li>key_len: 索引长度</li>
+<li>ref: 与索引比较的列</li>
+<li>rows: 估算的行数</li>
+<li>filtered: 按表条件筛选的行百分比</li>
+<li>Extra: 额外信息</li>
+</ul>
+<h5 id="一、id列"><a href="#一、id列" class="headerlink" title="一、id列"></a>一、id列</h5><p>select查询的序列号(一组数字)，表示查询中执行select子句或者操作表的顺序。<br>id列分为三种情况：</p>
 <ol>
-<li>满足业务需求的情况下，尽量降低主键的长度。</li>
-<li>插入数据时，尽量选择顺序插入，选择使用AUTO_INCREMENT自增主键。</li>
-<li>尽量不要使用UUID做主键或者是其他自然主键，如身份证号。</li>
+<li>如果id相同，那么执行顺序从上到下</li>
+<li>如果id不同，如果是子查询，id的序号会递增，id值越大优先级越高，越先被执行</li>
+<li>id相同和不同的，同时存在，同时满足以上两种规则即可。</li>
 </ol>
-</blockquote>
-<h4 id="order-by-语句优化"><a href="#order-by-语句优化" class="headerlink" title="order by 语句优化"></a>order by 语句优化</h4><h5 id="Using-flesort"><a href="#Using-flesort" class="headerlink" title="Using flesort"></a>Using flesort</h5><p>通过表的索引或全表扫描，读取满足条件的数据行，然后在排序缓冲区sort buffer中完成排序操作，所有不是通过索引直接返回排序结果的排序都叫FileSort排序。</p>
-<h5 id="Using-index"><a href="#Using-index" class="headerlink" title="Using index"></a>Using index</h5><p>通过有序索引顺序扫描直接返回有序数据，这种情况即为using index，不需要额外排序，操作效率高。</p>
-<h5 id="优化原则"><a href="#优化原则" class="headerlink" title="优化原则"></a>优化原则</h5><blockquote>
+<h5 id="二、select-type列"><a href="#二、select-type列" class="headerlink" title="二、select_type列"></a>二、select_type列</h5><p>复制代码主要用来分辨查询的类型，是普通查询还是联合查询还是子查询</p>
 <ol>
-<li>根据排序字段建立合适的索引，多字段排序时，也遵循最左前缀法则。</li>
-<li>尽量使用覆盖索引。</li>
-<li>多字段排序,一个升序一个降序，此时需要注意联合索引在创建时的规则(ASC/DESC)。</li>
-<li>如果不可避免的出现filesort，大数据量排序时，可以适当增大排序缓冲区大小 sort_buffer_size(默认256k)。</li>
+<li>sample: 简单的查询，不包含子查询和union</li>
+<li>primary: 查询中若包含任何复杂的子查询，最外层查询则被标记为Primary</li>
+<li>union: 在union，union all和子查询中的第二个和随后的select被标记为union</li>
+<li>dependent union: 在包含UNION或者UNION ALL的大查询中，如果各个小查询都依赖于外层查询的话，那除了最左边的那个小查询之外，其余的小查询的select_type的值就是DEPENDENT UNION。</li>
+<li>union result: 从union表获取结果的select。</li>
+<li>subquery: 在select或者where列表中包含子查询（不在from子句中）</li>
+<li>dependent subquery: 子查询中的第一个select（不在from子句中），而且取决于外面的查询。</li>
+<li>derived: 在FROM列表中包含的子查询被标记为DERIVED，也叫做派生类</li>
+<li>UNCACHEABLE SUBQUERY：一个子查询的结果不能被缓存，必须重新评估外链接的第一行对于外层的主表，子查询不可被物化，每次都需要计算（耗时操作）</li>
+<li>uncacheable union: 表示union的查询结果不能被缓存：没找到具体的sql语句验证</li>
 </ol>
-</blockquote>
-<h4 id="group-by-语句优化"><a href="#group-by-语句优化" class="headerlink" title="group by 语句优化"></a>group by 语句优化</h4><h5 id="优化原则-1"><a href="#优化原则-1" class="headerlink" title="优化原则"></a>优化原则</h5><blockquote>
+<h5 id="三、table列"><a href="#三、table列" class="headerlink" title="三、table列"></a>三、table列</h5><p>对应行正在访问哪一个表，表名或者别名，可能是临时表或者union合并结果集.</p>
 <ol>
-<li>在分组操作时，可以通过索引来提高效率。</li>
-<li>分组操作时，索引的使用也是满足最左前缀法则的。</li>
+<li>如果是具体的表名，则表明从实际的物理表中获取数据，当然也可以是表的别名.</li>
+<li>表名是derivedN的形式，表示使用了id为N的查询产生的衍生表.</li>
+<li>当有union result的时候，表名是union n1,n2等的形式，n1,n2表示参与union的id.</li>
 </ol>
-</blockquote>
-<h4 id="limit-语句优化"><a href="#limit-语句优化" class="headerlink" title="limit 语句优化"></a>limit 语句优化</h4><p><strong>一个常见又非常头疼的问题就是limit 20000000,10，此时需要MySQL排序前2000010记录，仅仅返回2000000 - 2000010的记录，其他记录丢弃，查询排序的代价非常大。</strong></p>
-<h5 id="优化原则-2"><a href="#优化原则-2" class="headerlink" title="优化原则"></a>优化原则</h5><p>一般分页查询时，通过创建覆盖索引能够比较好地提高性能，可以通过覆盖索引加子查询形式进行优化。</p>
-<h4 id="count-语句优化"><a href="#count-语句优化" class="headerlink" title="count 语句优化"></a>count 语句优化</h4><p>MylSAM引擎把二个表的总行数存在了磁盘上，因此执行count(*)的时候会直接返回这个数，效率很高<br>InnoDB引擎就麻烦了，它执行count(*)的时候，需要把数据一行一行地从引擎里面读出来，然后累积计数</p>
-<h5 id="优化原则：自己计数"><a href="#优化原则：自己计数" class="headerlink" title="优化原则：自己计数"></a>优化原则：自己计数</h5><blockquote>
+<h5 id="四，type列"><a href="#四，type列" class="headerlink" title="四，type列"></a>四，type列</h5><p>type是访问类型，访问类型表示以何种方式去访问我们的数据，<br>访问类型很多，效率从最好到最坏是：<br><strong>NULL &gt; system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL</strong></p>
 <ol>
-<li>count (主键)<br> InnoDB引擎会遍历整张表，把每一行的主键id值都取出来，返回给服务层。服务层拿到主键后，直接按行进行累加(主键不可能为null)</li>
-<li>count (字段)<br> 没有not null约束: InnoDB引擎会遍历整张表把每一行的字段值都取出来，返回给服务层，服务层判断，不为null，计数累加。有not null约束: InnoDB引擎会遍历整张表把每一行的字段值都取出来，返回给服务层，直接按行进行累加。</li>
-<li>count (1)<br> InnoDB引擎遍历整张表，但不取值。服务层对于返回的每一行，放一个数字“1”进去，直接按行进行累加。</li>
-<li>count (*)<br> lnnoDB引擎并不会把全部字段取出来，而是专门做了优化，不取值，服务层直接按行进行累加。</li>
+<li>all: 全表扫描，需要扫描整张表，从头到尾找到需要的数据行。一般情况下出现这样的sql语句而且数据量比较大的话那么就需要进行优化。</li>
+<li>index：全索引扫描这个比all的效率要好，主要有两种情况，一种是当前的查询时覆盖索引，即我们需要的数据在索引中就可以索取，或者是使用了索引进行排序，这样就避免数据的重排序</li>
+<li>range：表示利用索引查询的时候限制了范围，在指定范围内进行查询，这样避免了index的全索引扫描，适用的操作符：=, &lt;&gt;, &gt;, &gt;=, &lt;, &lt;=, IS NULL, BETWEEN, LIKE, or IN() </li>
+<li>index_subquery：利用索引来关联子查询，不再扫描全表但是大多数情况下使用SELECT子查询时，MySQL查询优化器会自动将子查询优化为联表查询，因此 type 不会显示为 index_subquery,而是ref</li>
+<li>unique_subquery: 该连接类型类似于index_subquery,使用的是唯一索引。大多数情况下使用SELECT子查询时，MySQL查询优化器会自动将子查询优化为联表查询，因此 type 不会显示为 index_subquery,而是eq_ref</li>
+<li>index_merge：在查询过程中需要多个索引组合使用.</li>
+<li>ref_or_null：对于某个字段即需要关联条件，也需要null值的情况下，查询优化器会选择这种访问方式.</li>
+<li>ref：使用了非唯一性索引进行数据的查找</li>
+<li>eq_ref ：当进行等值联表查询使用主键索引或者唯一性非空索引进行数据查找(实际上唯一索引等值查询type不是eq_ref而是const)</li>
+<li>const：最多只能匹配到一条数据，通常使用主键或唯一索引进行等值条件查询</li>
+<li>system：表只有一行记录（等于系统表），这是const类型的特例，平时不会出现,不需要进行磁盘io</li>
+<li>NULL：直接显示，例如 SELECT ‘A’ ，一般业务不可能优化为NULL</li>
 </ol>
-</blockquote>
-<p><strong>按照效率排序的话，count(字段):xcount(主键id)&lt; count(1) = count(<em>)，所以尽量使用count(</em>)。</strong></p>
-<h4 id="update-语句优化-避免行级锁变为表级锁"><a href="#update-语句优化-避免行级锁变为表级锁" class="headerlink" title="update 语句优化(避免行级锁变为表级锁)"></a>update 语句优化(避免行级锁变为表级锁)</h4><h5 id="优化原则-3"><a href="#优化原则-3" class="headerlink" title="优化原则"></a>优化原则</h5><p>InnoDB的行锁是针对索引加的锁，不是针对记录加的锁,并且该索引不能失效，否则会从行锁升级为表锁。</p>
-<h3 id="MySQL优化总结"><a href="#MySQL优化总结" class="headerlink" title="MySQL优化总结"></a>MySQL优化总结</h3><h5 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h5><p>insert:批量插入、手动控制事务、主键顺序插入<br>大批量插入: load data local infile</p>
-<h5 id="主键优化-1"><a href="#主键优化-1" class="headerlink" title="主键优化"></a>主键优化</h5><p>主键长度尽量短、顺序插入<br>AUTO_INCREMENT  <del>UUID</del></p>
-<h5 id="order-by优化"><a href="#order-by优化" class="headerlink" title="order by优化"></a>order by优化</h5><p>using index:直接通过索引返回数据，性能高<br>using filesort:需要将返回的结果在排序缓冲区排序</p>
-<h5 id="group-by优化"><a href="#group-by优化" class="headerlink" title="group by优化"></a>group by优化</h5><p>索引，多字段分组满足最左前缀法则</p>
-<h5 id="limit优化"><a href="#limit优化" class="headerlink" title="limit优化"></a>limit优化</h5><p>覆盖索引+子查询</p>
-<h5 id="count优化"><a href="#count优化" class="headerlink" title="count优化"></a>count优化</h5><p>性能: count(字段) &lt; count(主键id) &lt; count(1) &lt; count(*)</p>
-<h5 id="update优化"><a href="#update优化" class="headerlink" title="update优化"></a>update优化</h5><p>尽量根据主键/索引字段进行数据更新</p>
+<h5 id="五、possible-keys列"><a href="#五、possible-keys列" class="headerlink" title="五、possible_keys列"></a>五、possible_keys列</h5><p>显示可能应用在这张表中的索引，一个或多个，查询涉及到的字段上若存在索引，则该索引将被列出，但不一定被查询实际使用。</p>
+<h5 id="六、key列"><a href="#六、key列" class="headerlink" title="六、key列"></a>六、key列</h5><p>实际使用的索引，如果为null，则没有使用索引，查询中若使用了覆盖索引，则该索引和查询的select字段重叠。</p>
+<h5 id="七、key-len列"><a href="#七、key-len列" class="headerlink" title="七、key_len列"></a>七、key_len列</h5><p>表示索引中使用的字节数，可以通过key_len计算查询中使用的索引长度，在不损失精度的情况下长度越短越好。<br>索引越大占用存储空间越大，这样io的次数和量就会增加，影响执行效率</p>
+<h5 id="八、ref列"><a href="#八、ref列" class="headerlink" title="八、ref列"></a>八、ref列</h5><p>显示之前的表在key列记录的索引中查找值所用的列或者常量</p>
+<h5 id="九、rows列"><a href="#九、rows列" class="headerlink" title="九、rows列"></a>九、rows列</h5><p>根据表的统计信息及索引使用情况，大致估算出找出所需记录需要读取的行数，此参数很重要，直接反应的sql找了多少数据，在完成目的的情况下越少越好。</p>
+<h5 id="十、filtered列"><a href="#十、filtered列" class="headerlink" title="十、filtered列"></a>十、filtered列</h5><p>针对表中符合某个条件(where子句或者联接条件)的记录数的百分比所做的一个悲观估算。</p>
+<h5 id="十一、extra列"><a href="#十一、extra列" class="headerlink" title="十一、extra列"></a>十一、extra列</h5><p>包含额外的信息。</p>
+<ol>
+<li>using filesort: 说明mysql无法利用索引进行排序，只能利用排序算法进行排序，会消耗额外的位置</li>
+<li>using temporary: 建立临时表来保存中间结果，查询完成之后把临时表删除</li>
+<li>using index: 这个表示当前的查询是覆盖索引的，直接从索引中读取数据，而不用访问数据表。如果同时出现using where 表名索引被用来执行索引键值的查找，如果没有，表面索引被用来读取数据，而不是真的查找</li>
+<li>using where: 使用where进行条件过滤</li>
+<li>using join buffer: 使用连接缓存</li>
+<li>impossible where：where语句的结果总是false</li>
+</ol>
 ]]></content>
       <categories>
         <category>MySQL</category>
@@ -1238,69 +1301,6 @@
 <h3 id="总结（来自黑马程序员，侵删）"><a href="#总结（来自黑马程序员，侵删）" class="headerlink" title="总结（来自黑马程序员，侵删）"></a>总结（来自黑马程序员，侵删）</h3><h4 id="容器相关"><a href="#容器相关" class="headerlink" title="容器相关"></a>容器相关</h4><p><img src="https://wang-nine.cn/iamges/SSM02-05%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3.png" alt="SSM02-05容器相关"></p>
 <h4 id="bean相关"><a href="#bean相关" class="headerlink" title="bean相关"></a>bean相关</h4><p><img src="https://wang-nine.cn/iamges/SSM02-06bean%E7%9B%B8%E5%85%B3.png" alt="SSM02-06bean相关"></p>
 <h4 id="依赖注入相关"><a href="#依赖注入相关" class="headerlink" title="依赖注入相关"></a>依赖注入相关</h4><p><img src="https://wang-nine.cn/iamges/SSM02-07%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E7%9B%B8%E5%85%B3.png" alt="SSM02-07依赖注入相关"></p>
-]]></content>
-      <categories>
-        <category>SSM</category>
-      </categories>
-      <tags>
-        <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>从零开始的SSM框架-01-Spring中的Bean</title>
-    <url>/posts/10300.html</url>
-    <content><![CDATA[<p> 简单的介绍了Spring中的架构以及IOC和DI。<br><span id="more"></span></p>
-<h3 id="Spring-FrameWork架构"><a href="#Spring-FrameWork架构" class="headerlink" title="Spring FrameWork架构"></a>Spring FrameWork架构</h3><p><strong>Spring Framework是Spring生态圈中最基础的项目，是其他项目的根基</strong></p>
-<p><strong>Spirng FrameWork的架构</strong></p>
-<p><img src="https://wang-nine.cn/iamges/SSM01-01SpringFrameWork%E6%9E%B6%E6%9E%84.png" alt="SSM01-01SpringFrameWork架构"></p>
-<h3 id="Spring核心概念"><a href="#Spring核心概念" class="headerlink" title="Spring核心概念"></a>Spring核心概念</h3><h4 id="IoC-Inversion-of-Control-控制反转"><a href="#IoC-Inversion-of-Control-控制反转" class="headerlink" title="IoC ( Inversion of Control )控制反转"></a><strong>IoC ( Inversion of Control )控制反转</strong></h4><blockquote>
-<p>使用对象时，由主动new产生对象转换为由<strong>外部</strong>提供对象，此过程中对象创建控制权由程序转移到<strong>外部</strong>，此思想称为控制反转</p>
-<p>Spring技术对IoC思想进行了实现Spring提供了一个容器，，称为IoC容器，用来充当IoC思想中的”<strong>外部</strong>“</p>
-<p>IoC容器负责对象的创建、初始化等一系列工作，被创建或被管理的对象在IoC容器中统称为Bean</p>
-</blockquote>
-<h4 id="DI-Dependency-Injection-依赖注入"><a href="#DI-Dependency-Injection-依赖注入" class="headerlink" title="DI ( Dependency Injection)依赖注入"></a><strong>DI ( Dependency Injection)依赖注入</strong></h4><blockquote>
-<p>在容器中建立bean与bean之间的依赖关系的整个过程，称为依赖注入</p>
-</blockquote>
-<h3 id="IoC入门案例"><a href="#IoC入门案例" class="headerlink" title="IoC入门案例"></a>IoC入门案例</h3><blockquote>
-<p>思路分析：<br>1.管理什么? （Service与Dao）<br>2.如何将被管理的对象告知IoC容器?（配置）<br>3.被管理的对象交给IoC容器，如何获取到IoC容器?（接口）<br>4.IoC容器得到后，如何从容器中获取bean ?（接口方法）<br>5.使用Spring导入哪些坐标?（pom.xml）</p>
-</blockquote>
-<h4 id="非Spring环境下"><a href="#非Spring环境下" class="headerlink" title="非Spring环境下"></a>非Spring环境下</h4><p>案例代码如下：</p>
-<p>Service层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.dao.impl.DaoImpl;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">Dao</span> <span class="variable">dao</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DaoImpl</span>();</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>DAO层的代码：<br>接口：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>实现：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.dao.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">DaoImpl</span> <span class="keyword">implements</span> <span class="title class_">Dao</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Dao save() ...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>主函数代码：<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"><span class="keyword">import</span> wang.service.impl.ServiceImpl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ServiceImpl</span>();</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行结果：<br><img src="https://wang-nine.cn/iamges/SSM01-02%E9%9D%9ESpring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-02非Spring环境样例"></p>
-<h4 id="Spring环境下"><a href="#Spring环境下" class="headerlink" title="Spring环境下"></a>Spring环境下</h4><p>别忘记在pom.xml中引入spring-context<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.10.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>在resources中创建配置文件（名称：applicationContext.xml）：如图<br><img src="https://wang-nine.cn/iamges/SSM01-03%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png" alt="SSM01-03配置文件"></p>
-<p>在配置文件中输入以下的代码<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--导入spring的坐标spring-context，对应版本是5.2.10.RELEASE--&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--配置bean--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--bean标签标示配置bean</span></span><br><span class="line"><span class="comment">    id属性标示给bean起名字</span></span><br><span class="line"><span class="comment">    class属性表示给bean定义类型--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Dao&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.dao.impl.DaoImpl&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>主函数代码<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">App2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 获取IoC容器</span></span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">ctx</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ClassPathXmlApplicationContext</span>(<span class="string">&quot;applicationContext.xml&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取Bean</span></span><br><span class="line">        <span class="type">Service</span> <span class="variable">service</span> <span class="operator">=</span> (Service) ctx.getBean(<span class="string">&quot;Service&quot;</span>);</span><br><span class="line">        service.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>此时运行样例与非Spring方式相同如下：<br><img src="https://wang-nine.cn/iamges/SSM01-04Spring%E7%8E%AF%E5%A2%83%E6%A0%B7%E4%BE%8B.png" alt="SSM01-04Spring环境样例"></p>
-<p><strong>综上：可以分为四步</strong></p>
-<blockquote>
-<p><strong>1.导入Spring坐标</strong></p>
-<p><strong>2.定义Spring管理的类（接口）</strong></p>
-<p><strong>3.创建Spring配置文件进行配置</strong></p>
-<p><strong>4.初始化IoC容器，从容器中获取Bean（getBean方法）</strong></p>
-</blockquote>
-<p><strong>问题：业务层中仍然是使用new创建对象，仍然耦合，那么如何解耦合呢？</strong></p>
-<h3 id="DI入门案例"><a href="#DI入门案例" class="headerlink" title="DI入门案例"></a>DI入门案例</h3><blockquote>
-<p>思路分析：<br>1.基于IoC管理bean<br>2.Service使用new形式创建的Dao对象是否保留?（否）<br>3.Service中需要的Dao对象如何进入到service中?（提供方法）<br>4.Service与Dao间的关系如何描述?（配置）</p>
-</blockquote>
-<p>改变Service层实现代码如下<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> wang.service.impl;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> wang.dao.Dao;</span><br><span class="line"><span class="keyword">import</span> wang.service.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">Service</span> &#123;</span><br><span class="line">    <span class="comment">// 删除业务层以new的方式创建Dao对象</span></span><br><span class="line">    <span class="comment">//private Dao dao = new DaoImpl();</span></span><br><span class="line">    <span class="keyword">private</span> Dao dao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Service save() ...&quot;</span>);</span><br><span class="line">        dao.save();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提供对应的set方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setDao</span><span class="params">(Dao dao)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.dao = dao;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>修改applicationContext.xml中配置：<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;Service&quot;</span> <span class="attr">class</span>=<span class="string">&quot;wang.service.impl.ServiceImpl&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--7.配置server与dao的关系--&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--property标签表示配置当前bean的属性</span></span><br><span class="line"><span class="comment">        name属性表示配置哪一个具体的属性</span></span><br><span class="line"><span class="comment">        ref属性表示参照哪一个bean--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;dao&quot;</span> <span class="attr">ref</span>=<span class="string">&quot;Dao&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p><strong>注意：name是上述的（private Dao dao;）语句中的变量名，ref是bean的名字。</strong></p>
-</blockquote>
-<p>运行结果与上述一样：<br><img src="https://wang-nine.cn/iamges/SSM01-05DI.png" alt="SSM01-05DI"></p>
-<p><strong>综上：可以分为三步</strong></p>
-<blockquote>
-<p>1.<strong>删除以new的形式创建对象的代码</strong></p>
-<p>2.<strong>提供对应的Set方法</strong></p>
-<p>3.<strong>配置Service与Dao之间的关系</strong></p>
-</blockquote>
-<p><strong>注意在Bean标签中还可以进行以下的配置：</strong></p>
-<p><strong>属性name：定义Bean的别名</strong></p>
-<p><strong>属性scope：定义作用范围 singleton（默认，单例）  prototype（非单例）</strong></p>
 ]]></content>
       <categories>
         <category>SSM</category>
@@ -1879,23 +1879,18 @@
       </tags>
   </entry>
   <entry>
-    <title>相册</title>
-    <url>/gallery/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>分类</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/about/index.html</url>
+    <title></title>
+    <url>/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/index.html</url>
+    <title>关于</title>
+    <url>/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -1906,6 +1901,11 @@
   <entry>
     <title>标签</title>
     <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>相册</title>
+    <url>/gallery/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
