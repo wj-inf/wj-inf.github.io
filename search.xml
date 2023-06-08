@@ -50,20 +50,14 @@ Decomposition)产生了较大的兴趣。借此机会，对之前上过的高等
 ]]></content>
   </entry>
   <entry>
+    <title>关于</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/index.html</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>相册</title>
-    <url>/gallery/index.html</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
     <content><![CDATA[
 ]]></content>
   </entry>
@@ -74,14 +68,20 @@ Decomposition)产生了较大的兴趣。借此机会，对之前上过的高等
 ]]></content>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/about/index.html</url>
+    <title>相册</title>
+    <url>/gallery/index.html</url>
     <content><![CDATA[
 ]]></content>
   </entry>
   <entry>
     <title>峨眉山之行</title>
     <url>/gallery/%E8%83%8C%E6%99%AF/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
     <content><![CDATA[
 ]]></content>
   </entry>
