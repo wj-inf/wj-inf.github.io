@@ -1,112 +1,739 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title></title>
-      <link href="/posts/3.html"/>
-      <url>/posts/3.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="注意本文中所有的-command键-等价于-ctrl键">注意：本文中所有的command键 等价于 ctrl键</h2><h2 id="vim-三种基本的工作模式">1、vim 三种基本的工作模式</h2><p>vim有三种基本的工作模式，分别为：命令模式、末行模式、编辑模式。关于这三种工作模式的介绍，请见下文。</p><h3 id="命令模式">1.1、命令模式</h3><p>使用vim打开文件之后，首先进入命令模式，它是vim编辑器的入口模式。在命令模式下，通过使用命令对文件进行常规的编辑操作，例如：复制、粘贴、删除、定位、翻页等等。</p><h3 id="末行模式">1.2、末行模式</h3><p>末行模式是vim编辑器的出口，要退出vim，必须要在末行模式下。在末行模式下，执行退出文件、保存并退出文件等操作。</p><h3 id="编辑模式">1.3、编辑模式</h3><p>正常的编辑文字模式。</p><h2 id="三种模式的切换操作">2、三种模式的切换操作</h2><p>（1）vim打开一个文件进入的就是命令模式，另外两种模式需要回到命令模式才能进入彼此。</p><p>（2）在命令模式中按下<code>i，I，o，O，a，A，r，R</code>任何一个字母后进入编辑模式，进入编辑模式后，下方会出现<code>INSERT</code>或者<code>REPLACE</code>字样，按<code>Esc</code>键退出编辑模式，回到命令模式。</p><p>（3）在命令模式中按下<code>:，/，?</code>中任意一个即可进入末行模式，末行模式可以对文档或者vim环境进行操作，例如查找、读取、存盘、替换、离开、显示行号等。</p><h2 id="各种模式切换">3、各种模式切换</h2><h3 id="普通模式-----normal-----插入模式-----insert----">普通模式 - -NORMAL - - ———&gt; 插入模式 - - INSERT - -</h3><ul><li><p>insert</p><ul><li><p>i 在光标前插入</p></li><li><p>I 在行首插入</p></li></ul></li><li><p>open a new line</p><ul><li><p>o 在下一行插入</p></li><li><p>O 在上一行插入</p></li></ul></li><li><p>append</p><ul><li>a 在光标后插入</li><li>A 在行尾插入</li></ul></li></ul><h3 id="普通模式-----normal-----插入模式-----insert-----1">普通模式 - -NORMAL - - &lt;——— 插入模式 - - INSERT - -</h3><ul><li>ESC</li><li>jj / CapsLock</li></ul><h3 id="普通模式-----normal-----可视模式-----visual----">普通模式 - -NORMAL - - ———&gt; 可视模式 - - VISUAL - -</h3><ul><li>v</li></ul><h3 id="普通模式-----normal-----可视模式-----visual-----1">普通模式 - -NORMAL - - &lt;——— 可视模式 - - VISUAL - -</h3><ul><li>v</li><li>Esc</li></ul><h3 id="普通模式-----normal-----命令模式">普通模式 - - NORMAL - -———&gt; 命令模式</h3><ul><li>:</li></ul><h3 id="普通模式-----normal-----命令模式-1">普通模式 - - NORMAL - -&lt;——— 命令模式</h3><ul><li>Esc</li></ul><h3 id="总结">总结</h3><figure><img src="https://wang-nine.cn/images/Vim01.png" alt="Vim01"><figcaption aria-hidden="true">Vim01</figcaption></figure><figure><img src="https://wang-nine.cn/images/Vim02.png" alt="Vim02"><figcaption aria-hidden="true">Vim02</figcaption></figure><figure><img src="https://wang-nine.cn/images/Vim03.png" alt="Vim03"><figcaption aria-hidden="true">Vim03</figcaption></figure><figure><img src="https://wang-nine.cn/images/Vim04.png" alt="Vim04"><figcaption aria-hidden="true">Vim04</figcaption></figure><figure><img src="https://wang-nine.cn/images/Vim05.png" alt="Vim05"><figcaption aria-hidden="true">Vim05</figcaption></figure><h2 id="光标移动">4、光标移动</h2><figure><img src="https://wang-nine.cn/images/Vim06.png" alt="Vim06"><figcaption aria-hidden="true">Vim06</figcaption></figure><figure><img src="https://wang-nine.cn/images/Vim07.png" alt="Vim07"><figcaption aria-hidden="true">Vim07</figcaption></figure><p>解释：</p><ul><li>w : word</li><li>b : begin</li><li>e : end</li><li>ge : 不太常用</li></ul><figure><img src="https://wang-nine.cn/images/Vim08.png" alt="Vim08"><figcaption aria-hidden="true">Vim08</figcaption></figure><figure><img src="https://wang-nine.cn/images/Vim09.png" alt="Vim09"><figcaption aria-hidden="true">Vim09</figcaption></figure><table style="width:100%;"><colgroup><col style="width: 5%"><col style="width: 33%"><col style="width: 20%"><col style="width: 28%"><col style="width: 11%"></colgroup><thead><tr class="header"><th>字符</th><th>单词</th><th>行</th><th>跳转</th><th>句和段</th></tr></thead><tbody><tr class="odd"><td>h 左</td><td>w下一个单词开头</td><td>0 行首</td><td>f char 跳到char位置</td><td>( 到句首</td></tr><tr class="even"><td>j 下</td><td>b本单词或上一个单词开头</td><td>^ 行首非空字符</td><td>F char 反向</td><td>) 到句尾</td></tr><tr class="odd"><td>k 上</td><td>e本单词或下一个单词结尾</td><td>$ 行尾</td><td>t char char前一位置</td><td>{ 到段首</td></tr><tr class="even"><td>l 右</td><td>ge上一个单词结尾</td><td>gg 首行</td><td>T char char后一位置</td><td>} 到段尾</td></tr><tr class="odd"><td></td><td>W长单词 E长单词 B长单词</td><td>G 尾行</td><td>; 重复上次的跳转</td><td></td></tr><tr class="even"><td></td><td></td><td>ngg 第n行</td><td>, 反向查找上次的查找</td><td></td></tr></tbody></table><h2 id="动作-motion">5、动作 motion</h2><figure><img src="https://wang-nine.cn/images/Vim10.png" alt="Vim10"><figcaption aria-hidden="true">Vim10</figcaption></figure><figure><img src="https://wang-nine.cn/images/Vim11.png" alt="Vim11"><figcaption aria-hidden="true">Vim11</figcaption></figure><ul><li>it : inner tag</li><li>is : inner sentence</li><li>ip : inner paragraph</li></ul><h2 id="操作符">6、操作符</h2><figure><img src="https://wang-nine.cn/images/Vim12.png" alt="Vim12"><figcaption aria-hidden="true">Vim12</figcaption></figure><table><thead><tr class="header"><th>操作符</th><th>说明</th></tr></thead><tbody><tr class="odd"><td>d(delete)</td><td>删除</td></tr><tr class="even"><td>c(change)</td><td>修改（删除并且进入插入模式）</td></tr><tr class="odd"><td>y(yank)</td><td>复制</td></tr><tr class="even"><td>v(visual)</td><td>选中并且进入 VISUAL 模式</td></tr><tr class="odd"><td>p(paste)</td><td>粘贴</td></tr><tr class="even"><td>b(bracket)</td><td>小括号的简写</td></tr><tr class="odd"><td>B(Bracket)</td><td>大括号的简写</td></tr><tr class="even"><td>e(entire)</td><td>全选</td></tr></tbody></table><h2 id="大小写">7、大小写</h2><figure><img src="https://wang-nine.cn/images/Vim13.png" alt="Vim13"><figcaption aria-hidden="true">Vim13</figcaption></figure><ul><li>‘g’ means goto</li><li>‘U’ means Uppercase</li><li>‘u’ 与上一个相反</li></ul><h2 id="tips">Tips</h2><ul><li>gd : goto definition 跳转到定义</li><li>ctrl + o : 跳回</li><li>gh : goto (mouse) hover 鼠标悬浮</li><li>gt : goto tab 跳转下一个标签页</li><li>gT : 与上一个相反 跳转上一个标签页</li><li>ngt / ngT : 跳转到第n个标签页</li></ul><h2 id="vscode中的vim">VSCode中的Vim</h2><ul><li><p>vscode中&lt;leader&gt;默认为space</p></li><li><p>&lt;leader&gt;&lt;leader&gt; S{Charactor} : 寻找某个字符</p></li><li><p>&lt;leader&gt;&lt;leader&gt; xxx : 详见配置</p></li></ul><table><colgroup><col style="width: 36%"><col style="width: 63%"></colgroup><thead><tr class="header"><th style="text-align: left;">Motion Command</th><th style="text-align: left;">Description</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; s &lt;char&gt;</code></td><td style="text-align: left;">Search character</td></tr><tr class="even"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; f &lt;char&gt;</code></td><td style="text-align: left;">Find character forwards</td></tr><tr class="odd"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; F &lt;char&gt;</code></td><td style="text-align: left;">Find character backwards</td></tr><tr class="even"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; t &lt;char&gt;</code></td><td style="text-align: left;">Til character forwards</td></tr><tr class="odd"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; T &lt;char&gt;</code></td><td style="text-align: left;">Til character backwards</td></tr><tr class="even"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; w</code></td><td style="text-align: left;">Start of word forwards</td></tr><tr class="odd"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; b</code></td><td style="text-align: left;">Start of word backwards</td></tr><tr class="even"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; l</code></td><td style="text-align: left;">Matches beginning &amp; ending of word,camelCase, after <code>_</code>, and after <code>#</code> forwards</td></tr><tr class="odd"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; h</code></td><td style="text-align: left;">Matches beginning &amp; ending of word,camelCase, after <code>_</code>, and after <code>#</code> backwards</td></tr><tr class="even"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; e</code></td><td style="text-align: left;">End of word forwards</td></tr><tr class="odd"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; ge</code></td><td style="text-align: left;">End of word backwards</td></tr><tr class="even"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; j</code></td><td style="text-align: left;">Start of line forwards</td></tr><tr class="odd"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; k</code></td><td style="text-align: left;">Start of line backwards</td></tr><tr class="even"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; / &lt;char&gt;... &lt;CR&gt;</code></td><td style="text-align: left;">Search n-character</td></tr><tr class="odd"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdt</code></td><td style="text-align: left;">Til character</td></tr><tr class="even"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdw</code></td><td style="text-align: left;">Start of word</td></tr><tr class="odd"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bde</code></td><td style="text-align: left;">End of word</td></tr><tr class="even"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdjk</code></td><td style="text-align: left;">Start of line</td></tr><tr class="odd"><td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; j</code></td><td style="text-align: left;">JumpToAnywhere motion; default behaviormatches beginning &amp; ending of word, camelCase, after <code>_</code>and after <code>#</code></td></tr></tbody></table><p><code>&lt;leader&gt;&lt;leader&gt; (2s|2f|2F|2t|2T) &lt;char&gt;&lt;char&gt;</code>and<code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bd2t &lt;char&gt;char&gt;</code>are also available. The difference is character count required forsearch. For example,<code>&lt;leader&gt;&lt;leader&gt; 2s &lt;char&gt;&lt;char&gt;</code>requires two characters, and search by two characters. This mapping isnot a standard mapping, so it is recommended to use your custommapping.</p><ul><li>surround</li></ul><table><colgroup><col style="width: 31%"><col style="width: 68%"></colgroup><thead><tr class="header"><th style="text-align: left;">Surround Command</th><th style="text-align: left;">Description</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><code>y s &lt;motion&gt; &lt;desired&gt;</code></td><td style="text-align: left;">Add <code>desired</code> surround aroundtext defined by <code>&lt;motion&gt;</code></td></tr><tr class="even"><td style="text-align: left;"><code>d s &lt;existing&gt;</code></td><td style="text-align: left;">Delete <code>existing</code> surround</td></tr><tr class="odd"><td style="text-align: left;"><code>c s &lt;existing&gt; &lt;desired&gt;</code></td><td style="text-align: left;">Change <code>existing</code> surround to<code>desired</code></td></tr><tr class="even"><td style="text-align: left;"><code>S &lt;desired&gt;</code></td><td style="text-align: left;">Surround when in visual modes (surroundsfull selection)</td></tr></tbody></table><p>Some examples:</p><ul><li><code>"test"</code> with cursor inside quotes type <code>cs"'</code>to end up with <code>'test'</code></li><li><code>"test"</code> with cursor inside quotes type <code>ds"</code>to end up with <code>test</code></li><li><code>"test"</code> with cursor inside quotes type <code>cs"t</code>and enter <code>123&gt;</code> to end up with<code>&lt;123&gt;test&lt;/123&gt;</code></li></ul><h2 id="多光标功能">多光标功能</h2><h3 id="multi-cursor-mode">🖱️ Multi-Cursor Mode</h3><blockquote><p>:warning: Multi-Cursor mode is experimental. Please report issues inour <a href="https://github.com/VSCodeVim/Vim/issues/824">feedbackthread.</a></p></blockquote><p>Enter multi-cursor mode by:</p><ul><li>On OSX, <code>cmd-d</code>. On Windows, <code>ctrl-d</code>.</li><li><code>gb</code>, a new shortcut we added which is equivalent to<code>cmd-d</code> (OSX) or <code>ctrl-d</code> (Windows). It addsanother cursor at the next word that matches the word the cursor iscurrently on.</li><li>Running "Add Cursor Above/Below" or the shortcut on anyplatform.</li></ul><p>Once you have multiple cursors, you should be able to use Vimcommands as you see fit. Most should work; some are unsupported (ref <a href="https://github.com/VSCodeVim/Vim/pull/587">PR#587</a>).</p><ul><li>Each cursor has its own clipboard.</li><li>Pressing Escape in Multi-Cursor Visual Mode will bring you toMulti-Cursor Normal mode. Pressing it again will return you to Normalmode.</li></ul><p>vscode中可以使用 cmd + d 批量修改</p><p>vim中可以使用 gb 批量膝盖</p><h2 id="将光标定位到终端">将光标定位到终端</h2><p>在settings.json添加如下快捷键</p><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">//由editor 转到 terminal</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;before&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;leader&quot;</span><span class="punctuation">,</span> <span class="string">&quot;t&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;commands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;workbench.action.terminal.focus&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>space + t 即可跳转到终端中</p><h2 id="跳转tab">跳转Tab</h2><p>进入命令模式 :</p><ul><li>输入 tabn : tab next 即进入下一个标签页</li><li>输入 tabp : tab prev 即进入下一个标签页</li></ul>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>线性代数复健</title>
-      <link href="/posts/36888.html"/>
-      <url>/posts/36888.html</url>
-      
-        <content type="html"><![CDATA[<p>前言：最近在学习机器学习，但是在看AE(AutoEncoder)时，感觉到了其与PCA(PrincipalComponent Analysis)的联系，从而对SVD(Singular ValueDecomposition)产生了较大的兴趣。借此机会，对之前上过的高等代数课的部分知识做一个复健整理。</p><p>说到线代，我们首先能想到嘴边的概念有：向量，矩阵，秩，线性空间，线性变化，逆矩阵，单位矩阵，相似矩阵，特征值分解。核心还是矩阵，我们可以把矩阵看作一组基或者看作一个线性变换。</p><h3 id="基和坐标">基和坐标</h3>例如，$=( x_1,x_2,,x_n ) <span class="math inline">\(代表一个向量，\)</span>X=(<span class="math display">\[\begin{matrix}    x_{11}&amp;     x_{12}&amp;     x_{13}\\    x_{21}&amp;     x_{22}&amp;     x_{23}\\    x_{31}&amp;     x_{32}&amp;     x_{33}\\\end{matrix}\]</span><p>) <span class="math inline">\(代表一个矩阵，我们令\)</span><em>1=(x</em>{11},x_{21},x_{31} ) ^T , <em>2=( x</em>{12},x_{22},x_{32} ) ^T ,<em>3=( x</em>{13},x_{23},x_{33} ) ^T$</p><p>则有$X=( _1,_2,_3 ) $。即矩阵的每一列代表一个基。</p>我们常见的单位矩阵$I=(<span class="math display">\[\begin{matrix}    1&amp;      0&amp;      0\\    0&amp;      1&amp;      0\\    0&amp;      0&amp;      1\\\end{matrix}\]</span><p>) <span class="math inline">\(即是把\)</span>_1=( 1,0,0 ) ,_2=( 0,1,0), _3=( 0,0,1 ) $当作基。</p><p>当然，谈到矩阵的基，自然会回忆起线性无关，正交基，施密特正交化这一系列东西，但是这些知识还比较熟悉，不是复习的重点。给定一个向量<span class="math inline">\(\alpha =\left( 1,2,3 \right)^T\)</span>，我们可以把它看作一个向量，也可以把它看作一个坐标，即$_1+2_2+3_3=(_1,_2,_3 ) ( 1,2,3 ) ^T=I$，事实上，我们既然写成了这个样子，就潜意识地将标准基作为基底了。</p><h3 id="线性变换的引出">线性变换的引出</h3><p>另外一种看法是将矩阵看成一种线性变换，确切来说，矩阵是某个线性变换在一组基上的表示。</p><p>按照课本的叙述方式：</p><p>设<span class="math inline">\(V\)</span>是数域<span class="math inline">\(F\)</span>上一个<span class="math inline">\(n\)</span>维向量空间，令<span class="math inline">\(\sigma\)</span>是<span class="math inline">\(V\)</span>的一个线性变换。取定<span class="math inline">\(V\)</span>的一个基 <span class="math display">\[\mathbf{\alpha }_1,\mathbf{\alpha }_2,\cdots ,\mathbf{\alpha }_n\]</span> 考虑<span class="math inline">\(V\)</span>中任意一个向量 <span class="math display">\[\xi =x_1\mathbf{\alpha }_1+x_2\mathbf{\alpha }_2+\cdots+x_n\mathbf{\alpha }_n\]</span> <span class="math inline">\(\sigma \left( \xi\right)\)</span>仍是<span class="math inline">\(V\)</span>的一个向量。设<span class="math display">\[\sigma \left( \xi \right) =y_1\mathbf{\alpha }_1+y_2\mathbf{\alpha}_2+\cdots +y_n\mathbf{\alpha }_n\]</span> 自然要问，如何计算<span class="math inline">\(\sigma \left(\xi \right)\)</span>的坐标<span class="math inline">\(\left(y_1,y_2,\cdots ,y_n \right)\)</span>。</p><p>令 <span class="math display">\[\begin{cases}    \sigma \left( \mathbf{\alpha }_1 \right) =a_{11}\mathbf{\alpha}_1+a_{21}\mathbf{\alpha }_2+\cdots +a_{n1}\mathbf{\alpha }_n\\    \sigma \left( \mathbf{\alpha }_2 \right) =a_{12}\mathbf{\alpha}_1+a_{22}\mathbf{\alpha }_2+\cdots +a_{n2}\mathbf{\alpha }_n\\    \,\,                  \cdots \cdots \cdots \cdots\\    \sigma \left( \mathbf{\alpha }_n \right) =a_{1n}\mathbf{\alpha}_1+a_{2n}\mathbf{\alpha }_2+\cdots +a_{nn}\mathbf{\alpha }_n\\\end{cases}\]</span> 这里<span class="math inline">\(a_{ij}\)</span>就是$( _j )<span class="math inline">\(关于基\)</span>_1,_2,,_n$的坐标。</p><p>令 <span class="math display">\[A=\left( \begin{matrix}    a_{11}&amp;     a_{12}&amp;     \cdots&amp;     a_{1n}\\    a_{21}&amp;     a_{22}&amp;     \cdots&amp;     a_{2n}\\    \vdots&amp;     \vdots&amp;     &amp;       \vdots\\    a_{n1}&amp;     a_{n2}&amp;     \cdots&amp;     a_{nn}\\\end{matrix} \right)\]</span> <span class="math inline">\(n\)</span>阶矩阵<span class="math inline">\(A\)</span>叫做线性变换<span class="math inline">\(\sigma\)</span>关于基${ _1,_2,,_n } <span class="math inline">\(的矩阵。矩阵\)</span>A<span class="math inline">\(的第\)</span>j<span class="math inline">\(列的元素就是\)</span>( _j ) <span class="math inline">\(关于基\)</span>{ _1,_2,,_n } $的坐标。</p><p>这样，取定<span class="math inline">\(F\)</span>上<span class="math inline">\(n\)</span>维向量空间<span class="math inline">\(V\)</span>的一个基后，对于<span class="math inline">\(V\)</span>的每一线性变换，有唯一确定的<span class="math inline">\(F\)</span>上<span class="math inline">\(n\)</span>阶矩阵与之对应。</p><p>事实上： <span class="math display">\[\left( \sigma \left( \mathbf{\alpha }_1 \right) ,\sigma \left(\mathbf{\alpha }_2 \right) ,\cdots ,\sigma \left( \mathbf{\alpha }_n\right) \right) =\left( \mathbf{\alpha }_1,\mathbf{\alpha }_2,\cdots,\mathbf{\alpha }_n \right) A\]</span> 这意味着从基${ _1,_2,,_n } <span class="math inline">\(到基\)</span>{ ( _1 ) ,( _2 ) ,,( _n ) } <span class="math inline">\(的过渡矩阵\)</span>A<span class="math inline">\(即是线性变换\)</span><span class="math inline">\(关于基\)</span>{ _1,_2,,_n } $的矩阵。</p><h3 id="从拉伸角度理解线性变换">从拉伸角度理解线性变换</h3>我们将坐标轴进行拉伸，即相当于对$(<span class="math display">\[\begin{matrix}    1&amp;      0\\    0&amp;      1\\\end{matrix}\]</span>) $做变换 $(<span class="math display">\[\begin{matrix}    \lambda _1&amp;     0\\    0&amp;      \lambda _2\\\end{matrix}\]</span>) <span class="math inline">\(，即\)</span>(<span class="math display">\[\begin{matrix}    \lambda _1&amp;     0\\    0&amp;      \lambda _2\\\end{matrix}\]</span>) (<span class="math display">\[\begin{matrix}    1&amp;      0\\    0&amp;      1\\\end{matrix}\]</span>) =(<span class="math display">\[\begin{matrix}    \lambda _1&amp;     0\\    0&amp;      \lambda _2\\\end{matrix}\]</span><p>)$，显然，对标准正交基做的拉伸这一类线性变换对应的矩阵都是对角矩阵。那么，当一个线性变换对于标准正交基的矩阵不是对角矩阵时，我们能不能用拉伸来理解呢？事实上，可以，这就是特征向量和特征值的一个很重要的意义。</p>我们先反过来看，假如有一个线性变换对于基$(<span class="math display">\[\begin{matrix}    1&amp;      -1\\    0&amp;      1\\\end{matrix}\]</span>) <span class="math inline">\(的矩阵是\)</span>B=(<span class="math display">\[\begin{matrix}    3&amp;      0\\    0&amp;      2\\\end{matrix}\]</span>) <span class="math inline">\(，那么我们只需要命名基\)</span>(<span class="math display">\[\begin{matrix}    1&amp;      0\\    0&amp;      1\\\end{matrix}\]</span>) <span class="math inline">\(到基\)</span>(<span class="math display">\[\begin{matrix}    1&amp;      -1\\    0&amp;      1\\\end{matrix}\]</span>) <span class="math inline">\(的过渡矩阵\)</span>T=(<span class="math display">\[\begin{matrix}    1&amp;      -1\\    0&amp;      1\\\end{matrix}\]</span>) <span class="math inline">\(，命名这一线性变换关于基\)</span>(<span class="math display">\[\begin{matrix}    1&amp;      0\\    0&amp;      1\\\end{matrix}\]</span>) <span class="math inline">\(的矩阵为\)</span>A<span class="math inline">\(，根据相似矩阵的知识，有\)</span>B=T<sup>{-1}AT<span class="math inline">\(，据此求得\)</span>A=TBT</sup>{-1}=(<span class="math display">\[\begin{matrix}    3&amp;      1\\    0&amp;      2\\\end{matrix}\]</span><p>)$，所以，如果一个线性变换关于标准正交基的矩阵可以相似对角化，那么这个变换就可以被理解为对某组基的拉伸，这组基上的向量就是特征向量，对应的拉伸强度就是对应的特征值，至此，我们找到了一个更为直观的视角去看待线性变换。</p><p>书上给出了一个对角化的充要条件，即<span class="math inline">\(n\)</span>维向量空间<span class="math inline">\(V\)</span>的一个线性变换<span class="math inline">\(\sigma\)</span>可以对角化的充要的条件是，<span class="math inline">\(V\)</span>可以分解为<span class="math inline">\(n\)</span>个在<span class="math inline">\(\sigma\)</span>之下不变的一维子空间<span class="math inline">\(W_1,W_2,\cdots,W_n\)</span>的直和。我们可以简单地理解为，这一个线性变换不会让空间坍塌降维。</p><p>另外一点值得记录的是，这种拉伸是针对指定的方向的，并不是针对方向上的某一个向量，如果我们在选定的方向上选择标准基作为基，那么我们得到的特征向量矩阵将是一个正交矩阵，即它只表示方向。我们用<span class="math inline">\(W\)</span>来表示特征向量矩阵，用对角阵<span class="math inline">\(\varSigma\)</span>来表示拉伸强度，则有<span class="math inline">\(A=W\varSigma W^{-1}\)</span>，因为我们选取的<span class="math inline">\(W\)</span>为正交矩阵，所以有<span class="math inline">\(WW^T=I\)</span>，所以<span class="math inline">\(A=W\varSigma W^{T}\)</span>。</p><h3 id="非方阵">非方阵</h3>我们将<span class="math inline">\(\left( \begin{matrix}  1&amp;2\\  -1&amp; 4\\  3&amp; 0\\ \end{matrix} \right)\)</span>作用于<span class="math inline">\(\left( \begin{matrix}  1&amp; 0\\  0&amp; 1\\\end{matrix} \right)\)</span>，即$(<span class="math display">\[\begin{matrix}    1&amp;      2\\    -1&amp;     4\\    3&amp;      0\\\end{matrix}\]</span>) (<span class="math display">\[\begin{matrix}    1&amp;      0\\    0&amp;      1\\\end{matrix}\]</span>) =(<span class="math display">\[\begin{matrix}    1&amp;      2\\    -1&amp;     4\\    3&amp;      0\\\end{matrix}\]</span><p>) <span class="math inline">\(，根据很多视频的说法，这个矩阵将平面映射成了斜面，我的理解是，非方阵会将基从\)</span>m<span class="math inline">\(维映射到\)</span>n$维，但是由这些映射完的基所张成的空间的维度还是没有变大。</p><h3 id="奇异值分解">奇异值分解</h3><p>根据这个文章的思路作为主线<a href="https://zhuanlan.zhihu.com/p/29846048">奇异值分解（SVD） - 知乎(zhihu.com)</a></p><p>存在一个mxn的矩阵<span class="math inline">\(A\)</span>，我们定义<span class="math inline">\(A\)</span>的SVD为<span class="math inline">\(A=U\varSigma V^{T}\)</span>，其中<span class="math inline">\(U\)</span>是mxm的矩阵，<span class="math inline">\(\varSigma\)</span>是mxn的矩阵，<span class="math inline">\(V\)</span>是nxn的矩阵，我们可以理解为，<span class="math inline">\(U\)</span>是在原平面找的特征向量矩阵，<span class="math inline">\(V\)</span>是在变换后的斜面找的特征向量矩阵。 <span class="math display">\[A^TA=V\varSigma ^TU^TU\varSigma V^T=V\varSigma ^2V^T\\AA^T=U\varSigma V^TV\varSigma ^TU^T=U\varSigma ^2U^T\]</span> 所以我们可以根据<span class="math inline">\(A\)</span>来求得<span class="math inline">\(A^TA\)</span>和<span class="math inline">\(AA^T\)</span>，进而求出<span class="math inline">\(V,\varSigma,U\)</span>。</p><p>根据文中的例子： <span class="math display">\[A=\left( \begin{matrix}    0&amp;      1\\    1&amp;      1\\    1&amp;      0\\\end{matrix} \right) ,A^T=\left( \begin{matrix}    0&amp;      1&amp;      1\\    1&amp;      1&amp;      0\\\end{matrix} \right)\]</span> 然后对方阵<span class="math inline">\(A^TA\)</span>和<span class="math inline">\(AA^T\)</span>进行分解。 <span class="math display">\[A^TA=\left( \begin{matrix}    0&amp;      1&amp;      1\\    1&amp;      1&amp;      0\\\end{matrix} \right) \left( \begin{matrix}    0&amp;      1\\    1&amp;      1\\    1&amp;      0\\\end{matrix} \right) =\left( \begin{matrix}    2&amp;      1\\    1&amp;      2\\\end{matrix} \right) =\left( \begin{matrix}    \frac{1}{\sqrt{2}}&amp;     -\frac{1}{\sqrt{2}}\\    \frac{1}{\sqrt{2}}&amp;     \frac{1}{\sqrt{2}}\\\end{matrix} \right) \left( \begin{matrix}    3&amp;      0\\    0&amp;      1\\\end{matrix} \right) \left( \begin{matrix}    \frac{1}{\sqrt{2}}&amp;     \frac{1}{\sqrt{2}}\\    -\frac{1}{\sqrt{2}}&amp;        \frac{1}{\sqrt{2}}\\\end{matrix} \right)\\AA^T=\left( \begin{matrix}    0&amp;      1\\    1&amp;      1\\    1&amp;      0\\\end{matrix} \right) \left( \begin{matrix}    0&amp;      1&amp;      1\\    1&amp;      1&amp;      0\\\end{matrix} \right) =\left( \begin{matrix}    1&amp;      1&amp;      0\\    1&amp;      2&amp;      1\\    0&amp;      1&amp;      1\\\end{matrix} \right) =\left( \begin{matrix}    \frac{1}{\sqrt{6}}&amp;     \frac{1}{\sqrt{2}}&amp;     \frac{1}{\sqrt{3}}\\    \frac{2}{\sqrt{6}}&amp;     0&amp;      -\frac{1}{\sqrt{3}}\\    \frac{1}{\sqrt{6}}&amp;     -\frac{1}{\sqrt{2}}&amp;        \frac{1}{\sqrt{3}}\\\end{matrix} \right) \left( \begin{matrix}    3&amp;      0&amp;      0\\    0&amp;      1&amp;      0\\    0&amp;      0&amp;      0\\\end{matrix} \right) \left( \begin{matrix}    \frac{1}{\sqrt{6}}&amp;     \frac{2}{\sqrt{6}}&amp;     \frac{1}{\sqrt{6}}\\    \frac{1}{\sqrt{2}}&amp;     0&amp;      -\frac{1}{\sqrt{2}}\\    \frac{1}{\sqrt{3}}&amp;     -\frac{1}{\sqrt{3}}&amp;        \frac{1}{\sqrt{3}}\\\end{matrix} \right)\]</span> 所以得： <span class="math display">\[A=\left( \begin{matrix}    \frac{1}{\sqrt{6}}&amp;     \frac{1}{\sqrt{2}}&amp;     \frac{1}{\sqrt{3}}\\    \frac{2}{\sqrt{6}}&amp;     0&amp;      -\frac{1}{\sqrt{3}}\\    \frac{1}{\sqrt{6}}&amp;     -\frac{1}{\sqrt{2}}&amp;        \frac{1}{\sqrt{3}}\\\end{matrix} \right) \left( \begin{matrix}    3&amp;      0\\    0&amp;      1\\    0&amp;      0\\\end{matrix} \right) \left( \begin{matrix}    \frac{1}{\sqrt{2}}&amp;     \frac{1}{\sqrt{2}}\\    -\frac{1}{\sqrt{2}}&amp;        \frac{1}{\sqrt{2}}\\\end{matrix} \right)\]</span> 细心的话可以发现<span class="math inline">\(\det \left( U\right) =\left| \begin{matrix}  \frac{1}{\sqrt{6}}&amp;\frac{1}{\sqrt{2}}&amp; \frac{1}{\sqrt{3}}\\  \frac{2}{\sqrt{6}}&amp;0&amp; -\frac{1}{\sqrt{3}}\\  \frac{1}{\sqrt{6}}&amp;-\frac{1}{\sqrt{2}}&amp; \frac{1}{\sqrt{3}}\\ \end{matrix} \right|=-6\ne0\)</span>，但<span class="math inline">\(A^TA\)</span>的最后一个特征值是零，其实就代表着三维空间中一个维度坍塌了，而这一切的根源则是<span class="math inline">\(\det \left( AA^T \right) =\left|\begin{matrix}  1&amp; 1&amp; 0\\  1&amp; 2&amp; 1\\  0&amp; 1&amp; 1\\\end{matrix} \right|=0\)</span>，这激起了我对<span class="math inline">\(AA^T\)</span>和<span class="math inline">\(A^TA\)</span>之间关系的兴趣，等以后学矩阵论或许有机会探索下。</p><figure><img src="/posts/36888.htm/线代复健\Pake.jpg" alt="Pake"><figcaption aria-hidden="true">Pake</figcaption></figure>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
-    
-    
-    <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>相册</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/index.html"/>
-      <url>/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>资源</title>
-      <link href="/resources/index.html"/>
-      <url>/resources/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>峨眉山之行</title>
-      <link href="/gallery/%E8%83%8C%E6%99%AF/index.html"/>
-      <url>/gallery/%E8%83%8C%E6%99%AF/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-  
+<search>
+  <entry>
+    <title></title>
+    <url>/posts/3.html</url>
+    <content><![CDATA[<h2 id="注意本文中所有的-command键-等价于-ctrl键">注意：本文中所有的
+command键 等价于 ctrl键</h2>
+<h2 id="vim-三种基本的工作模式">1、vim 三种基本的工作模式</h2>
+<p>vim有三种基本的工作模式，分别为：命令模式、末行模式、编辑模式。关于这三种工作模式的介绍，请见下文。</p>
+<h3 id="命令模式">1.1、命令模式</h3>
+<p>使用vim打开文件之后，首先进入命令模式，它是vim编辑器的入口模式。在命令模式下，通过使用命令对文件进行常规的编辑操作，例如：复制、粘贴、删除、定位、翻页等等。</p>
+<h3 id="末行模式">1.2、末行模式</h3>
+<p>末行模式是vim编辑器的出口，要退出vim，必须要在末行模式下。在末行模式下，执行退出文件、保存并退出文件等操作。</p>
+<h3 id="编辑模式">1.3、编辑模式</h3>
+<p>正常的编辑文字模式。</p>
+<h2 id="三种模式的切换操作">2、三种模式的切换操作</h2>
+<p>（1）vim打开一个文件进入的就是命令模式，另外两种模式需要回到命令模式才能进入彼此。</p>
+<p>（2）在命令模式中按下<code>i，I，o，O，a，A，r，R</code>任何一个字母后进入编辑模式，进入编辑模式后，下方会出现<code>INSERT</code>或者<code>REPLACE</code>字样，按<code>Esc</code>键退出编辑模式，回到命令模式。</p>
+<p>（3）在命令模式中按下<code>:，/，?</code>中任意一个即可进入末行模式，末行模式可以对文档或者vim环境进行操作，例如查找、读取、存盘、替换、离开、显示行号等。</p>
+<h2 id="各种模式切换">3、各种模式切换</h2>
+<h3 id="普通模式-----normal-----插入模式-----insert----">普通模式 - -
+NORMAL - - ———&gt; 插入模式 - - INSERT - -</h3>
+<ul>
+<li><p>insert</p>
+<ul>
+<li><p>i 在光标前插入</p></li>
+<li><p>I 在行首插入</p></li>
+</ul></li>
+<li><p>open a new line</p>
+<ul>
+<li><p>o 在下一行插入</p></li>
+<li><p>O 在上一行插入</p></li>
+</ul></li>
+<li><p>append</p>
+<ul>
+<li>a 在光标后插入</li>
+<li>A 在行尾插入</li>
+</ul></li>
+</ul>
+<h3 id="普通模式-----normal-----插入模式-----insert-----1">普通模式 - -
+NORMAL - - &lt;——— 插入模式 - - INSERT - -</h3>
+<ul>
+<li>ESC</li>
+<li>jj / CapsLock</li>
+</ul>
+<h3 id="普通模式-----normal-----可视模式-----visual----">普通模式 - -
+NORMAL - - ———&gt; 可视模式 - - VISUAL - -</h3>
+<ul>
+<li>v</li>
+</ul>
+<h3 id="普通模式-----normal-----可视模式-----visual-----1">普通模式 - -
+NORMAL - - &lt;——— 可视模式 - - VISUAL - -</h3>
+<ul>
+<li>v</li>
+<li>Esc</li>
+</ul>
+<h3 id="普通模式-----normal-----命令模式">普通模式 - - NORMAL - -
+———&gt; 命令模式</h3>
+<ul>
+<li>:</li>
+</ul>
+<h3 id="普通模式-----normal-----命令模式-1">普通模式 - - NORMAL - -
+&lt;——— 命令模式</h3>
+<ul>
+<li>Esc</li>
+</ul>
+<h3 id="总结">总结</h3>
+<figure>
+<img src="https://wang-nine.cn/images/Vim01.png" alt="Vim01">
+<figcaption aria-hidden="true">Vim01</figcaption>
+</figure>
+<figure>
+<img src="https://wang-nine.cn/images/Vim02.png" alt="Vim02">
+<figcaption aria-hidden="true">Vim02</figcaption>
+</figure>
+<figure>
+<img src="https://wang-nine.cn/images/Vim03.png" alt="Vim03">
+<figcaption aria-hidden="true">Vim03</figcaption>
+</figure>
+<figure>
+<img src="https://wang-nine.cn/images/Vim04.png" alt="Vim04">
+<figcaption aria-hidden="true">Vim04</figcaption>
+</figure>
+<figure>
+<img src="https://wang-nine.cn/images/Vim05.png" alt="Vim05">
+<figcaption aria-hidden="true">Vim05</figcaption>
+</figure>
+<h2 id="光标移动">4、光标移动</h2>
+<figure>
+<img src="https://wang-nine.cn/images/Vim06.png" alt="Vim06">
+<figcaption aria-hidden="true">Vim06</figcaption>
+</figure>
+<figure>
+<img src="https://wang-nine.cn/images/Vim07.png" alt="Vim07">
+<figcaption aria-hidden="true">Vim07</figcaption>
+</figure>
+<p>解释：</p>
+<ul>
+<li>w : word</li>
+<li>b : begin</li>
+<li>e : end</li>
+<li>ge : 不太常用</li>
+</ul>
+<figure>
+<img src="https://wang-nine.cn/images/Vim08.png" alt="Vim08">
+<figcaption aria-hidden="true">Vim08</figcaption>
+</figure>
+<figure>
+<img src="https://wang-nine.cn/images/Vim09.png" alt="Vim09">
+<figcaption aria-hidden="true">Vim09</figcaption>
+</figure>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 33%">
+<col style="width: 20%">
+<col style="width: 28%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>字符</th>
+<th>单词</th>
+<th>行</th>
+<th>跳转</th>
+<th>句和段</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>h 左</td>
+<td>w下一个单词开头</td>
+<td>0 行首</td>
+<td>f char 跳到char位置</td>
+<td>( 到句首</td>
+</tr>
+<tr class="even">
+<td>j 下</td>
+<td>b本单词或上一个单词开头</td>
+<td>^ 行首非空字符</td>
+<td>F char 反向</td>
+<td>) 到句尾</td>
+</tr>
+<tr class="odd">
+<td>k 上</td>
+<td>e本单词或下一个单词结尾</td>
+<td>$ 行尾</td>
+<td>t char char前一位置</td>
+<td>{ 到段首</td>
+</tr>
+<tr class="even">
+<td>l 右</td>
+<td>ge上一个单词结尾</td>
+<td>gg 首行</td>
+<td>T char char后一位置</td>
+<td>} 到段尾</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>W长单词 E长单词 B长单词</td>
+<td>G 尾行</td>
+<td>; 重复上次的跳转</td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>ngg 第n行</td>
+<td>, 反向查找上次的查找</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="动作-motion">5、动作 motion</h2>
+<figure>
+<img src="https://wang-nine.cn/images/Vim10.png" alt="Vim10">
+<figcaption aria-hidden="true">Vim10</figcaption>
+</figure>
+<figure>
+<img src="https://wang-nine.cn/images/Vim11.png" alt="Vim11">
+<figcaption aria-hidden="true">Vim11</figcaption>
+</figure>
+<ul>
+<li>it : inner tag</li>
+<li>is : inner sentence</li>
+<li>ip : inner paragraph</li>
+</ul>
+<h2 id="操作符">6、操作符</h2>
+<figure>
+<img src="https://wang-nine.cn/images/Vim12.png" alt="Vim12">
+<figcaption aria-hidden="true">Vim12</figcaption>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th>操作符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>d(delete)</td>
+<td>删除</td>
+</tr>
+<tr class="even">
+<td>c(change)</td>
+<td>修改（删除并且进入插入模式）</td>
+</tr>
+<tr class="odd">
+<td>y(yank)</td>
+<td>复制</td>
+</tr>
+<tr class="even">
+<td>v(visual)</td>
+<td>选中并且进入 VISUAL 模式</td>
+</tr>
+<tr class="odd">
+<td>p(paste)</td>
+<td>粘贴</td>
+</tr>
+<tr class="even">
+<td>b(bracket)</td>
+<td>小括号的简写</td>
+</tr>
+<tr class="odd">
+<td>B(Bracket)</td>
+<td>大括号的简写</td>
+</tr>
+<tr class="even">
+<td>e(entire)</td>
+<td>全选</td>
+</tr>
+</tbody>
+</table>
+<h2 id="大小写">7、大小写</h2>
+<figure>
+<img src="https://wang-nine.cn/images/Vim13.png" alt="Vim13">
+<figcaption aria-hidden="true">Vim13</figcaption>
+</figure>
+<ul>
+<li>‘g’ means goto</li>
+<li>‘U’ means Uppercase</li>
+<li>‘u’ 与上一个相反</li>
+</ul>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>gd : goto definition 跳转到定义</li>
+<li>ctrl + o : 跳回</li>
+<li>gh : goto (mouse) hover 鼠标悬浮</li>
+<li>gt : goto tab 跳转下一个标签页</li>
+<li>gT : 与上一个相反 跳转上一个标签页</li>
+<li>ngt / ngT : 跳转到第n个标签页</li>
+</ul>
+<h2 id="vscode中的vim">VSCode中的Vim</h2>
+<ul>
+<li><p>vscode中&lt;leader&gt;默认为space</p></li>
+<li><p>&lt;leader&gt;&lt;leader&gt; S{Charactor} : 寻找某个字符</p></li>
+<li><p>&lt;leader&gt;&lt;leader&gt; xxx : 详见配置</p></li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 36%">
+<col style="width: 63%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Motion Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; s &lt;char&gt;</code></td>
+<td style="text-align: left;">Search character</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; f &lt;char&gt;</code></td>
+<td style="text-align: left;">Find character forwards</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; F &lt;char&gt;</code></td>
+<td style="text-align: left;">Find character backwards</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; t &lt;char&gt;</code></td>
+<td style="text-align: left;">Til character forwards</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; T &lt;char&gt;</code></td>
+<td style="text-align: left;">Til character backwards</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; w</code></td>
+<td style="text-align: left;">Start of word forwards</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; b</code></td>
+<td style="text-align: left;">Start of word backwards</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; l</code></td>
+<td style="text-align: left;">Matches beginning &amp; ending of word,
+camelCase, after <code>_</code>, and after <code>#</code> forwards</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; h</code></td>
+<td style="text-align: left;">Matches beginning &amp; ending of word,
+camelCase, after <code>_</code>, and after <code>#</code> backwards</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; e</code></td>
+<td style="text-align: left;">End of word forwards</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; ge</code></td>
+<td style="text-align: left;">End of word backwards</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; j</code></td>
+<td style="text-align: left;">Start of line forwards</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; k</code></td>
+<td style="text-align: left;">Start of line backwards</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt; / &lt;char&gt;... &lt;CR&gt;</code></td>
+<td style="text-align: left;">Search n-character</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdt</code></td>
+<td style="text-align: left;">Til character</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdw</code></td>
+<td style="text-align: left;">Start of word</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bde</code></td>
+<td style="text-align: left;">End of word</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdjk</code></td>
+<td style="text-align: left;">Start of line</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; j</code></td>
+<td style="text-align: left;">JumpToAnywhere motion; default behavior
+matches beginning &amp; ending of word, camelCase, after <code>_</code>
+and after <code>#</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>&lt;leader&gt;&lt;leader&gt; (2s|2f|2F|2t|2T) &lt;char&gt;&lt;char&gt;</code>
+and
+<code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bd2t &lt;char&gt;char&gt;</code>
+are also available. The difference is character count required for
+search. For example,
+<code>&lt;leader&gt;&lt;leader&gt; 2s &lt;char&gt;&lt;char&gt;</code>
+requires two characters, and search by two characters. This mapping is
+not a standard mapping, so it is recommended to use your custom
+mapping.</p>
+<ul>
+<li>surround</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 31%">
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Surround Command</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>y s &lt;motion&gt; &lt;desired&gt;</code></td>
+<td style="text-align: left;">Add <code>desired</code> surround around
+text defined by <code>&lt;motion&gt;</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>d s &lt;existing&gt;</code></td>
+<td style="text-align: left;">Delete <code>existing</code> surround</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>c s &lt;existing&gt; &lt;desired&gt;</code></td>
+<td style="text-align: left;">Change <code>existing</code> surround to
+<code>desired</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>S &lt;desired&gt;</code></td>
+<td style="text-align: left;">Surround when in visual modes (surrounds
+full selection)</td>
+</tr>
+</tbody>
+</table>
+<p>Some examples:</p>
+<ul>
+<li><code>"test"</code> with cursor inside quotes type <code>cs"'</code>
+to end up with <code>'test'</code></li>
+<li><code>"test"</code> with cursor inside quotes type <code>ds"</code>
+to end up with <code>test</code></li>
+<li><code>"test"</code> with cursor inside quotes type <code>cs"t</code>
+and enter <code>123&gt;</code> to end up with
+<code>&lt;123&gt;test&lt;/123&gt;</code></li>
+</ul>
+<h2 id="多光标功能">多光标功能</h2>
+<h3 id="multi-cursor-mode">🖱️ Multi-Cursor Mode</h3>
+<blockquote>
+<p>:warning: Multi-Cursor mode is experimental. Please report issues in
+our <a href="https://github.com/VSCodeVim/Vim/issues/824">feedback
+thread.</a></p>
+</blockquote>
+<p>Enter multi-cursor mode by:</p>
+<ul>
+<li>On OSX, <code>cmd-d</code>. On Windows, <code>ctrl-d</code>.</li>
+<li><code>gb</code>, a new shortcut we added which is equivalent to
+<code>cmd-d</code> (OSX) or <code>ctrl-d</code> (Windows). It adds
+another cursor at the next word that matches the word the cursor is
+currently on.</li>
+<li>Running "Add Cursor Above/Below" or the shortcut on any
+platform.</li>
+</ul>
+<p>Once you have multiple cursors, you should be able to use Vim
+commands as you see fit. Most should work; some are unsupported (ref <a href="https://github.com/VSCodeVim/Vim/pull/587">PR#587</a>).</p>
+<ul>
+<li>Each cursor has its own clipboard.</li>
+<li>Pressing Escape in Multi-Cursor Visual Mode will bring you to
+Multi-Cursor Normal mode. Pressing it again will return you to Normal
+mode.</li>
+</ul>
+<p>vscode中可以使用 cmd + d 批量修改</p>
+<p>vim中可以使用 gb 批量膝盖</p>
+<h2 id="将光标定位到终端">将光标定位到终端</h2>
+<p>在settings.json添加如下快捷键</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">//由editor 转到 terminal</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;before&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;leader&quot;</span><span class="punctuation">,</span> <span class="string">&quot;t&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;commands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;workbench.action.terminal.focus&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>space + t 即可跳转到终端中</p>
+<h2 id="跳转tab">跳转Tab</h2>
+<p>进入命令模式 :</p>
+<ul>
+<li>输入 tabn : tab next 即进入下一个标签页</li>
+<li>输入 tabp : tab prev 即进入下一个标签页</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>线性代数复健</title>
+    <url>/posts/36888.html</url>
+    <content><![CDATA[<p>前言：最近在学习机器学习，但是在看AE(AutoEncoder)时，感觉到了其与PCA(Principal
+Component Analysis)的联系，从而对SVD(Singular Value
+Decomposition)产生了较大的兴趣。借此机会，对之前上过的高等代数课的部分知识做一个复健整理。</p>
+<p>说到线代，我们首先能想到嘴边的概念有：向量，矩阵，秩，线性空间，线性变化，逆矩阵，单位矩阵，相似矩阵，特征值分解。核心还是矩阵，我们可以把矩阵看作一组基或者看作一个线性变换。</p>
+<h3 id="基和坐标">基和坐标</h3>
+<p>例如，<span class="math inline">\(\mathbf{x}=\left( x_1,x_2,,x_n
+\right)\)</span>代表一个向量，<span class="math inline">\(X=\left(
+\begin{matrix}  x_{11}&amp; x_{12}&amp; x_{13}\\  x_{21}&amp;
+x_{22}&amp; x_{23}\\  x_{31}&amp; x_{32}&amp; x_{33}\\ \end{matrix}
+\right)\)</span>代表一个矩阵，我们令<span class="math inline">\(\mathbf{x}_1=\left( x_{11},x_{21},x_{31} \right)
+^T , \mathbf{x}_2=\left( x_{12},x_{22},x_{32} \right) ^T ,
+\mathbf{x}_3=\left( x_{13},x_{23},x_{33} \right) ^T\)</span></p>
+<p>则有$X=( _1,_2,_3 ) $。即矩阵的每一列代表一个基。</p>
+我们常见的单位矩阵$I=(
+<span class="math display">\[\begin{matrix}
+    1&amp;      0&amp;      0\\
+    0&amp;      1&amp;      0\\
+    0&amp;      0&amp;      1\\
+\end{matrix}\]</span>
+<p>) <span class="math inline">\(即是把\)</span>_1=( 1,0,0 ) ,_2=( 0,1,0
+), _3=( 0,0,1 ) $当作基。</p>
+<p>当然，谈到矩阵的基，自然会回忆起线性无关，正交基，施密特正交化这一系列东西，但是这些知识还比较熟悉，不是复习的重点。给定一个向量<span class="math inline">\(\alpha =\left( 1,2,3 \right)
+^T\)</span>，我们可以把它看作一个向量，也可以把它看作一个坐标，即$_1+2_2+3_3=(
+_1,_2,_3 ) ( 1,2,3 ) ^T=I
+$，事实上，我们既然写成了这个样子，就潜意识地将标准基作为基底了。</p>
+<h3 id="线性变换的引出">线性变换的引出</h3>
+<p>另外一种看法是将矩阵看成一种线性变换，确切来说，矩阵是某个线性变换在一组基上的表示。</p>
+<p>按照课本的叙述方式：</p>
+<p>设<span class="math inline">\(V\)</span>是数域<span class="math inline">\(F\)</span>上一个<span class="math inline">\(n\)</span>维向量空间，令<span class="math inline">\(\sigma\)</span>是<span class="math inline">\(V\)</span>的一个线性变换。取定<span class="math inline">\(V\)</span>的一个基 <span class="math display">\[
+\mathbf{\alpha }_1,\mathbf{\alpha }_2,\cdots ,\mathbf{\alpha }_n
+\]</span> 考虑<span class="math inline">\(V\)</span>中任意一个向量 <span class="math display">\[
+\xi =x_1\mathbf{\alpha }_1+x_2\mathbf{\alpha }_2+\cdots
++x_n\mathbf{\alpha }_n
+\]</span> <span class="math inline">\(\sigma \left( \xi
+\right)\)</span>仍是<span class="math inline">\(V\)</span>的一个向量。设
+<span class="math display">\[
+\sigma \left( \xi \right) =y_1\mathbf{\alpha }_1+y_2\mathbf{\alpha
+}_2+\cdots +y_n\mathbf{\alpha }_n
+\]</span> 自然要问，如何计算<span class="math inline">\(\sigma \left(
+\xi \right)\)</span>的坐标<span class="math inline">\(\left(
+y_1,y_2,\cdots ,y_n \right)\)</span>。</p>
+<p>令 <span class="math display">\[
+\begin{cases}
+    \sigma \left( \mathbf{\alpha }_1 \right) =a_{11}\mathbf{\alpha
+}_1+a_{21}\mathbf{\alpha }_2+\cdots +a_{n1}\mathbf{\alpha }_n\\
+    \sigma \left( \mathbf{\alpha }_2 \right) =a_{12}\mathbf{\alpha
+}_1+a_{22}\mathbf{\alpha }_2+\cdots +a_{n2}\mathbf{\alpha }_n\\
+    \,\,                  \cdots \cdots \cdots \cdots\\
+    \sigma \left( \mathbf{\alpha }_n \right) =a_{1n}\mathbf{\alpha
+}_1+a_{2n}\mathbf{\alpha }_2+\cdots +a_{nn}\mathbf{\alpha }_n\\
+\end{cases}
+\]</span> 这里<span class="math inline">\(a_{ij}\)</span>就是$( _j )
+<span class="math inline">\(关于基\)</span>_1,_2,,_n$的坐标。</p>
+<p>令 <span class="math display">\[
+A=\left( \begin{matrix}
+    a_{11}&amp;     a_{12}&amp;     \cdots&amp;     a_{1n}\\
+    a_{21}&amp;     a_{22}&amp;     \cdots&amp;     a_{2n}\\
+    \vdots&amp;     \vdots&amp;     &amp;       \vdots\\
+    a_{n1}&amp;     a_{n2}&amp;     \cdots&amp;     a_{nn}\\
+\end{matrix} \right)
+\]</span> <span class="math inline">\(n\)</span>阶矩阵<span class="math inline">\(A\)</span>叫做线性变换<span class="math inline">\(\sigma\)</span>关于基${ _1,_2,,_n } <span class="math inline">\(的矩阵。矩阵\)</span>A<span class="math inline">\(的第\)</span>j<span class="math inline">\(列的元素就是\)</span>( _j ) <span class="math inline">\(关于基\)</span>{ _1,_2,,_n } $的坐标。</p>
+<p>这样，取定<span class="math inline">\(F\)</span>上<span class="math inline">\(n\)</span>维向量空间<span class="math inline">\(V\)</span>的一个基后，对于<span class="math inline">\(V\)</span>的每一线性变换，有唯一确定的<span class="math inline">\(F\)</span>上<span class="math inline">\(n\)</span>阶矩阵与之对应。</p>
+<p>事实上： <span class="math display">\[
+\left( \sigma \left( \mathbf{\alpha }_1 \right) ,\sigma \left(
+\mathbf{\alpha }_2 \right) ,\cdots ,\sigma \left( \mathbf{\alpha }_n
+\right) \right) =\left( \mathbf{\alpha }_1,\mathbf{\alpha }_2,\cdots
+,\mathbf{\alpha }_n \right) A
+\]</span> 这意味着从基${ _1,_2,,_n } <span class="math inline">\(到基\)</span>{ ( _1 ) ,( _2 ) ,,( _n ) } <span class="math inline">\(的过渡矩阵\)</span>A<span class="math inline">\(即是线性变换\)</span><span class="math inline">\(关于基\)</span>{ _1,_2,,_n } $的矩阵。</p>
+<h3 id="从拉伸角度理解线性变换">从拉伸角度理解线性变换</h3>
+我们将坐标轴进行拉伸，即相当于对$(
+<span class="math display">\[\begin{matrix}
+    1&amp;      0\\
+    0&amp;      1\\
+\end{matrix}\]</span>
+) $做变换 $(
+<span class="math display">\[\begin{matrix}
+    \lambda _1&amp;     0\\
+    0&amp;      \lambda _2\\
+\end{matrix}\]</span>
+) <span class="math inline">\(，即\)</span>(
+<span class="math display">\[\begin{matrix}
+    \lambda _1&amp;     0\\
+    0&amp;      \lambda _2\\
+\end{matrix}\]</span>
+) (
+<span class="math display">\[\begin{matrix}
+    1&amp;      0\\
+    0&amp;      1\\
+\end{matrix}\]</span>
+) =(
+<span class="math display">\[\begin{matrix}
+    \lambda _1&amp;     0\\
+    0&amp;      \lambda _2\\
+\end{matrix}\]</span>
+<p>)
+$，显然，对标准正交基做的拉伸这一类线性变换对应的矩阵都是对角矩阵。那么，当一个线性变换对于标准正交基的矩阵不是对角矩阵时，我们能不能用拉伸来理解呢？事实上，可以，这就是特征向量和特征值的一个很重要的意义。</p>
+我们先反过来看，假如有一个线性变换对于基$(
+<span class="math display">\[\begin{matrix}
+    1&amp;      -1\\
+    0&amp;      1\\
+\end{matrix}\]</span>
+) <span class="math inline">\(的矩阵是\)</span>B=(
+<span class="math display">\[\begin{matrix}
+    3&amp;      0\\
+    0&amp;      2\\
+\end{matrix}\]</span>
+) <span class="math inline">\(，那么我们只需要命名基\)</span>(
+<span class="math display">\[\begin{matrix}
+    1&amp;      0\\
+    0&amp;      1\\
+\end{matrix}\]</span>
+) <span class="math inline">\(到基\)</span>(
+<span class="math display">\[\begin{matrix}
+    1&amp;      -1\\
+    0&amp;      1\\
+\end{matrix}\]</span>
+) <span class="math inline">\(的过渡矩阵\)</span>T=(
+<span class="math display">\[\begin{matrix}
+    1&amp;      -1\\
+    0&amp;      1\\
+\end{matrix}\]</span>
+) <span class="math inline">\(，命名这一线性变换关于基\)</span>(
+<span class="math display">\[\begin{matrix}
+    1&amp;      0\\
+    0&amp;      1\\
+\end{matrix}\]</span>
+) <span class="math inline">\(的矩阵为\)</span>A<span class="math inline">\(，根据相似矩阵的知识，有\)</span>B=T<sup>{-1}AT<span class="math inline">\(，据此求得\)</span>A=TBT</sup>{-1}=(
+<span class="math display">\[\begin{matrix}
+    3&amp;      1\\
+    0&amp;      2\\
+\end{matrix}\]</span>
+<p>)$，所以，如果一个线性变换关于标准正交基的矩阵可以相似对角化，那么这个变换就可以被理解为对某组基的拉伸，这组基上的向量就是特征向量，对应的拉伸强度就是对应的特征值，至此，我们找到了一个更为直观的视角去看待线性变换。</p>
+<p>书上给出了一个对角化的充要条件，即<span class="math inline">\(n\)</span>维向量空间<span class="math inline">\(V\)</span>的一个线性变换<span class="math inline">\(\sigma\)</span>可以对角化的充要的条件是，<span class="math inline">\(V\)</span>可以分解为<span class="math inline">\(n\)</span>个在<span class="math inline">\(\sigma\)</span>之下不变的一维子空间<span class="math inline">\(W_1,W_2,\cdots
+,W_n\)</span>的直和。我们可以简单地理解为，这一个线性变换不会让空间坍塌降维。</p>
+<p>另外一点值得记录的是，这种拉伸是针对指定的方向的，并不是针对方向上的某一个向量，如果我们在选定的方向上选择标准基作为基，那么我们得到的特征向量矩阵将是一个正交矩阵，即它只表示方向。我们用<span class="math inline">\(W\)</span>来表示特征向量矩阵，用对角阵<span class="math inline">\(\varSigma\)</span>来表示拉伸强度，则有<span class="math inline">\(A=W\varSigma W^{-1}\)</span>，因为我们选取的<span class="math inline">\(W\)</span>为正交矩阵，所以有<span class="math inline">\(WW^T=I\)</span>，所以<span class="math inline">\(A=W\varSigma W^{T}\)</span>。</p>
+<h3 id="非方阵">非方阵</h3>
+我们将<span class="math inline">\(\left( \begin{matrix}  1&amp;
+2\\  -1&amp; 4\\  3&amp; 0\\ \end{matrix} \right)\)</span>作用于<span class="math inline">\(\left( \begin{matrix}  1&amp; 0\\  0&amp; 1\\
+\end{matrix} \right)\)</span>，即$(
+<span class="math display">\[\begin{matrix}
+    1&amp;      2\\
+    -1&amp;     4\\
+    3&amp;      0\\
+\end{matrix}\]</span>
+) (
+<span class="math display">\[\begin{matrix}
+    1&amp;      0\\
+    0&amp;      1\\
+\end{matrix}\]</span>
+) =(
+<span class="math display">\[\begin{matrix}
+    1&amp;      2\\
+    -1&amp;     4\\
+    3&amp;      0\\
+\end{matrix}\]</span>
+<p>) <span class="math inline">\(，根据很多视频的说法，这个矩阵将平面映射成了斜面，我的理解是，非方阵会将基从\)</span>m<span class="math inline">\(维映射到\)</span>n$维，但是由这些映射完的基所张成的空间的维度还是没有变大。</p>
+<h3 id="奇异值分解">奇异值分解</h3>
+<p>根据这个文章的思路作为主线<a href="https://zhuanlan.zhihu.com/p/29846048">奇异值分解（SVD） - 知乎
+(zhihu.com)</a></p>
+<p>存在一个mxn的矩阵<span class="math inline">\(A\)</span>，我们定义<span class="math inline">\(A\)</span>的SVD为<span class="math inline">\(A=U\varSigma V^{T}\)</span>，其中<span class="math inline">\(U\)</span>是mxm的矩阵，<span class="math inline">\(\varSigma\)</span>是mxn的矩阵，<span class="math inline">\(V\)</span>是nxn的矩阵，我们可以理解为，<span class="math inline">\(U\)</span>是在原平面找的特征向量矩阵，<span class="math inline">\(V\)</span>是在变换后的斜面找的特征向量矩阵。 <span class="math display">\[
+A^TA=V\varSigma ^TU^TU\varSigma V^T=V\varSigma ^2V^T
+\\
+AA^T=U\varSigma V^TV\varSigma ^TU^T=U\varSigma ^2U^T
+\]</span> 所以我们可以根据<span class="math inline">\(A\)</span>来求得<span class="math inline">\(A^TA\)</span>和<span class="math inline">\(AA^T\)</span>，进而求出<span class="math inline">\(V,\varSigma,U\)</span>。</p>
+<p>根据文中的例子： <span class="math display">\[
+A=\left( \begin{matrix}
+    0&amp;      1\\
+    1&amp;      1\\
+    1&amp;      0\\
+\end{matrix} \right) ,A^T=\left( \begin{matrix}
+    0&amp;      1&amp;      1\\
+    1&amp;      1&amp;      0\\
+\end{matrix} \right)
+\]</span> 然后对方阵<span class="math inline">\(A^TA\)</span>和<span class="math inline">\(AA^T\)</span>进行分解。 <span class="math display">\[
+A^TA=\left( \begin{matrix}
+    0&amp;      1&amp;      1\\
+    1&amp;      1&amp;      0\\
+\end{matrix} \right) \left( \begin{matrix}
+    0&amp;      1\\
+    1&amp;      1\\
+    1&amp;      0\\
+\end{matrix} \right) =\left( \begin{matrix}
+    2&amp;      1\\
+    1&amp;      2\\
+\end{matrix} \right) =\left( \begin{matrix}
+    \frac{1}{\sqrt{2}}&amp;     -\frac{1}{\sqrt{2}}\\
+    \frac{1}{\sqrt{2}}&amp;     \frac{1}{\sqrt{2}}\\
+\end{matrix} \right) \left( \begin{matrix}
+    3&amp;      0\\
+    0&amp;      1\\
+\end{matrix} \right) \left( \begin{matrix}
+    \frac{1}{\sqrt{2}}&amp;     \frac{1}{\sqrt{2}}\\
+    -\frac{1}{\sqrt{2}}&amp;        \frac{1}{\sqrt{2}}\\
+\end{matrix} \right)
+\\
+AA^T=\left( \begin{matrix}
+    0&amp;      1\\
+    1&amp;      1\\
+    1&amp;      0\\
+\end{matrix} \right) \left( \begin{matrix}
+    0&amp;      1&amp;      1\\
+    1&amp;      1&amp;      0\\
+\end{matrix} \right) =\left( \begin{matrix}
+    1&amp;      1&amp;      0\\
+    1&amp;      2&amp;      1\\
+    0&amp;      1&amp;      1\\
+\end{matrix} \right) =\left( \begin{matrix}
+    \frac{1}{\sqrt{6}}&amp;     \frac{1}{\sqrt{2}}&amp;     \frac{1}{\sqrt{3}}\\
+    \frac{2}{\sqrt{6}}&amp;     0&amp;      -\frac{1}{\sqrt{3}}\\
+    \frac{1}{\sqrt{6}}&amp;     -\frac{1}{\sqrt{2}}&amp;        \frac{1}{\sqrt{3}}\\
+\end{matrix} \right) \left( \begin{matrix}
+    3&amp;      0&amp;      0\\
+    0&amp;      1&amp;      0\\
+    0&amp;      0&amp;      0\\
+\end{matrix} \right) \left( \begin{matrix}
+    \frac{1}{\sqrt{6}}&amp;     \frac{2}{\sqrt{6}}&amp;     \frac{1}{\sqrt{6}}\\
+    \frac{1}{\sqrt{2}}&amp;     0&amp;      -\frac{1}{\sqrt{2}}\\
+    \frac{1}{\sqrt{3}}&amp;     -\frac{1}{\sqrt{3}}&amp;        \frac{1}{\sqrt{3}}\\
+\end{matrix} \right)
+\]</span> 所以得： <span class="math display">\[
+A=\left( \begin{matrix}
+    \frac{1}{\sqrt{6}}&amp;     \frac{1}{\sqrt{2}}&amp;     \frac{1}{\sqrt{3}}\\
+    \frac{2}{\sqrt{6}}&amp;     0&amp;      -\frac{1}{\sqrt{3}}\\
+    \frac{1}{\sqrt{6}}&amp;     -\frac{1}{\sqrt{2}}&amp;        \frac{1}{\sqrt{3}}\\
+\end{matrix} \right) \left( \begin{matrix}
+    3&amp;      0\\
+    0&amp;      1\\
+    0&amp;      0\\
+\end{matrix} \right) \left( \begin{matrix}
+    \frac{1}{\sqrt{2}}&amp;     \frac{1}{\sqrt{2}}\\
+    -\frac{1}{\sqrt{2}}&amp;        \frac{1}{\sqrt{2}}\\
+\end{matrix} \right)
+\]</span> 细心的话可以发现<span class="math inline">\(\det \left( U
+\right) =\left| \begin{matrix}  \frac{1}{\sqrt{6}}&amp;
+\frac{1}{\sqrt{2}}&amp; \frac{1}{\sqrt{3}}\\  \frac{2}{\sqrt{6}}&amp;
+0&amp; -\frac{1}{\sqrt{3}}\\  \frac{1}{\sqrt{6}}&amp;
+-\frac{1}{\sqrt{2}}&amp; \frac{1}{\sqrt{3}}\\ \end{matrix} \right|=-6\ne
+0\)</span>，但<span class="math inline">\(A^TA\)</span>的最后一个特征值是零，其实就代表着三维空间中一个维度坍塌了，而这一切的根源则是<span class="math inline">\(\det \left( AA^T \right) =\left|
+\begin{matrix}  1&amp; 1&amp; 0\\  1&amp; 2&amp; 1\\  0&amp; 1&amp; 1\\
+\end{matrix} \right|=0\)</span>，这激起了我对<span class="math inline">\(AA^T\)</span>和<span class="math inline">\(A^TA\)</span>之间关系的兴趣，等以后学矩阵论或许有机会探索下。</p>
+<figure>
+<img src="/posts/36888.htm/线代复健\Pake.jpg" alt="Pake">
+<figcaption aria-hidden="true">Pake</figcaption>
+</figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>相册</title>
+    <url>/gallery/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>资源</title>
+    <url>/resources/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>峨眉山之行</title>
+    <url>/gallery/%E8%83%8C%E6%99%AF/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
 </search>
