@@ -5,6 +5,6 @@ https://wj-inf.github.io/gallery/index.html
 https://wj-inf.github.io/gallery/%E8%83%8C%E6%99%AF/index.html
 https://wj-inf.github.io/index.html
 https://wj-inf.github.io/categories/index.html
-https://wj-inf.github.io/resources/index.html
 https://wj-inf.github.io/tags/index.html
+https://wj-inf.github.io/resources/index.html
 https://wj-inf.github.io/
