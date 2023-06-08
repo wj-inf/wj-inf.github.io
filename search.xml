@@ -190,11 +190,11 @@
 <li>ngt / ngT   :   跳转到第n个标签页</li>
 </ul>
 <h2 id="VSCode中的Vim"><a href="#VSCode中的Vim" class="headerlink" title="VSCode中的Vim"></a>VSCode中的Vim</h2><ul>
-<li><p>vscode中\<leader>默认为space</p>
+<li><p>vscode中\<leader>默认为space</leader></p>
 </li>
-<li><p>\<leader>\<leader> S{Charactor}   :   寻找某个字符</p>
+<li><p>\<leader>\<leader> S{Charactor}   :   寻找某个字符</leader></leader></p>
 </li>
-<li><p>\<leader>\<leader> xxx   :   详见配置</p>
+<li><p>\<leader>\<leader> xxx   :   详见配置</leader></leader></p>
 <p>| Motion Command                      | Description                                                  |<br>| :————————————————— | :—————————————————————————————- |<br>| <code>&lt;leader&gt;&lt;leader&gt; s &lt;char&gt;</code>         | Search character                                             |<br>| <code>&lt;leader&gt;&lt;leader&gt; f &lt;char&gt;</code>         | Find character forwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; F &lt;char&gt;</code>         | Find character backwards                                     |<br>| <code>&lt;leader&gt;&lt;leader&gt; t &lt;char&gt;</code>         | Til character forwards                                       |<br>| <code>&lt;leader&gt;&lt;leader&gt; T &lt;char&gt;</code>         | Til character backwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; w</code>                | Start of word forwards                                       |<br>| <code>&lt;leader&gt;&lt;leader&gt; b</code>                | Start of word backwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; l</code>                | Matches beginning &amp; ending of word, camelCase, after <code>_</code>, and after <code>#</code> forwards |<br>| <code>&lt;leader&gt;&lt;leader&gt; h</code>                | Matches beginning &amp; ending of word, camelCase, after <code>_</code>, and after <code>#</code> backwards |<br>| <code>&lt;leader&gt;&lt;leader&gt; e</code>                | End of word forwards                                         |<br>| <code>&lt;leader&gt;&lt;leader&gt; ge</code>               | End of word backwards                                        |<br>| <code>&lt;leader&gt;&lt;leader&gt; j</code>                | Start of line forwards                                       |<br>| <code>&lt;leader&gt;&lt;leader&gt; k</code>                | Start of line backwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; / &lt;char&gt;... &lt;CR&gt;</code> | Search n-character                                           |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdt</code>      | Til character                                                |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdw</code>      | Start of word                                                |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bde</code>      | End of word                                                  |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdjk</code>     | Start of line                                                |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; j</code>        | JumpToAnywhere motion; default behavior matches beginning &amp; ending of word, camelCase, after <code>_</code> and after <code>#</code> |</p>
 <p><code>&lt;leader&gt;&lt;leader&gt; (2s|2f|2F|2t|2T) &lt;char&gt;&lt;char&gt;</code> and <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bd2t &lt;char&gt;char&gt;</code> are also available. The difference is character count required for search. For example, <code>&lt;leader&gt;&lt;leader&gt; 2s &lt;char&gt;&lt;char&gt;</code> requires two characters, and search by two characters. This mapping is not a standard mapping, so it is recommended to use your custom mapping.</p>
 </li>
@@ -240,8 +240,8 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
+    <title></title>
+    <url>/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -250,8 +250,8 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/index.html</url>
+    <title>分类</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
