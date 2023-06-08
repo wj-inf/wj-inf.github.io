@@ -453,8 +453,8 @@ Component Analysis)的联系，从而对SVD(Singular Value
 Decomposition)产生了较大的兴趣。借此机会，对之前上过的高等代数课的部分知识做一个复健整理。</p>
 <p>说到线代，我们首先能想到嘴边的概念有：向量，矩阵，秩，线性空间，线性变化，逆矩阵，单位矩阵，相似矩阵，特征值分解。核心还是矩阵，我们可以把矩阵看作一组基或者看作一个线性变换。</p>
 <h3 id="基和坐标">基和坐标</h3>
-<p>例如，<span class="math inline">\(\mathbf{x}=\left( x_1,x_2,,x_n
-\right)\)</span>代表一个向量，<span class="math inline">\(X=\left(
+<p>例如， <span class="math inline">\(\mathbf{x}=\left( x_1,x_2,,x_n
+\right)\)</span> 代表一个向量， <span class="math inline">\(X=\left(
 \begin{matrix}  x_{11}&amp; x_{12}&amp; x_{13}\\  x_{21}&amp;
 x_{22}&amp; x_{23}\\  x_{31}&amp; x_{32}&amp; x_{33}\\ \end{matrix}
 \right)\)</span>代表一个矩阵，我们令<span class="math inline">\(\mathbf{x}_1=\left( x_{11},x_{21},x_{31} \right)
@@ -695,12 +695,6 @@ A=\left( \begin{matrix}
 ]]></content>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
     <title>关于</title>
     <url>/about/index.html</url>
     <content><![CDATA[
@@ -713,14 +707,20 @@ A=\left( \begin{matrix}
 ]]></content>
   </entry>
   <entry>
-    <title>资源</title>
-    <url>/resources/index.html</url>
+    <title></title>
+    <url>/index.html</url>
     <content><![CDATA[
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/index.html</url>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[
+]]></content>
+  </entry>
+  <entry>
+    <title>资源</title>
+    <url>/resources/index.html</url>
     <content><![CDATA[
 ]]></content>
   </entry>
