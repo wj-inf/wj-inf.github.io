@@ -1,272 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title></title>
-    <url>/wj-inf/wj-inf.github.io/posts/3.html</url>
-    <content><![CDATA[<h2 id="注意：本文中所有的-command键-等价于-ctrl键"><a href="#注意：本文中所有的-command键-等价于-ctrl键" class="headerlink" title="注意：本文中所有的 command键 等价于 ctrl键"></a>注意：本文中所有的 command键 等价于 ctrl键</h2><h2 id="1、vim-三种基本的工作模式"><a href="#1、vim-三种基本的工作模式" class="headerlink" title="1、vim 三种基本的工作模式"></a>1、vim 三种基本的工作模式</h2><p>vim有三种基本的工作模式，分别为：命令模式、末行模式、编辑模式。关于这三种工作模式的介绍，请见下文。</p>
-<h3 id="1-1、命令模式"><a href="#1-1、命令模式" class="headerlink" title="1.1、命令模式"></a>1.1、命令模式</h3><p>使用vim打开文件之后，首先进入命令模式，它是vim编辑器的入口模式。在命令模式下，通过使用命令对文件进行常规的编辑操作，例如：复制、粘贴、删除、定位、翻页等等。</p>
-<h3 id="1-2、末行模式"><a href="#1-2、末行模式" class="headerlink" title="1.2、末行模式"></a>1.2、末行模式</h3><p>末行模式是vim编辑器的出口，要退出vim，必须要在末行模式下。在末行模式下，执行退出文件、保存并退出文件等操作。</p>
-<h3 id="1-3、编辑模式"><a href="#1-3、编辑模式" class="headerlink" title="1.3、编辑模式"></a>1.3、编辑模式</h3><p>正常的编辑文字模式。</p>
-<h2 id="2、三种模式的切换操作"><a href="#2、三种模式的切换操作" class="headerlink" title="2、三种模式的切换操作"></a>2、三种模式的切换操作</h2><p>（1）vim打开一个文件进入的就是命令模式，另外两种模式需要回到命令模式才能进入彼此。</p>
-<p>（2）在命令模式中按下<code>i，I，o，O，a，A，r，R</code>任何一个字母后进入编辑模式，进入编辑模式后，下方会出现<code>INSERT</code>或者<code>REPLACE</code>字样，按<code>Esc</code>键退出编辑模式，回到命令模式。</p>
-<p>（3）在命令模式中按下<code>:，/，?</code>中任意一个即可进入末行模式，末行模式可以对文档或者vim环境进行操作，例如查找、读取、存盘、替换、离开、显示行号等。</p>
-<h2 id="3、各种模式切换"><a href="#3、各种模式切换" class="headerlink" title="3、各种模式切换"></a>3、各种模式切换</h2><h3 id="普通模式-NORMAL-———-gt-插入模式-INSERT"><a href="#普通模式-NORMAL-———-gt-插入模式-INSERT" class="headerlink" title="普通模式 - - NORMAL - -   ———&gt;   插入模式 - - INSERT - -"></a>普通模式 - - NORMAL - -   ———&gt;   插入模式 - - INSERT - -</h3><ul>
-<li><p>insert</p>
-<ul>
-<li><p>i 在光标前插入</p>
-</li>
-<li><p>I 在行首插入</p>
-</li>
-</ul>
-</li>
-<li><p>open a new line</p>
-<ul>
-<li><p>o 在下一行插入</p>
-</li>
-<li><p>O 在上一行插入</p>
-</li>
-</ul>
-</li>
-<li><p>append</p>
-<ul>
-<li>a 在光标后插入</li>
-<li>A 在行尾插入</li>
-</ul>
-</li>
-</ul>
-<h3 id="普通模式-NORMAL-lt-———-插入模式-INSERT"><a href="#普通模式-NORMAL-lt-———-插入模式-INSERT" class="headerlink" title="普通模式 - - NORMAL - -   &lt;———   插入模式 - - INSERT - -"></a>普通模式 - - NORMAL - -   &lt;———   插入模式 - - INSERT - -</h3><ul>
-<li>ESC</li>
-<li>jj / CapsLock</li>
-</ul>
-<h3 id="普通模式-NORMAL-———-gt-可视模式-VISUAL"><a href="#普通模式-NORMAL-———-gt-可视模式-VISUAL" class="headerlink" title="普通模式 - - NORMAL - -   ———&gt;   可视模式 - - VISUAL - -"></a>普通模式 - - NORMAL - -   ———&gt;   可视模式 - - VISUAL - -</h3><ul>
-<li>v</li>
-</ul>
-<h3 id="普通模式-NORMAL-lt-———-可视模式-VISUAL"><a href="#普通模式-NORMAL-lt-———-可视模式-VISUAL" class="headerlink" title="普通模式 - - NORMAL - -   &lt;———   可视模式 - - VISUAL - -"></a>普通模式 - - NORMAL - -   &lt;———   可视模式 - - VISUAL - -</h3><ul>
-<li>v</li>
-<li>Esc</li>
-</ul>
-<h3 id="普通模式-NORMAL-———-gt-命令模式"><a href="#普通模式-NORMAL-———-gt-命令模式" class="headerlink" title="普通模式 - - NORMAL - -   ———&gt;   命令模式"></a>普通模式 - - NORMAL - -   ———&gt;   命令模式</h3><ul>
-<li>:</li>
-</ul>
-<h3 id="普通模式-NORMAL-lt-———-命令模式"><a href="#普通模式-NORMAL-lt-———-命令模式" class="headerlink" title="普通模式 - - NORMAL - -   &lt;———   命令模式"></a>普通模式 - - NORMAL - -   &lt;———   命令模式</h3><ul>
-<li>Esc</li>
-</ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="https://wang-nine.cn/images/Vim01.png" alt="Vim01"></p>
-<p><img src="https://wang-nine.cn/images/Vim02.png" alt="Vim02"></p>
-<p><img src="https://wang-nine.cn/images/Vim03.png" alt="Vim03"></p>
-<p><img src="https://wang-nine.cn/images/Vim04.png" alt="Vim04"></p>
-<p><img src="https://wang-nine.cn/images/Vim05.png" alt="Vim05"></p>
-<h2 id="4、光标移动"><a href="#4、光标移动" class="headerlink" title="4、光标移动"></a>4、光标移动</h2><p><img src="https://wang-nine.cn/images/Vim06.png" alt="Vim06"></p>
-<p><img src="https://wang-nine.cn/images/Vim07.png" alt="Vim07"></p>
-<p>解释：</p>
-<ul>
-<li>w   :   word</li>
-<li>b   :   begin</li>
-<li>e   :   end</li>
-<li>ge   :   不太常用</li>
-</ul>
-<p><img src="https://wang-nine.cn/images/Vim08.png" alt="Vim08"></p>
-<p><img src="https://wang-nine.cn/images/Vim09.png" alt="Vim09"></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>字符</th>
-<th>单词</th>
-<th>行</th>
-<th>跳转</th>
-<th>句和段</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>h 左</td>
-<td>w下一个单词开头</td>
-<td>0 行首</td>
-<td>f char 跳到char位置</td>
-<td>( 到句首</td>
-</tr>
-<tr>
-<td>j 下</td>
-<td>b本单词或上一个单词开头</td>
-<td>^ 行首非空字符</td>
-<td>F char 反向</td>
-<td>) 到句尾</td>
-</tr>
-<tr>
-<td>k 上</td>
-<td>e本单词或下一个单词结尾</td>
-<td>$ 行尾</td>
-<td>t char char前一位置</td>
-<td>{ 到段首</td>
-</tr>
-<tr>
-<td>l 右</td>
-<td>ge上一个单词结尾</td>
-<td>gg 首行</td>
-<td>T char char后一位置</td>
-<td>} 到段尾</td>
-</tr>
-<tr>
-<td></td>
-<td>W长单词 E长单词 B长单词</td>
-<td>G 尾行</td>
-<td>; 重复上次的跳转</td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>ngg 第n行</td>
-<td>, 反向查找上次的查找</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="5、动作-motion"><a href="#5、动作-motion" class="headerlink" title="5、动作 motion"></a>5、动作 motion</h2><p><img src="https://wang-nine.cn/images/Vim10.png" alt="Vim10"></p>
-<p><img src="https://wang-nine.cn/images/Vim11.png" alt="Vim11"></p>
-<ul>
-<li>it   :   inner tag</li>
-<li>is   :   inner sentence</li>
-<li>ip   :   inner paragraph</li>
-</ul>
-<h2 id="6、操作符"><a href="#6、操作符" class="headerlink" title="6、操作符"></a>6、操作符</h2><p><img src="https://wang-nine.cn/images/Vim12.png" alt="Vim12"></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>操作符</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>d(delete)</td>
-<td>删除</td>
-</tr>
-<tr>
-<td>c(change)</td>
-<td>修改（删除并且进入插入模式）</td>
-</tr>
-<tr>
-<td>y(yank)</td>
-<td>复制</td>
-</tr>
-<tr>
-<td>v(visual)</td>
-<td>选中并且进入 VISUAL 模式</td>
-</tr>
-<tr>
-<td>p(paste)</td>
-<td>粘贴</td>
-</tr>
-<tr>
-<td>b(bracket)</td>
-<td>小括号的简写</td>
-</tr>
-<tr>
-<td>B(Bracket)</td>
-<td>大括号的简写</td>
-</tr>
-<tr>
-<td>e(entire)</td>
-<td>全选</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="7、大小写"><a href="#7、大小写" class="headerlink" title="7、大小写"></a>7、大小写</h2><p><img src="https://wang-nine.cn/images/Vim13.png" alt="Vim13"></p>
-<ul>
-<li>‘g’ means goto</li>
-<li>‘U’ means Uppercase</li>
-<li>‘u’ 与上一个相反</li>
-</ul>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ul>
-<li>gd   :   goto definition   跳转到定义</li>
-<li>ctrl + o   :   跳回</li>
-<li>gh   :   goto (mouse) hover   鼠标悬浮</li>
-<li>gt   :   goto tab   跳转下一个标签页</li>
-<li>gT   :   与上一个相反   跳转上一个标签页</li>
-<li>ngt / ngT   :   跳转到第n个标签页</li>
-</ul>
-<h2 id="VSCode中的Vim"><a href="#VSCode中的Vim" class="headerlink" title="VSCode中的Vim"></a>VSCode中的Vim</h2><ul>
-<li><p>vscode中\<leader>默认为space</p>
-</li>
-<li><p>\<leader>\<leader> S{Charactor}   :   寻找某个字符</p>
-</li>
-<li><p>\<leader>\<leader> xxx   :   详见配置</p>
-<p>| Motion Command                      | Description                                                  |<br>| :————————————————— | :—————————————————————————————- |<br>| <code>&lt;leader&gt;&lt;leader&gt; s &lt;char&gt;</code>         | Search character                                             |<br>| <code>&lt;leader&gt;&lt;leader&gt; f &lt;char&gt;</code>         | Find character forwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; F &lt;char&gt;</code>         | Find character backwards                                     |<br>| <code>&lt;leader&gt;&lt;leader&gt; t &lt;char&gt;</code>         | Til character forwards                                       |<br>| <code>&lt;leader&gt;&lt;leader&gt; T &lt;char&gt;</code>         | Til character backwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; w</code>                | Start of word forwards                                       |<br>| <code>&lt;leader&gt;&lt;leader&gt; b</code>                | Start of word backwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; l</code>                | Matches beginning &amp; ending of word, camelCase, after <code>_</code>, and after <code>#</code> forwards |<br>| <code>&lt;leader&gt;&lt;leader&gt; h</code>                | Matches beginning &amp; ending of word, camelCase, after <code>_</code>, and after <code>#</code> backwards |<br>| <code>&lt;leader&gt;&lt;leader&gt; e</code>                | End of word forwards                                         |<br>| <code>&lt;leader&gt;&lt;leader&gt; ge</code>               | End of word backwards                                        |<br>| <code>&lt;leader&gt;&lt;leader&gt; j</code>                | Start of line forwards                                       |<br>| <code>&lt;leader&gt;&lt;leader&gt; k</code>                | Start of line backwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; / &lt;char&gt;... &lt;CR&gt;</code> | Search n-character                                           |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdt</code>      | Til character                                                |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdw</code>      | Start of word                                                |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bde</code>      | End of word                                                  |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdjk</code>     | Start of line                                                |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; j</code>        | JumpToAnywhere motion; default behavior matches beginning &amp; ending of word, camelCase, after <code>_</code> and after <code>#</code> |</p>
-<p><code>&lt;leader&gt;&lt;leader&gt; (2s|2f|2F|2t|2T) &lt;char&gt;&lt;char&gt;</code> and <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bd2t &lt;char&gt;char&gt;</code> are also available. The difference is character count required for search. For example, <code>&lt;leader&gt;&lt;leader&gt; 2s &lt;char&gt;&lt;char&gt;</code> requires two characters, and search by two characters. This mapping is not a standard mapping, so it is recommended to use your custom mapping.</p>
-</li>
-<li><p>surround</p>
-<p>| Surround Command           | Description                                              |<br>| :————————————- | :———————————————————————————- |<br>| <code>y s &lt;motion&gt; &lt;desired&gt;</code>   | Add <code>desired</code> surround around text defined by <code>&lt;motion&gt;</code> |<br>| <code>d s &lt;existing&gt;</code>           | Delete <code>existing</code> surround                               |<br>| <code>c s &lt;existing&gt; &lt;desired&gt;</code> | Change <code>existing</code> surround to <code>desired</code>                  |<br>| <code>S &lt;desired&gt;</code>              | Surround when in visual modes (surrounds full selection) |</p>
-<p>Some examples:</p>
-<ul>
-<li><code>&quot;test&quot;</code> with cursor inside quotes type <code>cs&quot;&#39;</code> to end up with <code>&#39;test&#39;</code></li>
-<li><code>&quot;test&quot;</code> with cursor inside quotes type <code>ds&quot;</code> to end up with <code>test</code></li>
-<li><code>&quot;test&quot;</code> with cursor inside quotes type <code>cs&quot;t</code> and enter <code>123&gt;</code> to end up with <code>&lt;123&gt;test&lt;/123&gt;</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="多光标功能"><a href="#多光标功能" class="headerlink" title="多光标功能"></a>多光标功能</h2><h3 id="🖱️-Multi-Cursor-Mode"><a href="#🖱️-Multi-Cursor-Mode" class="headerlink" title="🖱️ Multi-Cursor Mode"></a>🖱️ Multi-Cursor Mode</h3><blockquote>
-<p>:warning: Multi-Cursor mode is experimental. Please report issues in our <a href="https://github.com/VSCodeVim/Vim/issues/824">feedback thread.</a></p>
-</blockquote>
-<p>Enter multi-cursor mode by:</p>
-<ul>
-<li>On OSX, <code>cmd-d</code>. On Windows, <code>ctrl-d</code>.</li>
-<li><code>gb</code>, a new shortcut we added which is equivalent to <code>cmd-d</code> (OSX) or <code>ctrl-d</code> (Windows). It adds another cursor at the next word that matches the word the cursor is currently on.</li>
-<li>Running “Add Cursor Above/Below” or the shortcut on any platform.</li>
-</ul>
-<p>Once you have multiple cursors, you should be able to use Vim commands as you see fit. Most should work; some are unsupported (ref <a href="https://github.com/VSCodeVim/Vim/pull/587">PR#587</a>).</p>
-<ul>
-<li>Each cursor has its own clipboard.</li>
-<li>Pressing Escape in Multi-Cursor Visual Mode will bring you to Multi-Cursor Normal mode. Pressing it again will return you to Normal mode.</li>
-</ul>
-<p>vscode中可以使用 cmd + d 批量修改</p>
-<p>vim中可以使用 gb 批量膝盖</p>
-<h2 id="将光标定位到终端"><a href="#将光标定位到终端" class="headerlink" title="将光标定位到终端"></a>将光标定位到终端</h2><p>在settings.json添加如下快捷键</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">//由editor 转到 terminal</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;before&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;leader&quot;</span><span class="punctuation">,</span> <span class="string">&quot;t&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;commands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;workbench.action.terminal.focus&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>space + t 即可跳转到终端中</p>
-<h2 id="跳转Tab"><a href="#跳转Tab" class="headerlink" title="跳转Tab"></a>跳转Tab</h2><p>进入命令模式 :</p>
-<ul>
-<li>输入 tabn   :   tab next 即进入下一个标签页</li>
-<li>输入 tabp   :   tab prev 即进入下一个标签页</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>关于</title>
-    <url>/wj-inf/wj-inf.github.io/about/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>资源</title>
-    <url>/wj-inf/wj-inf.github.io/resources/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/wj-inf/wj-inf.github.io/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>相册</title>
-    <url>/wj-inf/wj-inf.github.io/gallery/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/wj-inf/wj-inf.github.io/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/wj-inf/wj-inf.github.io/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>峨眉山之行</title>
-    <url>/wj-inf/wj-inf.github.io/gallery/%E8%83%8C%E6%99%AF/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title></title>
+      <link href="/wj-inf/wj-inf.github.io/posts/3.html"/>
+      <url>/wj-inf/wj-inf.github.io/posts/3.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="注意：本文中所有的-command键-等价于-ctrl键"><a href="#注意：本文中所有的-command键-等价于-ctrl键" class="headerlink" title="注意：本文中所有的 command键 等价于 ctrl键"></a>注意：本文中所有的 command键 等价于 ctrl键</h2><h2 id="1、vim-三种基本的工作模式"><a href="#1、vim-三种基本的工作模式" class="headerlink" title="1、vim 三种基本的工作模式"></a>1、vim 三种基本的工作模式</h2><p>vim有三种基本的工作模式，分别为：命令模式、末行模式、编辑模式。关于这三种工作模式的介绍，请见下文。</p><h3 id="1-1、命令模式"><a href="#1-1、命令模式" class="headerlink" title="1.1、命令模式"></a>1.1、命令模式</h3><p>使用vim打开文件之后，首先进入命令模式，它是vim编辑器的入口模式。在命令模式下，通过使用命令对文件进行常规的编辑操作，例如：复制、粘贴、删除、定位、翻页等等。</p><h3 id="1-2、末行模式"><a href="#1-2、末行模式" class="headerlink" title="1.2、末行模式"></a>1.2、末行模式</h3><p>末行模式是vim编辑器的出口，要退出vim，必须要在末行模式下。在末行模式下，执行退出文件、保存并退出文件等操作。</p><h3 id="1-3、编辑模式"><a href="#1-3、编辑模式" class="headerlink" title="1.3、编辑模式"></a>1.3、编辑模式</h3><p>正常的编辑文字模式。</p><h2 id="2、三种模式的切换操作"><a href="#2、三种模式的切换操作" class="headerlink" title="2、三种模式的切换操作"></a>2、三种模式的切换操作</h2><p>（1）vim打开一个文件进入的就是命令模式，另外两种模式需要回到命令模式才能进入彼此。</p><p>（2）在命令模式中按下<code>i，I，o，O，a，A，r，R</code>任何一个字母后进入编辑模式，进入编辑模式后，下方会出现<code>INSERT</code>或者<code>REPLACE</code>字样，按<code>Esc</code>键退出编辑模式，回到命令模式。</p><p>（3）在命令模式中按下<code>:，/，?</code>中任意一个即可进入末行模式，末行模式可以对文档或者vim环境进行操作，例如查找、读取、存盘、替换、离开、显示行号等。</p><h2 id="3、各种模式切换"><a href="#3、各种模式切换" class="headerlink" title="3、各种模式切换"></a>3、各种模式切换</h2><h3 id="普通模式-NORMAL-———-gt-插入模式-INSERT"><a href="#普通模式-NORMAL-———-gt-插入模式-INSERT" class="headerlink" title="普通模式 - - NORMAL - -   ———&gt;   插入模式 - - INSERT - -"></a>普通模式 - - NORMAL - -   ———&gt;   插入模式 - - INSERT - -</h3><ul><li><p>insert</p><ul><li><p>i 在光标前插入</p></li><li><p>I 在行首插入</p></li></ul></li><li><p>open a new line</p><ul><li><p>o 在下一行插入</p></li><li><p>O 在上一行插入</p></li></ul></li><li><p>append</p><ul><li>a 在光标后插入</li><li>A 在行尾插入</li></ul></li></ul><h3 id="普通模式-NORMAL-lt-———-插入模式-INSERT"><a href="#普通模式-NORMAL-lt-———-插入模式-INSERT" class="headerlink" title="普通模式 - - NORMAL - -   &lt;———   插入模式 - - INSERT - -"></a>普通模式 - - NORMAL - -   &lt;———   插入模式 - - INSERT - -</h3><ul><li>ESC</li><li>jj / CapsLock</li></ul><h3 id="普通模式-NORMAL-———-gt-可视模式-VISUAL"><a href="#普通模式-NORMAL-———-gt-可视模式-VISUAL" class="headerlink" title="普通模式 - - NORMAL - -   ———&gt;   可视模式 - - VISUAL - -"></a>普通模式 - - NORMAL - -   ———&gt;   可视模式 - - VISUAL - -</h3><ul><li>v</li></ul><h3 id="普通模式-NORMAL-lt-———-可视模式-VISUAL"><a href="#普通模式-NORMAL-lt-———-可视模式-VISUAL" class="headerlink" title="普通模式 - - NORMAL - -   &lt;———   可视模式 - - VISUAL - -"></a>普通模式 - - NORMAL - -   &lt;———   可视模式 - - VISUAL - -</h3><ul><li>v</li><li>Esc</li></ul><h3 id="普通模式-NORMAL-———-gt-命令模式"><a href="#普通模式-NORMAL-———-gt-命令模式" class="headerlink" title="普通模式 - - NORMAL - -   ———&gt;   命令模式"></a>普通模式 - - NORMAL - -   ———&gt;   命令模式</h3><ul><li>:</li></ul><h3 id="普通模式-NORMAL-lt-———-命令模式"><a href="#普通模式-NORMAL-lt-———-命令模式" class="headerlink" title="普通模式 - - NORMAL - -   &lt;———   命令模式"></a>普通模式 - - NORMAL - -   &lt;———   命令模式</h3><ul><li>Esc</li></ul><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="https://wang-nine.cn/images/Vim01.png" alt="Vim01"></p><p><img src="https://wang-nine.cn/images/Vim02.png" alt="Vim02"></p><p><img src="https://wang-nine.cn/images/Vim03.png" alt="Vim03"></p><p><img src="https://wang-nine.cn/images/Vim04.png" alt="Vim04"></p><p><img src="https://wang-nine.cn/images/Vim05.png" alt="Vim05"></p><h2 id="4、光标移动"><a href="#4、光标移动" class="headerlink" title="4、光标移动"></a>4、光标移动</h2><p><img src="https://wang-nine.cn/images/Vim06.png" alt="Vim06"></p><p><img src="https://wang-nine.cn/images/Vim07.png" alt="Vim07"></p><p>解释：</p><ul><li>w   :   word</li><li>b   :   begin</li><li>e   :   end</li><li>ge   :   不太常用</li></ul><p><img src="https://wang-nine.cn/images/Vim08.png" alt="Vim08"></p><p><img src="https://wang-nine.cn/images/Vim09.png" alt="Vim09"></p><div class="table-container"><table><thead><tr><th>字符</th><th>单词</th><th>行</th><th>跳转</th><th>句和段</th></tr></thead><tbody><tr><td>h 左</td><td>w下一个单词开头</td><td>0 行首</td><td>f char 跳到char位置</td><td>( 到句首</td></tr><tr><td>j 下</td><td>b本单词或上一个单词开头</td><td>^ 行首非空字符</td><td>F char 反向</td><td>) 到句尾</td></tr><tr><td>k 上</td><td>e本单词或下一个单词结尾</td><td>$ 行尾</td><td>t char char前一位置</td><td>{ 到段首</td></tr><tr><td>l 右</td><td>ge上一个单词结尾</td><td>gg 首行</td><td>T char char后一位置</td><td>} 到段尾</td></tr><tr><td></td><td>W长单词 E长单词 B长单词</td><td>G 尾行</td><td>; 重复上次的跳转</td><td></td></tr><tr><td></td><td></td><td>ngg 第n行</td><td>, 反向查找上次的查找</td></tr></tbody></table></div><h2 id="5、动作-motion"><a href="#5、动作-motion" class="headerlink" title="5、动作 motion"></a>5、动作 motion</h2><p><img src="https://wang-nine.cn/images/Vim10.png" alt="Vim10"></p><p><img src="https://wang-nine.cn/images/Vim11.png" alt="Vim11"></p><ul><li>it   :   inner tag</li><li>is   :   inner sentence</li><li>ip   :   inner paragraph</li></ul><h2 id="6、操作符"><a href="#6、操作符" class="headerlink" title="6、操作符"></a>6、操作符</h2><p><img src="https://wang-nine.cn/images/Vim12.png" alt="Vim12"></p><div class="table-container"><table><thead><tr><th>操作符</th><th>说明</th></tr></thead><tbody><tr><td>d(delete)</td><td>删除</td></tr><tr><td>c(change)</td><td>修改（删除并且进入插入模式）</td></tr><tr><td>y(yank)</td><td>复制</td></tr><tr><td>v(visual)</td><td>选中并且进入 VISUAL 模式</td></tr><tr><td>p(paste)</td><td>粘贴</td></tr><tr><td>b(bracket)</td><td>小括号的简写</td></tr><tr><td>B(Bracket)</td><td>大括号的简写</td></tr><tr><td>e(entire)</td><td>全选</td></tr></tbody></table></div><h2 id="7、大小写"><a href="#7、大小写" class="headerlink" title="7、大小写"></a>7、大小写</h2><p><img src="https://wang-nine.cn/images/Vim13.png" alt="Vim13"></p><ul><li>‘g’ means goto</li><li>‘U’ means Uppercase</li><li>‘u’ 与上一个相反</li></ul><h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ul><li>gd   :   goto definition   跳转到定义</li><li>ctrl + o   :   跳回</li><li>gh   :   goto (mouse) hover   鼠标悬浮</li><li>gt   :   goto tab   跳转下一个标签页</li><li>gT   :   与上一个相反   跳转上一个标签页</li><li>ngt / ngT   :   跳转到第n个标签页</li></ul><h2 id="VSCode中的Vim"><a href="#VSCode中的Vim" class="headerlink" title="VSCode中的Vim"></a>VSCode中的Vim</h2><ul><li><p>vscode中\<leader>默认为space</p></li><li><p>\<leader>\<leader> S{Charactor}   :   寻找某个字符</p></li><li><p>\<leader>\<leader> xxx   :   详见配置</p><p>| Motion Command                      | Description                                                  |<br>| :————————————————— | :—————————————————————————————- |<br>| <code>&lt;leader&gt;&lt;leader&gt; s &lt;char&gt;</code>         | Search character                                             |<br>| <code>&lt;leader&gt;&lt;leader&gt; f &lt;char&gt;</code>         | Find character forwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; F &lt;char&gt;</code>         | Find character backwards                                     |<br>| <code>&lt;leader&gt;&lt;leader&gt; t &lt;char&gt;</code>         | Til character forwards                                       |<br>| <code>&lt;leader&gt;&lt;leader&gt; T &lt;char&gt;</code>         | Til character backwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; w</code>                | Start of word forwards                                       |<br>| <code>&lt;leader&gt;&lt;leader&gt; b</code>                | Start of word backwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; l</code>                | Matches beginning &amp; ending of word, camelCase, after <code>_</code>, and after <code>#</code> forwards |<br>| <code>&lt;leader&gt;&lt;leader&gt; h</code>                | Matches beginning &amp; ending of word, camelCase, after <code>_</code>, and after <code>#</code> backwards |<br>| <code>&lt;leader&gt;&lt;leader&gt; e</code>                | End of word forwards                                         |<br>| <code>&lt;leader&gt;&lt;leader&gt; ge</code>               | End of word backwards                                        |<br>| <code>&lt;leader&gt;&lt;leader&gt; j</code>                | Start of line forwards                                       |<br>| <code>&lt;leader&gt;&lt;leader&gt; k</code>                | Start of line backwards                                      |<br>| <code>&lt;leader&gt;&lt;leader&gt; / &lt;char&gt;... &lt;CR&gt;</code> | Search n-character                                           |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdt</code>      | Til character                                                |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdw</code>      | Start of word                                                |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bde</code>      | End of word                                                  |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bdjk</code>     | Start of line                                                |<br>| <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; j</code>        | JumpToAnywhere motion; default behavior matches beginning &amp; ending of word, camelCase, after <code>_</code> and after <code>#</code> |</p><p><code>&lt;leader&gt;&lt;leader&gt; (2s|2f|2F|2t|2T) &lt;char&gt;&lt;char&gt;</code> and <code>&lt;leader&gt;&lt;leader&gt;&lt;leader&gt; bd2t &lt;char&gt;char&gt;</code> are also available. The difference is character count required for search. For example, <code>&lt;leader&gt;&lt;leader&gt; 2s &lt;char&gt;&lt;char&gt;</code> requires two characters, and search by two characters. This mapping is not a standard mapping, so it is recommended to use your custom mapping.</p></li><li><p>surround</p><p>| Surround Command           | Description                                              |<br>| :————————————- | :———————————————————————————- |<br>| <code>y s &lt;motion&gt; &lt;desired&gt;</code>   | Add <code>desired</code> surround around text defined by <code>&lt;motion&gt;</code> |<br>| <code>d s &lt;existing&gt;</code>           | Delete <code>existing</code> surround                               |<br>| <code>c s &lt;existing&gt; &lt;desired&gt;</code> | Change <code>existing</code> surround to <code>desired</code>                  |<br>| <code>S &lt;desired&gt;</code>              | Surround when in visual modes (surrounds full selection) |</p><p>Some examples:</p><ul><li><code>&quot;test&quot;</code> with cursor inside quotes type <code>cs&quot;&#39;</code> to end up with <code>&#39;test&#39;</code></li><li><code>&quot;test&quot;</code> with cursor inside quotes type <code>ds&quot;</code> to end up with <code>test</code></li><li><code>&quot;test&quot;</code> with cursor inside quotes type <code>cs&quot;t</code> and enter <code>123&gt;</code> to end up with <code>&lt;123&gt;test&lt;/123&gt;</code></li></ul></li></ul><h2 id="多光标功能"><a href="#多光标功能" class="headerlink" title="多光标功能"></a>多光标功能</h2><h3 id="🖱️-Multi-Cursor-Mode"><a href="#🖱️-Multi-Cursor-Mode" class="headerlink" title="🖱️ Multi-Cursor Mode"></a>🖱️ Multi-Cursor Mode</h3><blockquote><p>:warning: Multi-Cursor mode is experimental. Please report issues in our <a href="https://github.com/VSCodeVim/Vim/issues/824">feedback thread.</a></p></blockquote><p>Enter multi-cursor mode by:</p><ul><li>On OSX, <code>cmd-d</code>. On Windows, <code>ctrl-d</code>.</li><li><code>gb</code>, a new shortcut we added which is equivalent to <code>cmd-d</code> (OSX) or <code>ctrl-d</code> (Windows). It adds another cursor at the next word that matches the word the cursor is currently on.</li><li>Running “Add Cursor Above/Below” or the shortcut on any platform.</li></ul><p>Once you have multiple cursors, you should be able to use Vim commands as you see fit. Most should work; some are unsupported (ref <a href="https://github.com/VSCodeVim/Vim/pull/587">PR#587</a>).</p><ul><li>Each cursor has its own clipboard.</li><li>Pressing Escape in Multi-Cursor Visual Mode will bring you to Multi-Cursor Normal mode. Pressing it again will return you to Normal mode.</li></ul><p>vscode中可以使用 cmd + d 批量修改</p><p>vim中可以使用 gb 批量膝盖</p><h2 id="将光标定位到终端"><a href="#将光标定位到终端" class="headerlink" title="将光标定位到终端"></a>将光标定位到终端</h2><p>在settings.json添加如下快捷键</p><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">//由editor 转到 terminal</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;before&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;leader&quot;</span><span class="punctuation">,</span> <span class="string">&quot;t&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;commands&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;workbench.action.terminal.focus&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>space + t 即可跳转到终端中</p><h2 id="跳转Tab"><a href="#跳转Tab" class="headerlink" title="跳转Tab"></a>跳转Tab</h2><p>进入命令模式 :</p><ul><li>输入 tabn   :   tab next 即进入下一个标签页</li><li>输入 tabp   :   tab prev 即进入下一个标签页</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/wj-inf/wj-inf.github.io/categories/index.html"/>
+      <url>/wj-inf/wj-inf.github.io/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>相册</title>
+      <link href="/wj-inf/wj-inf.github.io/gallery/index.html"/>
+      <url>/wj-inf/wj-inf.github.io/gallery/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于</title>
+      <link href="/wj-inf/wj-inf.github.io/about/index.html"/>
+      <url>/wj-inf/wj-inf.github.io/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/wj-inf/wj-inf.github.io/index.html"/>
+      <url>/wj-inf/wj-inf.github.io/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>资源</title>
+      <link href="/wj-inf/wj-inf.github.io/resources/index.html"/>
+      <url>/wj-inf/wj-inf.github.io/resources/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/wj-inf/wj-inf.github.io/tags/index.html"/>
+      <url>/wj-inf/wj-inf.github.io/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>峨眉山之行</title>
+      <link href="/wj-inf/wj-inf.github.io/gallery/%E8%83%8C%E6%99%AF/index.html"/>
+      <url>/wj-inf/wj-inf.github.io/gallery/%E8%83%8C%E6%99%AF/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+  
 </search>
